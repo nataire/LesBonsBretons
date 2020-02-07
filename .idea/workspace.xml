@@ -12,6 +12,7 @@
       <list>
         <option value="hibernate-configuration-5.2" />
         <option value="hibernate-main-5.2" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581072865839</updated>
       <workItem from="1581072870658" duration="26000" />
+      <workItem from="1581072992285" duration="682000" />
     </task>
     <servers />
   </component>
