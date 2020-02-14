@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +151,7 @@
       <workItem from="1581072992285" duration="682000" />
       <workItem from="1581673547031" duration="5922000" />
       <workItem from="1581681300557" duration="4543000" />
-      <workItem from="1581686347117" duration="474000" />
+      <workItem from="1581686347117" duration="915000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581685761144</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dialect">
+      <created>1581686830888</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581686830888</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +183,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe Annonce faite" />
     <MESSAGE value="Classe faites" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classe faites" />
+    <MESSAGE value="Dialect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dialect" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1581674999045">
@@ -202,30 +211,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581674379737" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581685760298">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581686830155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581685760298" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581686830155" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1581673848165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581673848165" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1581686766178">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1581687141702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581686766178" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1581686766178">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581687141702" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1581687141702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581686766178" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1581686766177">
+    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581687141702" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1581687141702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581686766177" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1581686766178">
+    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581687141702" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1581687141702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581686766178" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581687141702" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1581674209222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,6 +251,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="685" y="481" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1581674551119" />
+    <state x="342" y="140" key="new project wizard" timestamp="1581687113285">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1581687113285" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581678985051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

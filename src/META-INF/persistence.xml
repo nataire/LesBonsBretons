@@ -4,7 +4,7 @@
     <persistence-unit name="NewPersistenceUnit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="hibernate.connection.url" value="54.38.190.187"/>
+            <property name="hibernate.connection.url" value="54.38.190.187/lbb"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="cchabot"/>
             <property name="hibernate.connection.password" value="*w9T$zuRPfi*5Y"/>
