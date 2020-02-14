@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LesBonsBretons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LesBonsBretons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/CaracteristiqueEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CaracteristiqueEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/CategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CategorieEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/TypeCaracteristiqueEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/TypeCaracteristiqueEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,41 @@
         <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="annonce: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="caracteristique: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="categorie: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="surcategorie: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="typecaracteristique: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="utilisateur: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -70,6 +105,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XTb7dfEKTtWbgie6kst8TpNi9j" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -103,26 +141,43 @@
       <updated>1581072865839</updated>
       <workItem from="1581072870658" duration="26000" />
       <workItem from="1581072992285" duration="682000" />
-      <workItem from="1581673547031" duration="4435000" />
+      <workItem from="1581673547031" duration="5922000" />
+      <workItem from="1581681300557" duration="4378000" />
     </task>
+    <task id="LOCAL-00001" summary="Classe Annonce faite">
+      <created>1581679143461</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581679143461</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Classe Annonce faite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classe Annonce faite" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Assign_Data_Sources" timestamp="1581674999045">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1581674999045" />
+    <state x="552" y="178" key="#Inspections" timestamp="1581681663605">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1581681663605" />
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581674169206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581674169206" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1581679103574">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1581685667537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581679103574" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581685667537" />
     <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581676703323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -131,10 +186,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581674379737" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581674629706">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581679141935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581674629706" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581679141935" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1581673848165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
