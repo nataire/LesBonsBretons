@@ -1,5 +1,6 @@
 package metier;
 
+import java.sql.Timestamp;
 import java.util.Objects;
 import javax.persistence.*;
 
@@ -12,7 +13,7 @@ public class AnnonceEntity {
     private int idAnnonce;
 
     @Basic
-    @Column(name = "tireAnnonce")
+    @Column(name = "titreAnnonce")
     private String titreAnnonce;
 
     @Basic
@@ -34,6 +35,10 @@ public class AnnonceEntity {
     @Basic
     @Column(name = "idAnnonceLocalisation")
     private int idAnnonceLocalisation;
+
+    @Basic
+    @Column(name = "dateAnnonce")
+    private Timestamp dateAnnonce;
 
     public AnnonceEntity(){
 
