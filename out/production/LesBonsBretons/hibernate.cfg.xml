@@ -7,7 +7,7 @@
         <property name="connection.url">jdbc:mysql://54.38.190.187/lbb</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">cchabot</property>
-        <property name="connection.password">"*w9T$zuRPfi*5Y"</property>
+        <property name="connection.password">*w9T$zuRPfi*5Y</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         
         <!-- DB schema will be updated if needed -->
