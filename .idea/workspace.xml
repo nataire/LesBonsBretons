@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/dao/JpaTypeCaracteristiqueDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CategorieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CategorieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaCaracteristiqueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaCaracteristiqueDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaCategorieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaCategorieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaLocalisationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaLocalisationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaSurCategorieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaSurCategorieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaTypeCategorieDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +112,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Biere2i" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -147,6 +162,7 @@
       <workItem from="1582629753676" duration="2629000" />
       <workItem from="1583321117143" duration="2049000" />
       <workItem from="1583358715326" duration="230000" />
+      <workItem from="1583834441719" duration="3154000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -205,13 +221,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1581681663605" />
+    <state x="600" y="245" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1583835533383">
+      <screen x="0" y="0" width="1739" height="978" />
+    </state>
+    <state x="600" y="245" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1739.978@0.0.1739.978" timestamp="1583835533383" />
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582388929005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582388929005" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1582629962854">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1583836001194">
+      <screen x="0" y="0" width="1739" height="978" />
     </state>
+    <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1739.978@0.0.1739.978" timestamp="1583836001194" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582629962854" />
     <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582562224292">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -221,9 +242,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581674379737" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1582632215738">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1583837692676">
+      <screen x="0" y="0" width="1739" height="978" />
     </state>
+    <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582632215738" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1582630001513">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -261,9 +283,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="685" y="481" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1581674551119" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583358798823">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="697" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583837703528">
+      <screen x="0" y="0" width="1739" height="978" />
     </state>
+    <state x="697" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1739.978@0.0.1739.978" timestamp="1583837703528" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583358798822" />
     <state x="342" y="140" key="new project wizard" timestamp="1581687113285">
       <screen x="0" y="0" width="1920" height="1040" />

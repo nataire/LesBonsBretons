@@ -1,6 +1,6 @@
 package dao;
 
-import metier.CaracteristiqueEntity;
+import metier.CategorieEntity;
 
-public interface CategorieDao extends Dao<CaracteristiqueEntity> {
+public interface CategorieDao extends Dao<CategorieEntity> {
 }
