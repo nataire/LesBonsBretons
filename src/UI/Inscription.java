@@ -1,41 +1,78 @@
+
 package UI;
 
 import javax.swing.*;
 
-public class Inscription extends JFrame {
-    private JButton validerButton;
-    private JPanel panel1;
-    private JTextField textField1;
-    private JPasswordField passwordField1;
+import dao.JpaUtilisateurDao;
+import metier.UtilisateurEntity;
 
-    public void test() {
-        JFrame frame = new JFrame("Test");
-        frame.setContentPane(new Inscription().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-    public void main(final String[] args) throws Exception {
-        test();
-    }
+public class Inscription extends JDialog implements ActionListener {
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+    public JTextField jTextFieldEmail;
+    public JPasswordField jPasswordFieldPassword;
+    public JPasswordField jPasswordFieldPasswordConfirm;
+    public JButton jButtonConfirm;
 
-    }
+    public Inscription(Frame owner, boolean modal) {
+        super(owner, modal);
 
-    /*private void $$$setupUI$$$() {
-        createUIComponents();
-      /*  inscriptionButton.addActionListener(new ActionListener() {
+        this.setSize(1920, 1080);
+        this.setLayout(new BorderLayout());
+
+        JPanel jPanel = new JPanel();
+
+        jTextFieldEmail = new JTextField();
+        jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
+
+        jPasswordFieldPassword = new JPasswordField();
+        jPasswordFieldPassword.setPreferredSize(new Dimension(500, 50));
+
+        jPasswordFieldPasswordConfirm = new JPasswordField();
+        jPasswordFieldPasswordConfirm.setPreferredSize(new Dimension(500, 50));
+
+        jButtonConfirm = new JButton("Confirmer");
+        jButtonConfirm.setPreferredSize(new Dimension(500, 50));
+        jButtonConfirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JFrame inscritpion = new JFrame("Inscription");
-                new Inscription();
+                System.out.println("coucou");
             }
         });
-        Annonce.addAll(JpaAnnconce.findAll());
-    }*/
 
 
+        jPanel.add(jTextFieldEmail);
+        jPanel.add(jPasswordFieldPassword);
+        jPanel.add(jPasswordFieldPasswordConfirm);
+        jPanel.add(jButtonConfirm);
+
+        this.add(jPanel, BorderLayout.CENTER);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+
+        String password = jPasswordFieldPassword.getPassword().toString();
+        String confirmPassword = jPasswordFieldPassword.getPassword().toString();
+
+        if (password.equals(confirmPassword)) {
+
+            String email = jTextFieldEmail.getText();
+            UtilisateurEntity user = new UtilisateurEntity();
+            user.setLogin(email);
+            user.setPassword(password);
+
+            this.setVisible(false);
+            this.dispose();
+
+            JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+            if (true) {
+                dispose();
+            }
+        }
+    }
 }

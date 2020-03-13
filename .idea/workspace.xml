@@ -157,6 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Inscription" />
@@ -165,10 +166,41 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+=======
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.Test" />
+      <module name="LesBonsBretons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Test" />
+>>>>>>> Stashed changes
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Inscription" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -191,7 +223,12 @@
       <workItem from="1583321117143" duration="2049000" />
       <workItem from="1583358715326" duration="230000" />
       <workItem from="1583834441719" duration="3154000" />
+<<<<<<< Updated upstream
       <workItem from="1584084180102" duration="10110000" />
+=======
+      <workItem from="1584084180102" duration="2504000" />
+      <workItem from="1584087176883" duration="7545000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -306,19 +343,27 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584085420652" />
+<<<<<<< Updated upstream
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1584094400709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1739.978@0.0.1739.978" timestamp="1583836001194" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584094400709" />
+=======
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1584093931493">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1739.978@0.0.1739.978" timestamp="1583836001194" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584093931493" />
+>>>>>>> Stashed changes
     <state x="827" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584085418112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="827" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584085418112" />
-    <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582562224292">
+    <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584087184874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582562224292" />
+    <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584087184874" />
     <state x="795" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1581674379737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -336,6 +381,7 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
+<<<<<<< Updated upstream
     <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1584091887602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -368,6 +414,40 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584090577294" />
+=======
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1584095128229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584095128229" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1584095128229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584095128229" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1584095128229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584095128229" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1584095128229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584095128229" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584087447107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584087447107" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584087447107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584087447107" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584087447107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584087447107" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584087447107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584087447107" />
+>>>>>>> Stashed changes
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1582562268982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -405,5 +485,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581678985051" />
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1584090555613">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584090555613" />
   </component>
 </project>
