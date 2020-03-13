@@ -1,8 +1,6 @@
 
 package UI;
 
-import javax.swing.*;
-
 import dao.JpaUtilisateurDao;
 import metier.UtilisateurEntity;
 
@@ -40,7 +38,20 @@ public class Inscription extends JDialog implements ActionListener {
         jButtonConfirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("coucou");
+                String password = jPasswordFieldPassword.getPassword().toString();
+                String confirmPassword = jPasswordFieldPassword.getPassword().toString();
+
+                if (password.equals(confirmPassword)) {
+
+                    String email = jTextFieldEmail.getText();
+                    UtilisateurEntity user = new UtilisateurEntity();
+                    user.setLogin(email);
+                    user.setPassword(password);
+                    JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+                    userDao.inscriptionUser(user);
+
+                }
+
             }
         });
 
