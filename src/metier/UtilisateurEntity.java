@@ -29,6 +29,8 @@ public class UtilisateurEntity {
     @Column(name = "idLocalisationUtilisateur")
     private int idLocalisationUtilisateur;
 
+    private String ville;
+
     public UtilisateurEntity() {
     }
 
@@ -87,6 +89,14 @@ public class UtilisateurEntity {
 
     public void setIdLocalisationUtilisateur(int idLocalisationUtilisateur) {
         this.idLocalisationUtilisateur = idLocalisationUtilisateur;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
     }
 
     @Override

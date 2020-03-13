@@ -13,7 +13,7 @@ public class Acceuil extends JFrame implements ActionListener {
     public JButton jButtonInscription;
 
     public Acceuil() {
-        this.setSize(1920,1080);
+        this.setSize(600, 600);
         this.setLayout(new BorderLayout());
 
         JPanel jPanel = new JPanel();
