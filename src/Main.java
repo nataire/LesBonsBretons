@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-=======
-import UI.Acceuil;
->>>>>>> Stashed changes
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -41,14 +37,8 @@ public class Main {
             }
         } finally {
             session.close();
-<<<<<<< Updated upstream
-        }
-        Accueil acc = new Accueil();
-        acc.setVisible(true);
-=======
-        }*/
-        Acceuil acceuil = new Acceuil();
-        acceuil.setVisible(true);
->>>>>>> Stashed changes
+            }
+         */
+
     }
 }
