@@ -6,10 +6,8 @@ import org.hibernate.query.Query;
 import java.util.Collection;
 
 public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
-    public AnnonceEntity findFirstAvailable() {
-        Query query = session.createQuery("SELECT a FROM AnnonceEntity a ORDER BY dateAnnonce asc");
-        return (AnnonceEntity) query.setMaxResults(1).getResultList();
-    }
+
+    private Class classAnnonce = new AnnonceEntity().getClass();
 
     public Collection<AnnonceEntity> findAnnonce(String nomAnnonce) {
         Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE titreAnnonce LIKE " + "%" + nomAnnonce + "%");
@@ -36,5 +34,10 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
     public boolean deleteAll() {
         Query query = session.createQuery("DELETE FROM AnnonceEntity a");
         return (boolean) query.getSingleResult();
+    }
+
+    public AnnonceEntity findFirstAvailable() {
+        Query query = session.createQuery("SELECT a FROM AnnonceEntity a ORDER BY dateAnnonce asc");
+        return (AnnonceEntity) query.setMaxResults(1).getResultList();
     }
 }

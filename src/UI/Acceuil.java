@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collection;
 
 public class Acceuil extends JFrame {
 
@@ -25,13 +26,10 @@ public class Acceuil extends JFrame {
         this.setSize(600, 600);
         this.setLayout(new GridLayout(1, 2));
 
-
         JPanel jPanelOptions = new JPanel();
         JPanel jPanelAnnonce = new JPanel();
-
+        JpaAn = new JpaAnnonceDao();
         jPanelAnnonce.setBackground(Color.BLUE);
-
-
         AnnonceE = new AnnonceEntity();
 
         jTextFieldEmail = new JTextField();
@@ -48,10 +46,11 @@ public class Acceuil extends JFrame {
         jButtonRecherche.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                if (jTextFieldRecherche.getText() != "") {
-                    JpaAn.findAnnonce(jTextFieldRecherche.getText()); // a continuer
-
-                }
+               // if (jTextFieldRecherche.getText() != "") {
+                    //JpaAn.findFirstAvailable();
+                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
+                System.out.println("test");// a continuer
+               // }
             }
         });
 

@@ -14,10 +14,14 @@ public class AnnonceEntity {
 
     @Basic
     @Column(name = "titreAnnonce")
+
     private String titreAnnonce;
 
     @Basic
+
     @Column(name = "descriptionAnnonce")
+    /*@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "Patate")*/ //A FAIRE
     private String descriptionAnnonce;
 
     @Basic
