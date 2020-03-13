@@ -2,13 +2,13 @@ package UI;
 
 import javax.swing.*;
 
-public class Inscription {
+public class Inscription extends JFrame {
     private JButton validerButton;
     private JPanel panel1;
     private JTextField textField1;
     private JPasswordField passwordField1;
 
-    public static void main(final String[] args) throws Exception {
+    public void test() {
         JFrame frame = new JFrame("Test");
         frame.setContentPane(new Inscription().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,12 +16,16 @@ public class Inscription {
         frame.setVisible(true);
     }
 
+    public void main(final String[] args) throws Exception {
+        test();
+    }
+
     private void createUIComponents() {
         // TODO: place custom component creation code here
 
     }
 
-    private void $$$setupUI$$$() {
+    /*private void $$$setupUI$$$() {
         createUIComponents();
       /*  inscriptionButton.addActionListener(new ActionListener() {
             @Override
@@ -30,6 +34,8 @@ public class Inscription {
                 new Inscription();
             }
         });
-        Annonce.addAll(JpaAnnconce.findAll());*/
-    }
+        Annonce.addAll(JpaAnnconce.findAll());
+    }*/
+
+
 }

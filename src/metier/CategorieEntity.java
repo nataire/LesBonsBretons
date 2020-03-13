@@ -1,10 +1,10 @@
 package metier;
 
-import java.util.Objects;
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
-@Table(name = "categorie")
+@Table(name = "Categorie")
 
 public class CategorieEntity {
 

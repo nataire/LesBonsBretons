@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/metier/CaracteristiqueHasCC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/metier/CategorieHasCaracteristique.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/metier/TypeCaseCochee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Accueil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/CaracteristiqueEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CaracteristiqueEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/CategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CategorieEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/LocalisationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/LocalisationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/TypeCaracteristiqueEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +53,29 @@
         <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="CategorieHasCaracteristique: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lbb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TypeCaseCochee: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -108,7 +146,7 @@
       <recent name="dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Inscription">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Inscription" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UI.Inscription" />
       <module name="LesBonsBretons" />
@@ -118,6 +156,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LesBonsBretons" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,11 +177,13 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Inscription" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Inscription" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Inscription" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +208,7 @@
       <workItem from="1583321117143" duration="2049000" />
       <workItem from="1583358715326" duration="230000" />
       <workItem from="1583834441719" duration="3154000" />
-      <workItem from="1584084180102" duration="3592000" />
+      <workItem from="1584084180102" duration="9962000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -226,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584086943304</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="UI setup Inscription">
+      <created>1584087827411</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584087827411</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +292,8 @@
     <MESSAGE value="Dialect" />
     <MESSAGE value="Dao + Jpa (début)" />
     <MESSAGE value="UI setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI setup" />
+    <MESSAGE value="UI setup Inscription" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI setup Inscription" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -260,11 +315,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584085420652" />
-    <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1583836001194">
-      <screen x="0" y="0" width="1739" height="978" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1584094400709">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1739.978@0.0.1739.978" timestamp="1583836001194" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582629962854" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584094400709" />
     <state x="827" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584085418112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -281,31 +336,47 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584087680547" />
-    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1584086942262">
+    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1584087826535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584086942262" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584087826535" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1582630001513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1584087802910">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1584091887602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
-    <state width="1877" height="213" key="GridCell.Tab.0.center" timestamp="1584087802910">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584091887602" />
+    <state width="1877" height="213" key="GridCell.Tab.0.center" timestamp="1584091887602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
-    <state width="1877" height="213" key="GridCell.Tab.0.left" timestamp="1584087802910">
+    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584091887602" />
+    <state width="1877" height="213" key="GridCell.Tab.0.left" timestamp="1584091887602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
-    <state width="1877" height="213" key="GridCell.Tab.0.right" timestamp="1584087802910">
+    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584091887602" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right" timestamp="1584091887602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584091887602" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584090577294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584090577294" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584090577294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584090577294" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584090577294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584090577294" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584090577294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584090577294" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1582562268982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -318,10 +389,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="839" y="315" key="UIDesigner.ListEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584085577434" />
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1584086945158">
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1584087829053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584086945158" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584087829053" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581673550479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

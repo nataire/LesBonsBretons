@@ -1,3 +1,4 @@
+import UI.Accueil;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
 import org.hibernate.Session;
@@ -42,5 +43,7 @@ public class Main {
         } finally {
             session.close();
         }
+        Accueil acc = new Accueil();
+        acc.setVisible(true);
     }
 }

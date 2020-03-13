@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "ville")
+@Table(name = "Ville")
 public class LocalisationEntity {
 
     @Id

@@ -1,11 +1,11 @@
 package metier;
 
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
-import javax.persistence.*;
 
 @Entity
-@Table(name = "annonce")
+@Table(name = "Annonce")
 public class AnnonceEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

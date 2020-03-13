@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "surcategorie")
+@Table(name = "Surcategorie")
 public class SurCategorieEntity {
 
     @Id
