@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/metier/CaracteristiqueHasCC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/metier/CategorieHasCaracteristique.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/metier/TypeCaseCochee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Accueil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/CaracteristiqueEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CaracteristiqueEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/CategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CategorieEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/LocalisationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/LocalisationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/TypeCaracteristiqueEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/JpaTypeCaseCocheeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/TypeCaseCocheeDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +71,8 @@
       <list>
         <option value="hibernate-configuration-5.2" />
         <option value="hibernate-main-5.2" />
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -208,7 +191,7 @@
       <workItem from="1583321117143" duration="2049000" />
       <workItem from="1583358715326" duration="230000" />
       <workItem from="1583834441719" duration="3154000" />
-      <workItem from="1584084180102" duration="9962000" />
+      <workItem from="1584084180102" duration="10110000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -280,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584087827411</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="bcp de changements">
+      <created>1584094473989</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584094473989</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +283,8 @@
     <MESSAGE value="Dao + Jpa (début)" />
     <MESSAGE value="UI setup" />
     <MESSAGE value="UI setup Inscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI setup Inscription" />
+    <MESSAGE value="bcp de changements" />
+    <option name="LAST_COMMIT_MESSAGE" value="bcp de changements" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -336,11 +327,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584087680547" />
-    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1584087826535">
+    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1584094472739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584087826535" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584094472739" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1582630001513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -389,10 +380,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="839" y="315" key="UIDesigner.ListEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584085577434" />
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1584087829053">
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1584094477825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584087829053" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584094477825" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581673550479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
