@@ -3,6 +3,7 @@ package dao;
 import metier.UtilisateurEntity;
 import org.hibernate.query.Query;
 
+import java.beans.Statement;
 import java.util.Collection;
 
 public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements UtilisateurDao{
@@ -46,14 +47,17 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (UtilisateurEntity) query.getResultList();
     }
 
-    public UtilisateurEntity inscriptionUser(String loginUser, String passwordUser, String numTel, String rue, int numRue, int idLocalisation) {
-        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE login = " + loginUser
-                + " AND password = " + passwordUser
-                + " AND numTel = " + numTel
-                + " AND rue = " + rue
-                + " AND numRue = " + numRue
-                + " AND idLocalisationUtilisateur = " + idLocalisation);
-        return (UtilisateurEntity) query.getResultList();
+    public Boolean inscriptionUser(UtilisateurEntity utilisateur) {
+
+        Query query = session.createQuery("INSERT INTO UtilisateurEntity ( login, password, numTel, rue, numRue, idLocalisationUtilisateur) " +
+                "VALUES ( " + utilisateur.getLogin() + ","
+                + utilisateur.getPassword() + ","
+                + utilisateur.getNumTel() +","
+                + utilisateur.getRue() +","
+                + utilisateur.getNumRue() +","
+                + utilisateur.getIdLocalisationUtilisateur() +");");
+
+        return (Boolean) query.getSingleResult();
     }
 
 }
