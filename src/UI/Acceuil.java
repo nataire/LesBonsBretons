@@ -17,16 +17,22 @@ public class Acceuil extends JFrame {
     public JTextField jTextFieldRecherche;
     public JButton jButtonRecherche;
     public JList<AnnonceEntity> jListAnnonce;
-    private Acceuil acc;
+    public AnnonceEntity AnnonceE;
+
     private JpaAnnonceDao JpaAn;
 
     public Acceuil() {
         this.setSize(600, 600);
-        this.setLayout(new BorderLayout());
+        this.setLayout(new GridLayout(1, 2));
 
 
-        JPanel jPanel = new JPanel();
+        JPanel jPanelOptions = new JPanel();
         JPanel jPanelAnnonce = new JPanel();
+
+        jPanelAnnonce.setBackground(Color.BLUE);
+
+
+        AnnonceE = new AnnonceEntity();
 
         jTextFieldEmail = new JTextField();
         jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
@@ -44,6 +50,7 @@ public class Acceuil extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
                 if (jTextFieldRecherche.getText() != "") {
                     JpaAn.findAnnonce(jTextFieldRecherche.getText()); // a continuer
+
                 }
             }
         });
@@ -56,21 +63,23 @@ public class Acceuil extends JFrame {
         jButtonInscription.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                Acceuil acc = new Acceuil();
                 Inscription inscription = new Inscription(acc, true);
                 inscription.setVisible(true);
             }
         });
 
-        jPanel.add(jTextFieldEmail);
-        jPanel.add(jTextFieldPassword);
-        jPanel.add(jButtonConnexion);
-        jPanel.add(jButtonInscription);
+        jPanelOptions.add(jTextFieldEmail);
+        jPanelOptions.add(jTextFieldPassword);
+        jPanelOptions.add(jButtonConnexion);
+        jPanelOptions.add(jButtonInscription);
 
-       /* jPanelAnnonce.add(jTextFieldRecherche);
-        jPanelAnnonce.add(jButtonRecherche);*/
+        jPanelAnnonce.add(jTextFieldRecherche);
+        jPanelAnnonce.add(jButtonRecherche);
+
+        this.add(jPanelAnnonce);
+        this.add(jPanelOptions);
 
 
-        this.add(jPanel, BorderLayout.CENTER);
-        //this.add(jPanelAnnonce, BorderLayout.CENTER);
     }
 }
