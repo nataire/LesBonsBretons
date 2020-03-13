@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Inscription extends JDialog implements ActionListener {
+public class Inscription extends JDialog {
 
     public JTextField jTextFieldEmail;
     public JPasswordField jPasswordFieldPassword;
@@ -94,8 +94,4 @@ public class Inscription extends JDialog implements ActionListener {
         this.add(jPanel, BorderLayout.CENTER);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-
-    }
 }
