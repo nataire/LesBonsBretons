@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dao/JpaTypeCaracteristiqueDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CategorieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CategorieDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaCaracteristiqueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaCaracteristiqueDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaCategorieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaCategorieDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaLocalisationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaLocalisationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaSurCategorieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaSurCategorieDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaTypeCategorieDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

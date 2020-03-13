@@ -11,4 +11,9 @@ public class Inscription {
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
+
+    private void $$$setupUI$$$() {
+        createUIComponents();
+
+    }
 }
