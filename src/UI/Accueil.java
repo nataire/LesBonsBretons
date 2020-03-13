@@ -4,6 +4,8 @@ import dao.JpaAnnonceDao;
 import metier.AnnonceEntity;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Collection;
 
 public class Accueil {
@@ -11,8 +13,8 @@ public class Accueil {
     private JButton rechercheButton;
     private JButton connexionButton;
     private JPanel panel;
-    private JButton button1;
     private JList list1;
+    private JButton inscriptionButton;
     private JpaAnnonceDao JpaAnnconce;
     private Collection<AnnonceEntity> Annonce;
 
@@ -31,6 +33,13 @@ public class Accueil {
 
     private void $$$setupUI$$$() {
         createUIComponents();
+        inscriptionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JFrame inscritpion = new JFrame("Inscription");
+                new Inscription();
+            }
+        });
         Annonce.addAll(JpaAnnconce.findAll());
     }
 }
