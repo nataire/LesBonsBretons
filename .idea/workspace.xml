@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Accueil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/CategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/CategorieDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCaracteristiqueDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCaracteristiqueDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCategorieDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaSurCategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaSurCategorieDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +108,20 @@
       <recent name="dao" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Inscription">
+    <configuration name="Inscription" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI.Inscription" />
+      <module name="LesBonsBretons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UI.Accueil" />
       <module name="LesBonsBretons" />
@@ -125,8 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Inscription" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Inscription" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -152,7 +161,7 @@
       <workItem from="1583321117143" duration="2049000" />
       <workItem from="1583358715326" duration="230000" />
       <workItem from="1583834441719" duration="3154000" />
-      <workItem from="1584084180102" duration="2504000" />
+      <workItem from="1584084180102" duration="3592000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -210,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584085530417</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="UI setup">
+      <created>1584086943302</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584086943304</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,31 +277,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581674379737" />
-    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1584085529605">
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584087680547">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584087680547" />
+    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1584086942262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584085529605" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584086942262" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1582630001513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1877" height="214" key="GridCell.Tab.0.bottom" timestamp="1584086176881">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1584087802910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="214" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584086176881" />
-    <state width="1877" height="214" key="GridCell.Tab.0.center" timestamp="1584086176881">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
+    <state width="1877" height="213" key="GridCell.Tab.0.center" timestamp="1584087802910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="214" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584086176881" />
-    <state width="1877" height="214" key="GridCell.Tab.0.left" timestamp="1584086176881">
+    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
+    <state width="1877" height="213" key="GridCell.Tab.0.left" timestamp="1584087802910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="214" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584086176881" />
-    <state width="1877" height="214" key="GridCell.Tab.0.right" timestamp="1584086176881">
+    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right" timestamp="1584087802910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="214" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584086176881" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584087802910" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1582562268982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -298,10 +318,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="839" y="315" key="UIDesigner.ListEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584085577434" />
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1584085532910">
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1584086945158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584085532910" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584086945158" />
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581673550479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
