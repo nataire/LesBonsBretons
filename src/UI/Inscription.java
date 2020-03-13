@@ -56,7 +56,7 @@ public class Inscription extends JDialog implements ActionListener {
                 String password = jPasswordFieldPassword.getPassword().toString();
                 String confirmPassword = jPasswordFieldPassword.getPassword().toString();
 
-                if (password.equals(confirmPassword)) {
+                if (true) {
 
                     String email = jTextFieldEmail.getText();
                     String ville = jTextFieldVille.getText();
@@ -72,7 +72,9 @@ public class Inscription extends JDialog implements ActionListener {
                     user.setNumRue(numRue);
                     user.setNumTel(numTel);
                     JpaUtilisateurDao userDao = new JpaUtilisateurDao();
-                    userDao.inscriptionUser(user);
+                    //userDao.inscriptionUser(user);
+
+                    dispose();
 
                 }
 
