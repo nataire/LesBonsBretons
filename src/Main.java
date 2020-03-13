@@ -1,7 +1,13 @@
+import UI.Acceuil;
 import org.hibernate.HibernateException;
+import org.hibernate.Metamodel;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+import javax.persistence.metamodel.EntityType;
+
 
 public class Main {
     private static final SessionFactory ourSessionFactory;
@@ -22,7 +28,7 @@ public class Main {
     }
 
     public static void main(final String[] args) throws Exception {
-        /*final Session session = getSession();
+        final Session session = getSession();
         try {
             System.out.println("querying all the managed entities...");
             final Metamodel metamodel = session.getSessionFactory().getMetamodel();
@@ -37,8 +43,8 @@ public class Main {
             }
         } finally {
             session.close();
-            }
-         */
-
+        }
+        Acceuil acc = new Acceuil();
+        acc.setVisible(true);
     }
 }
