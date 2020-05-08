@@ -26,16 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="">
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Correction IP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/META-INF/LesBonsBretons.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaTypeCategorieDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588928923022</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Correction IP">
+      <created>1588938262503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588938262503</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +244,8 @@
     <MESSAGE value="Ui Accueil" />
     <MESSAGE value="Ui Accueil+beau bleu" />
     <MESSAGE value="Mise en place manytoOne Etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place manytoOne Etc" />
+    <MESSAGE value="Correction IP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction IP" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -293,21 +294,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1588933031849">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1588939175325">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
     <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031849" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1588933031849">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1588939175325">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
     <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031849" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1588933031848">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1588939175325">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
     <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031848" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1588933031849">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1588939175325">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
     <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031849" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584117325998">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -325,9 +330,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1584103115215">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="189" height="380" key="HiddenNamespacesPopup" timestamp="1588938228900">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="189" height="380" key="HiddenNamespacesPopup/0.0.1536.864@0.0.1536.864" timestamp="1588938228900" />
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1584103115215" />
     <state x="184" y="85" key="MergeDialog" timestamp="1584106547470">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -341,9 +347,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581674636661" />
-    <state x="875" y="244" key="Vcs.Push.Dialog.v2" timestamp="1588928927502">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1588938276328">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1588938276328" />
     <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588928927502" />
     <state x="999" y="164" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584106706511">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -352,9 +359,10 @@
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581673550479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584114230254">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588938242050">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1588938242050" />
     <state x="1249" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584114230254" />
     <state x="1028" y="103" width="607" height="804" key="find.popup" timestamp="1588933138750">
       <screen x="0" y="0" width="1920" height="1040" />
