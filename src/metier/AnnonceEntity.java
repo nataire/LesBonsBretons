@@ -31,9 +31,9 @@ public class AnnonceEntity {
     @JoinColumn(name = "idCategorie")
     private List<CategorieEntity> categorie;
 
-    @OneToMany(mappedBy = "AnnonceUser", cascade = CascadeType.ALL, orphanRemoval = true)
+   /* @OneToMany(mappedBy = "AnnonceUser", cascade = CascadeType.ALL, orphanRemoval = true)
     @Column(name = "idUtilisateur")
-    private List<UtilisateurEntity> user;
+    private List<UtilisateurEntity> user;*/
 
     @Basic
     @Column(name = "idAnnonceLocalisation")
@@ -97,6 +97,13 @@ public class AnnonceEntity {
         this.categorie = categorie;
     }
 
+  /*  public List<UtilisateurEntity> getUser() {
+        return user;
+    }
+
+    public void setUser(List<UtilisateurEntity> user) {
+        this.user = user;
+    }*/
 
     public int getIdAnnonceLocalisation() {
         return idAnnonceLocalisation;
