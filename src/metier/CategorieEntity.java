@@ -9,8 +9,8 @@ import java.util.Objects;
 public class CategorieEntity {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "idCategorie",nullable = false,insertable = false,updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCategorie", nullable = false, insertable = false, updatable = false)
     private int idCategorie;
 
     @Column(name = "nomCategorie")
@@ -18,6 +18,9 @@ public class CategorieEntity {
 
     @Column(name = "idSurCategorieCtg")
     private int idSurCategorie;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private AnnonceEntity AnnonceCategorie;
 
     public CategorieEntity() {
     }

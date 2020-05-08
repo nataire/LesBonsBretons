@@ -29,6 +29,9 @@ public class UtilisateurEntity {
     @Column(name = "idLocalisationUtilisateur")
     private int idLocalisationUtilisateur;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private AnnonceEntity AnnonceUser;
+
     private String ville;
 
     public UtilisateurEntity() {

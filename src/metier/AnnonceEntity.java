@@ -2,6 +2,7 @@ package metier;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,21 +21,19 @@ public class AnnonceEntity {
     @Basic
 
     @Column(name = "descriptionAnnonce")
-    /*@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Patate")*/ //A FAIRE
     private String descriptionAnnonce;
 
     @Basic
     @Column(name = "isOffreAnnonce")
     private boolean isOffreAnnonce;
 
-    @Basic
-    @Column(name = "idCategorieAnnonce")
-    private int idCategorieAnnonce;
+    @OneToMany(mappedBy = "AnnonceCategorie", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "idCategorie")
+    private List<CategorieEntity> categorie;
 
-    @Basic
-    @Column(name = "idUtilisateurAnnonce")
-    private int idUtilisateurAnnonce;
+    @OneToMany(mappedBy = "AnnonceUser", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "idUtilisateur")
+    private List<UtilisateurEntity> user;
 
     @Basic
     @Column(name = "idAnnonceLocalisation")
@@ -44,7 +43,7 @@ public class AnnonceEntity {
     @Column(name = "dateAnnonce")
     private Timestamp dateAnnonce;
 
-    public AnnonceEntity(){
+    public AnnonceEntity() {
 
     }
 
@@ -52,12 +51,12 @@ public class AnnonceEntity {
         this.titreAnnonce = titreAnnonce;
         this.descriptionAnnonce = descriptionAnnonce;
         this.isOffreAnnonce = isOffreAnnonce;
-        this.idCategorieAnnonce = idCategorieAnnonce;
-        this.idUtilisateurAnnonce = idUtilisateurAnnonce;
+
         this.idAnnonceLocalisation = idAnnonceLocalisation;
     }
 
     //region Getter / Setter / toString / Hashcode
+
     public int getIdAnnonce() {
         return idAnnonce;
     }
@@ -90,21 +89,14 @@ public class AnnonceEntity {
         isOffreAnnonce = offreAnnonce;
     }
 
-    public int getIdCategorieAnnonce() {
-        return idCategorieAnnonce;
+    public List<CategorieEntity> getCategorie() {
+        return categorie;
     }
 
-    public void setIdCategorieAnnonce(int idCategorieAnnonce) {
-        this.idCategorieAnnonce = idCategorieAnnonce;
+    public void setCategorie(List<CategorieEntity> categorie) {
+        this.categorie = categorie;
     }
 
-    public int getIdUtilisateurAnnonce() {
-        return idUtilisateurAnnonce;
-    }
-
-    public void setIdUtilisateurAnnonce(int idUtilisateurAnnonce) {
-        this.idUtilisateurAnnonce = idUtilisateurAnnonce;
-    }
 
     public int getIdAnnonceLocalisation() {
         return idAnnonceLocalisation;
@@ -114,6 +106,14 @@ public class AnnonceEntity {
         this.idAnnonceLocalisation = idAnnonceLocalisation;
     }
 
+    public Timestamp getDateAnnonce() {
+        return dateAnnonce;
+    }
+
+    public void setDateAnnonce(Timestamp dateAnnonce) {
+        this.dateAnnonce = dateAnnonce;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -121,16 +121,16 @@ public class AnnonceEntity {
         AnnonceEntity that = (AnnonceEntity) o;
         return idAnnonce == that.idAnnonce &&
                 isOffreAnnonce == that.isOffreAnnonce &&
-                idCategorieAnnonce == that.idCategorieAnnonce &&
-                idUtilisateurAnnonce == that.idUtilisateurAnnonce &&
                 idAnnonceLocalisation == that.idAnnonceLocalisation &&
                 Objects.equals(titreAnnonce, that.titreAnnonce) &&
-                Objects.equals(descriptionAnnonce, that.descriptionAnnonce);
+                Objects.equals(descriptionAnnonce, that.descriptionAnnonce) &&
+                Objects.equals(categorie, that.categorie) &&
+                Objects.equals(dateAnnonce, that.dateAnnonce);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idAnnonce, titreAnnonce, descriptionAnnonce, isOffreAnnonce, idCategorieAnnonce, idUtilisateurAnnonce, idAnnonceLocalisation);
+        return Objects.hash(idAnnonce, titreAnnonce, descriptionAnnonce, isOffreAnnonce, categorie, idAnnonceLocalisation, dateAnnonce);
     }
 
     @Override
@@ -140,11 +140,13 @@ public class AnnonceEntity {
                 ", titreAnnonce='" + titreAnnonce + '\'' +
                 ", descriptionAnnonce='" + descriptionAnnonce + '\'' +
                 ", isOffreAnnonce=" + isOffreAnnonce +
-                ", idCategorieAnnonce=" + idCategorieAnnonce +
-                ", idUtilisateurAnnonce=" + idUtilisateurAnnonce +
+                ", categorie=" + categorie +
+
                 ", idAnnonceLocalisation=" + idAnnonceLocalisation +
+                ", dateAnnonce=" + dateAnnonce +
                 '}';
     }
+
     //endregion
 
 }
