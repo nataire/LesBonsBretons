@@ -4,11 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "CaracteristiqueHasCaseCochee")
-public class CaracteristiqueHasCC {
+public class CaracteristiqueHasCC implements Serializable {
 
     @Id
     @Column(name = "idCaracteristique", nullable = false, insertable = false, updatable = false)

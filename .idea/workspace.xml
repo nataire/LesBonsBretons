@@ -26,18 +26,29 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Correction IP">
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Correction IP V2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Inscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UtilisateurDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/CaracteristiqueHasCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CaracteristiqueHasCC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/CategorieHasCaracteristique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CategorieHasCaracteristique.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="LesBonsBretons" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,7 +91,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="255" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Biere2i" />
+    <property name="last_opened_file_path" value="D:/Git/tpBiere" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -116,7 +127,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="56f74c64-8f8a-4067-a5bb-c6a558d215f2" name="Default Changelist" comment="" />
+      <changelist id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Correction IP V2" />
       <created>1581072865839</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -136,6 +147,9 @@
       <workItem from="1584102298192" duration="7551000" />
       <workItem from="1588925276780" duration="2862000" />
       <workItem from="1588928406879" duration="4079000" />
+      <workItem from="1589783713971" duration="4538000" />
+      <workItem from="1589793732205" duration="3620000" />
+      <workItem from="1589802724921" duration="3925000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -207,11 +221,25 @@
       <option name="project" value="LOCAL" />
       <updated>1588938262503</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Correction IP V2">
+      <created>1588939422198</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588939422198</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Correction IP V2">
+      <created>1588939497895</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588939497895</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -235,6 +263,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe Annonce faite" />
@@ -245,7 +274,8 @@
     <MESSAGE value="Ui Accueil+beau bleu" />
     <MESSAGE value="Mise en place manytoOne Etc" />
     <MESSAGE value="Correction IP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction IP" />
+    <MESSAGE value="Correction IP V2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction IP V2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -268,9 +298,10 @@
     </state>
     <state x="442" y="148" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1588938199224" />
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588932912914" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1588926350656">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="612" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1589802834807">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="612" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1589802834807" />
     <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1739.978@0.0.1739.978" timestamp="1583836001194" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588926350656" />
     <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588925296862">
@@ -290,45 +321,50 @@
     </state>
     <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588933322886" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1582630001513">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="592" y="228" key="FileChooserDialogImpl" timestamp="1589804428989">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="592" y="228" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589804428989" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1588939175325">
+    <state width="746" height="223" key="GridCell.Tab.0.bottom" timestamp="1589806651865">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
+    <state width="746" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589806651865" />
     <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031849" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1588939175325">
+    <state width="746" height="223" key="GridCell.Tab.0.center" timestamp="1589806651865">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
+    <state width="746" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589806651865" />
     <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031849" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1588939175325">
+    <state width="746" height="223" key="GridCell.Tab.0.left" timestamp="1589806651865">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
+    <state width="746" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589806651865" />
     <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031848" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1588939175325">
+    <state width="746" height="223" key="GridCell.Tab.0.right" timestamp="1589806651865">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588939175325" />
+    <state width="746" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589806651865" />
     <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588933031849" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584117325998">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="746" height="277" key="GridCell.Tab.1.bottom" timestamp="1589806460173">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="746" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589806460173" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584117325998">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="746" height="277" key="GridCell.Tab.1.center" timestamp="1589806460172">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="746" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1589806460172" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584117325998">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="746" height="277" key="GridCell.Tab.1.left" timestamp="1589806460172">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="746" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1589806460172" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584117325998">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="746" height="277" key="GridCell.Tab.1.right" timestamp="1589806460172">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="746" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1589806460172" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
     <state width="189" height="380" key="HiddenNamespacesPopup" timestamp="1588938228900">
       <screen x="0" y="0" width="1536" height="864" />
@@ -339,18 +375,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584106547470" />
-    <state x="672" y="235" key="MultipleFileMergeDialog" timestamp="1584106547477">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="214" y="282" width="388" height="263" key="MultipleFileMergeDialog" timestamp="1588939453557">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="214" y="282" width="388" height="263" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1588939453557" />
     <state x="672" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584106547477" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1581674636661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581674636661" />
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1588938276328">
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1588939518841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1588938276328" />
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1588939518841" />
     <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588928927502" />
     <state x="999" y="164" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584106706511">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -359,14 +396,15 @@
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581673550479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588938242050">
+    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589783904128">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1588938242050" />
+    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1589783904128" />
     <state x="1249" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584114230254" />
-    <state x="1028" y="103" width="607" height="804" key="find.popup" timestamp="1588933138750">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="822" y="69" width="549" height="795" key="find.popup" timestamp="1589804836354">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="822" y="69" width="549" height="795" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1589804836354" />
     <state x="1028" y="103" width="607" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588933138750" />
   </component>
   <component name="XDebuggerManager">
@@ -374,13 +412,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/UI/Inscription.java</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/metier/AnnonceEntity.java</url>
-          <line>57</line>
+          <line>56</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/Inscription.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UI/Acceuil.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

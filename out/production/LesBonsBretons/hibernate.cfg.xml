@@ -9,7 +9,21 @@
         <property name="connection.username">cchabot</property>
         <property name="connection.password">*w9T$zuRPfi*5Y</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
         <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="metier.CaracteristiqueEntity"/>
+        <mapping class="metier.CaracteristiqueHasCC"/>
+        <mapping class="metier.CategorieEntity"/>
+        <mapping class="metier.AnnonceEntity"/>
+        <mapping class="metier.CategorieHasCaracteristique"/>
+        <mapping class="metier.LocalisationEntity"/>
+        <mapping class="metier.SurCategorieEntity"/>
+        <mapping class="metier.TypeCaseCochee"/>
+        <mapping class="metier.UtilisateurEntity"/>
+
     </session-factory>
+
+
 </hibernate-configuration>

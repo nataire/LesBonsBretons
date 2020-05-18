@@ -1,12 +1,12 @@
 package dao;
 
 import metier.UtilisateurEntity;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import java.beans.Statement;
 import java.util.Collection;
 
-public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements UtilisateurDao{
+public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements UtilisateurDao {
 
     //region Override
     @Override
@@ -16,9 +16,20 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     @Override
+    public void creer(UtilisateurEntity utilisateur) {
+
+    }
+
+    @Override
+    public void persist(UtilisateurEntity entity) {
+        session.persist(entity);
+    }
+
+
+    @Override
     public UtilisateurEntity find(Integer idUser) {
         Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE id = " + idUser);
-        return (UtilisateurEntity) query.getResultList();
+        return (UtilisateurEntity) query.getSingleResult();
     }
 
     @Override
@@ -47,17 +58,34 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (UtilisateurEntity) query.getResultList();
     }
 
-    public Boolean inscriptionUser(UtilisateurEntity utilisateur) {
 
-        Query query = session.createQuery("INSERT INTO UtilisateurEntity ( login, password, numTel, rue, numRue, idLocalisationUtilisateur) " +
+    public void inscriptionUser(UtilisateurEntity utilisateur) {
+
+
+        /*Query query = session.createQuery("INSERT INTO UtilisateurEntity ( login, password, numTel, rue, numRue, idLocalisationUtilisateur) " +
                 "VALUES ( " + utilisateur.getLogin() + ","
                 + utilisateur.getPassword() + ","
                 + utilisateur.getNumTel() +","
                 + utilisateur.getRue() +","
                 + utilisateur.getNumRue() +","
                 + utilisateur.getIdLocalisationUtilisateur() +");");
+*/
 
-        return (Boolean) query.getSingleResult();
+        Transaction txn = session.beginTransaction();
+
+        Query updateQuery
+                = session.createNativeQuery("INSERT INTO Utilisateur ( login, password, numTel, rue, numRue, idLocalisationUtilisateur) VALUES (?,?,?,?,?,?)");
+        updateQuery.setParameter(1, utilisateur.getLogin());
+        updateQuery.setParameter(2, utilisateur.getPassword());
+        updateQuery.setParameter(3, utilisateur.getNumTel());
+        updateQuery.setParameter(4, utilisateur.getRue());
+        updateQuery.setParameter(5, utilisateur.getNumRue());
+        updateQuery.setParameter(6, utilisateur.getIdLocalisationUtilisateur());
+        updateQuery.executeUpdate();
+
+
+        txn.commit();
+
     }
 
 }

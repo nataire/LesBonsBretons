@@ -71,10 +71,14 @@ public class Inscription extends JDialog {
                     user.setRue(rue);
                     user.setNumRue(numRue);
                     user.setNumTel(numTel);
-                    JpaUtilisateurDao userDao = new JpaUtilisateurDao();
-                    //userDao.inscriptionUser(user);
 
-                    dispose();
+
+                    JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+                    //          userDao.persist(user);
+
+
+                    System.out.println(userDao.find(1));
+                    //dispose();
 
                 }
 

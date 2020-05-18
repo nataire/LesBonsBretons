@@ -19,7 +19,6 @@ public class AnnonceEntity {
     private String titreAnnonce;
 
     @Basic
-
     @Column(name = "descriptionAnnonce")
     private String descriptionAnnonce;
 
@@ -28,7 +27,7 @@ public class AnnonceEntity {
     private boolean isOffreAnnonce;
 
     @OneToMany(mappedBy = "AnnonceCategorie", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "idCategorie")
+    //@JoinColumn(name = "idCategorie")
     private List<CategorieEntity> categorie;
 
    /* @OneToMany(mappedBy = "AnnonceUser", cascade = CascadeType.ALL, orphanRemoval = true)

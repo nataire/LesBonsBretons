@@ -3,6 +3,7 @@
 
     <persistence-unit name="NewPersistenceUnit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.connection.url" value="54.38.190.187/lbb?useUnicode=true&amp;
             useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
@@ -15,5 +16,7 @@
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.jdbc.time_zone" value="UTC"/>
         </properties>
+
     </persistence-unit>
+
 </persistence>
