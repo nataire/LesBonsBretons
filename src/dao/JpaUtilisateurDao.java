@@ -15,16 +15,6 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (Collection<UtilisateurEntity>) query.getResultList();
     }
 
-    @Override
-    public void creer(UtilisateurEntity utilisateur) {
-
-    }
-
-    @Override
-    public void persist(UtilisateurEntity entity) {
-        session.persist(entity);
-    }
-
 
     @Override
     public UtilisateurEntity find(Integer idUser) {
@@ -32,10 +22,14 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (UtilisateurEntity) query.getSingleResult();
     }
 
-    @Override
-    public UtilisateurEntity find(Class c, Integer id) {
-        return null;
+
+    public UtilisateurEntity Connexion(String mEmail, String mPassword) {
+        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE login =  ?  AND password = ?");
+        query.setParameter(1, mEmail); // replace first ? with value for first name
+        query.setParameter(2, mPassword);
+        return (UtilisateurEntity) query.getSingleResult();
     }
+
 
     @Override
     public Collection<UtilisateurEntity> findAll() {

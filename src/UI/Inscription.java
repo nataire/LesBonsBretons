@@ -1,5 +1,6 @@
 package UI;
 
+import dao.JpaLocalisationDao;
 import dao.JpaUtilisateurDao;
 import metier.UtilisateurEntity;
 
@@ -30,6 +31,7 @@ public class Inscription extends JDialog {
         jTextFieldEmail = new JTextField();
         jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
 
+
         jPasswordFieldPassword = new JPasswordField();
         jPasswordFieldPassword.setPreferredSize(new Dimension(500, 50));
 
@@ -53,10 +55,10 @@ public class Inscription extends JDialog {
         jButtonConfirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String password = jPasswordFieldPassword.getPassword().toString();
-                String confirmPassword = jPasswordFieldPassword.getPassword().toString();
+                String password = new String(jPasswordFieldPassword.getPassword());
+                String confirmPassword = new String(jPasswordFieldPasswordConfirm.getPassword());
 
-                if (true) {
+                if (password.equals(confirmPassword)) {
 
                     String email = jTextFieldEmail.getText();
                     String ville = jTextFieldVille.getText();
@@ -73,12 +75,13 @@ public class Inscription extends JDialog {
                     user.setNumTel(numTel);
 
 
+                    JpaLocalisationDao localisationDao = new JpaLocalisationDao();
+                    user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
+
                     JpaUtilisateurDao userDao = new JpaUtilisateurDao();
-                    //          userDao.persist(user);
+                    boolean test = userDao.create(user);
 
-
-                    System.out.println(userDao.find(1));
-                    //dispose();
+                    dispose();
 
                 }
 
