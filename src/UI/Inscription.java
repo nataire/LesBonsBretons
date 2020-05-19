@@ -1,13 +1,7 @@
 package UI;
 
-import dao.JpaLocalisationDao;
-import dao.JpaUtilisateurDao;
-import metier.UtilisateurEntity;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Inscription extends JDialog {
 
@@ -23,90 +17,75 @@ public class Inscription extends JDialog {
     public Inscription(Frame owner, boolean modal) {
         super(owner, modal);
 
-        this.setSize(600, 600);
-        this.setLayout(new BorderLayout());
+        JPanel jPanel = new JPanel(new GridBagLayout());
 
-        JPanel jPanel = new JPanel();
+        this.setTitle("Inscription");
+        this.setSize(1000, 400);
 
-        jTextFieldEmail = new JTextField();
-        jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
+        JLabel jLabelEmail = new JLabel("E-Mail :");
+        JLabel jLabelPassword = new JLabel("Mot de passe :");
+        JLabel jLabelPasswordConfirm = new JLabel("Confirmer le mot de passe :");
+        JLabel jLabelVille = new JLabel("Ville :");
+        JLabel jLabelRue = new JLabel("Rue :");
+        JLabel jLabelNumRue = new JLabel("Numéro dans la rue :");
+        JLabel jLabelNumTel = new JLabel("Numéro de téléphone :");
+        JLabel[] arrayLabel = {
+                jLabelEmail, jLabelPassword, jLabelPasswordConfirm,
+                jLabelVille, jLabelRue, jLabelNumRue, jLabelNumTel
+        };
 
+        JTextField jTextFieldEmail = new JTextField();
+        JTextField jTextFieldPassword = new JTextField();
+        JTextField jTextFieldPasswordConfirm = new JTextField();
+        JTextField jTextFieldVille = new JTextField();
+        JTextField jTextFieldRue = new JTextField();
+        JTextField jTextFieldNumRue = new JTextField();
+        JTextField jTextFieldNumTel = new JTextField();
+        JTextField[] arrayTextField = {
+                jTextFieldEmail, jTextFieldPassword, jTextFieldPasswordConfirm,
+                jTextFieldVille, jTextFieldRue, jTextFieldNumRue, jTextFieldNumTel
+        };
 
-        jPasswordFieldPassword = new JPasswordField();
-        jPasswordFieldPassword.setPreferredSize(new Dimension(500, 50));
+        JLabel jLabelTitle = new JLabel("Inscrivez vous içi");
 
-        jPasswordFieldPasswordConfirm = new JPasswordField();
-        jPasswordFieldPasswordConfirm.setPreferredSize(new Dimension(500, 50));
+        JButton jButton = new JButton("Inscription");
 
-        jTextFieldVille = new JTextField();
-        jTextFieldVille.setPreferredSize(new Dimension(500, 50));
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
 
-        jTextFieldRue = new JTextField();
-        jTextFieldRue.setPreferredSize(new Dimension(500, 50));
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new Insets(0, 200, 32, 320);
+        gridBagConstraints.anchor = GridBagConstraints.CENTER;
+        jPanel.add(jLabelTitle, gridBagConstraints);
 
-        jTextFieldNumRue = new JTextField();
-        jTextFieldNumRue.setPreferredSize(new Dimension(500, 50));
-
-        jTextFieldNumTel = new JTextField();
-        jTextFieldNumTel.setPreferredSize(new Dimension(500, 50));
-
-        jButtonConfirm = new JButton("Confirmer");
-        jButtonConfirm.setPreferredSize(new Dimension(500, 50));
-        jButtonConfirm.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                String password = new String(jPasswordFieldPassword.getPassword());
-                String confirmPassword = new String(jPasswordFieldPasswordConfirm.getPassword());
-
-                if (password.equals(confirmPassword)) {
-
-                    String email = jTextFieldEmail.getText();
-                    String ville = jTextFieldVille.getText();
-                    String rue = jTextFieldRue.getText();
-                    int numRue = Integer.parseInt(jTextFieldNumRue.getText());
-                    String numTel = jTextFieldNumTel.getText();
-
-                    UtilisateurEntity user = new UtilisateurEntity();
-                    user.setLogin(email);
-                    user.setPassword(password);
-                    user.setVille(ville);
-                    user.setRue(rue);
-                    user.setNumRue(numRue);
-                    user.setNumTel(numTel);
-
-                    JpaLocalisationDao localisationDao = new JpaLocalisationDao();
-                    JpaUtilisateurDao userDao = new JpaUtilisateurDao();
-
-
-                    try {
-                        user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
-                        if (userDao.create(user)) {
-                            System.out.println("reussi");
-                            dispose();
-                        } else
-                            System.out.println("echec");
-
-                    } catch (Exception e) {
-                        System.out.println("code postal faux");
-                    }
-
-
+        for (int y = 0; y < arrayLabel.length; y++) {
+            for (int x = 0; x < 2; x++) {
+                gridBagConstraints.gridx = x;
+                gridBagConstraints.gridy = y + 1;
+                if (x == 0) {
+                    gridBagConstraints.insets = new Insets(0, 32, 8, 16);
+                    gridBagConstraints.weightx = 0.10;
+                    jPanel.add(arrayLabel[y], gridBagConstraints);
+                } else {
+                    gridBagConstraints.insets = new Insets(0, 16, 8, 32);
+                    gridBagConstraints.weightx = 0.20;
+                    jPanel.add(arrayTextField[y], gridBagConstraints);
                 }
-
             }
-        });
+        }
 
+        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = GridBagConstraints.LINE_END;
+        gridBagConstraints.insets = new Insets(0, 128, 0, 320);
+        gridBagConstraints.weightx = 0.10;
+        gridBagConstraints.gridy++;
 
-        jPanel.add(jTextFieldEmail);
-        jPanel.add(jPasswordFieldPassword);
-        jPanel.add(jPasswordFieldPasswordConfirm);
-        jPanel.add(jTextFieldVille);
-        jPanel.add(jTextFieldRue);
-        jPanel.add(jTextFieldNumRue);
-        jPanel.add(jTextFieldNumTel);
-        jPanel.add(jButtonConfirm);
+        jPanel.add(jButton, gridBagConstraints);
 
-        this.add(jPanel, BorderLayout.CENTER);
+        this.setContentPane(jPanel);
+        this.setVisible(true);
+
     }
 
 }
