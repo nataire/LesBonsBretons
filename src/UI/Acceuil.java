@@ -79,9 +79,14 @@ public class Acceuil extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
-                JpaUtilisateurDao utilisateurDao = new JpaUtilisateurDao();
-                UtilisateurEntity user = utilisateurDao.connexionUser(jTextFieldEmail.getText(), jTextFieldPassword.getText());
-                System.out.println(user.toString());
+                try {
+                    JpaUtilisateurDao utilisateurDao = new JpaUtilisateurDao();
+                    UtilisateurEntity user = utilisateurDao.connexionUser(jTextFieldEmail.getText(), jTextFieldPassword.getText());
+                    System.out.println(user.toString());
+                } catch (javax.persistence.NoResultException e) {
+                    System.out.println("Non trouvé");
+                }
+
             }
         });
 

@@ -74,14 +74,22 @@ public class Inscription extends JDialog {
                     user.setNumRue(numRue);
                     user.setNumTel(numTel);
 
-
                     JpaLocalisationDao localisationDao = new JpaLocalisationDao();
-                    user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
-
                     JpaUtilisateurDao userDao = new JpaUtilisateurDao();
-                    boolean test = userDao.create(user);
 
-                    dispose();
+
+                    try {
+                        user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
+                        if (userDao.create(user)) {
+                            System.out.println("reussi");
+                            dispose();
+                        } else
+                            System.out.println("echec");
+
+                    } catch (Exception e) {
+                        System.out.println("code postal faux");
+                    }
+
 
                 }
 
