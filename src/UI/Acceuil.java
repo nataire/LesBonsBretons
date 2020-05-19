@@ -1,8 +1,10 @@
 package UI;
 
 import dao.JpaAnnonceDao;
+import dao.JpaCategorieDao;
 import dao.JpaUtilisateurDao;
 import metier.AnnonceEntity;
+import metier.CategorieEntity;
 import metier.UtilisateurEntity;
 
 import javax.swing.*;
@@ -19,10 +21,12 @@ public class Acceuil extends JFrame {
     public JButton jButtonInscription;
     public JTextField jTextFieldRecherche;
     public JButton jButtonRecherche;
+    public JComboBox jComboBox;
     public JList<AnnonceEntity> jListAnnonce;
     public AnnonceEntity AnnonceE;
 
     private JpaAnnonceDao JpaAn;
+    private JpaCategorieDao JpaCat;
 
     public Acceuil() {
         this.setSize(600, 600);
@@ -33,6 +37,7 @@ public class Acceuil extends JFrame {
         JpaAn = new JpaAnnonceDao();
         jPanelAnnonce.setBackground(Color.BLUE);
         AnnonceE = new AnnonceEntity();
+        JpaCat = new JpaCategorieDao();
 
         jTextFieldEmail = new JTextField();
         jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
@@ -43,6 +48,11 @@ public class Acceuil extends JFrame {
         jTextFieldRecherche = new JTextField();
         jTextFieldRecherche.setPreferredSize(new Dimension(500, 30));
 
+        jComboBox = new JComboBox();
+        Collection<CategorieEntity> categorie = JpaCat.findAll();
+        for (CategorieEntity c : categorie) {
+            jComboBox.addItem(c.getNomCategorie());
+        }
         jButtonRecherche = new JButton("Recherche");
         jButtonRecherche.setPreferredSize(new Dimension(250, 30));
         jButtonRecherche.addActionListener(new ActionListener() {
@@ -50,7 +60,7 @@ public class Acceuil extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
 
 
-                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText());
+                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText()); //jComboBox.getSelectedItem().toString()
                 //Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
                 System.out.println(mesAnnonces);// a continuer
                 for (AnnonceEntity an : mesAnnonces) {
@@ -94,6 +104,7 @@ public class Acceuil extends JFrame {
 
         jPanelAnnonce.add(jTextFieldRecherche);
         jPanelAnnonce.add(jButtonRecherche);
+        jPanelAnnonce.add(jComboBox);
 
         this.add(jPanelAnnonce);
         this.add(jPanelOptions);

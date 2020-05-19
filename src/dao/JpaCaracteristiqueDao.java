@@ -3,8 +3,10 @@ package dao;
 import metier.CaracteristiqueEntity;
 import org.hibernate.query.Query;
 
+import java.util.Collection;
 
-public class JpaCaracteristiqueDao extends JpaDao<CaracteristiqueEntity> implements CaracteristiqueDao{
+
+public class JpaCaracteristiqueDao extends JpaDao<CaracteristiqueEntity> implements CaracteristiqueDao {
 
     @Override
     public CaracteristiqueEntity find(Integer id) {
@@ -14,9 +16,15 @@ public class JpaCaracteristiqueDao extends JpaDao<CaracteristiqueEntity> impleme
 
     @Override
     public boolean deleteAll() {
-        if(session.createQuery("DELETE FROM CaracteristiqueEntity").executeUpdate() > 0){
+        if (session.createQuery("DELETE FROM CaracteristiqueEntity").executeUpdate() > 0) {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Collection<CaracteristiqueEntity> findAll() {
+        Query query = session.createQuery("SELECT c FROM CaracteristiqueEntity c");
+        return (Collection<CaracteristiqueEntity>) query.getResultList();
     }
 }
