@@ -1,7 +1,13 @@
 package UI;
 
+import dao.JpaLocalisationDao;
+import dao.JpaUtilisateurDao;
+import metier.UtilisateurEntity;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Inscription extends JDialog {
 
@@ -35,8 +41,8 @@ public class Inscription extends JDialog {
         };
 
         JTextField jTextFieldEmail = new JTextField();
-        JTextField jTextFieldPassword = new JTextField();
-        JTextField jTextFieldPasswordConfirm = new JTextField();
+        JPasswordField jTextFieldPassword = new JPasswordField();
+        JPasswordField jTextFieldPasswordConfirm = new JPasswordField();
         JTextField jTextFieldVille = new JTextField();
         JTextField jTextFieldRue = new JTextField();
         JTextField jTextFieldNumRue = new JTextField();
@@ -49,6 +55,52 @@ public class Inscription extends JDialog {
         JLabel jLabelTitle = new JLabel("Inscrivez vous içi");
 
         JButton jButton = new JButton("Inscription");
+
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                String password = new String(jTextFieldPassword.getPassword());
+                String confirmPassword = new String(jTextFieldPasswordConfirm.getPassword());
+
+                if (password.equals(confirmPassword)) {
+
+                    String email = jTextFieldEmail.getText();
+                    String ville = jTextFieldVille.getText();
+                    String rue = jTextFieldRue.getText();
+                    int numRue = Integer.parseInt(jTextFieldNumRue.getText());
+                    String numTel = jTextFieldNumTel.getText();
+
+                    UtilisateurEntity user = new UtilisateurEntity();
+                    user.setLogin(email);
+                    user.setPassword(password);
+                    user.setVille(ville);
+                    user.setRue(rue);
+                    user.setNumRue(numRue);
+                    user.setNumTel(numTel);
+
+                    JpaLocalisationDao localisationDao = new JpaLocalisationDao();
+                    JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+
+
+                    try {
+                        user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
+                        if (userDao.create(user)) {
+                            System.out.println("reussi");
+                            dispose();
+                        } else
+                            System.out.println("echec");
+
+                    } catch (Exception e) {
+                        System.out.println("code postal faux");
+                    }
+
+
+                }
+
+            }
+        });
+
 
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
@@ -85,6 +137,7 @@ public class Inscription extends JDialog {
 
         this.setContentPane(jPanel);
         this.setVisible(true);
+
 
     }
 
