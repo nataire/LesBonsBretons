@@ -15,16 +15,6 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (Collection<UtilisateurEntity>) query.getResultList();
     }
 
-    @Override
-    public void creer(UtilisateurEntity utilisateur) {
-
-    }
-
-    @Override
-    public void persist(UtilisateurEntity entity) {
-        session.persist(entity);
-    }
-
 
     @Override
     public UtilisateurEntity find(Integer idUser) {
@@ -32,10 +22,14 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (UtilisateurEntity) query.getSingleResult();
     }
 
-    @Override
-    public UtilisateurEntity find(Class c, Integer id) {
-        return null;
+
+    public UtilisateurEntity connexionUser(String mEmail, String mPassword) {
+        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE t.login =  :mEmail  AND t.password = :mPassword");
+        query.setParameter("mEmail", mEmail); // replace first ? with value for first name
+        query.setParameter("mPassword", mPassword);
+        return (UtilisateurEntity) query.getSingleResult();
     }
+
 
     @Override
     public Collection<UtilisateurEntity> findAll() {
@@ -51,12 +45,6 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     //endregion
-
-
-    public UtilisateurEntity connexionUser(String loginUser, String passwordUser) {
-        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE login = " + loginUser + " AND password = " + passwordUser);
-        return (UtilisateurEntity) query.getResultList();
-    }
 
 
     public void inscriptionUser(UtilisateurEntity utilisateur) {

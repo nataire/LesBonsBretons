@@ -6,6 +6,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "Utilisateur")
 public class UtilisateurEntity {
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "idUtilisateur",nullable = false,insertable = false,updatable = false)
@@ -26,8 +27,14 @@ public class UtilisateurEntity {
     @Column(name = "numrue")
     private int numRue;
 
-    @Column(name = "idLocalisationUtilisateur")
-    private int idLocalisationUtilisateur;
+    // @Column(name = "idLocalisationUtilisateur")
+    //@JoinColumn(name="ville_id")
+
+    //@JoinColumn(name = "idLocalisationUtilisateur")
+    //@JoinColumn(name="idLocalisationUtilisateur", referencedColumnName="ville_id")
+    @ManyToOne
+    @JoinColumn(name = "idLocalisationUtilisateur", referencedColumnName = "ville_id")
+    private LocalisationEntity idLocalisationUtilisateur;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private AnnonceEntity AnnonceUser;
@@ -86,11 +93,11 @@ public class UtilisateurEntity {
         this.numRue = numRue;
     }
 
-    public int getIdLocalisationUtilisateur() {
+    public LocalisationEntity getIdLocalisationUtilisateur() {
         return idLocalisationUtilisateur;
     }
 
-    public void setIdLocalisationUtilisateur(int idLocalisationUtilisateur) {
+    public void setIdLocalisationUtilisateur(LocalisationEntity idLocalisationUtilisateur) {
         this.idLocalisationUtilisateur = idLocalisationUtilisateur;
     }
 

@@ -10,9 +10,9 @@ public class JpaLocalisationDao extends JpaDao<LocalisationEntity> implements Lo
 
 
     @Override
-    public LocalisationEntity find(Integer id) {
-        Query query = session.createQuery("SELECT t FROM LocalisationEntity t WHERE id = " + id);
-        return (LocalisationEntity) query.getResultList();
+    public LocalisationEntity find(Integer codePostal) {
+        Query query = session.createQuery("SELECT t FROM LocalisationEntity t WHERE code_postal = " + codePostal);
+        return (LocalisationEntity) query.getSingleResult();
     }
 
     @Override

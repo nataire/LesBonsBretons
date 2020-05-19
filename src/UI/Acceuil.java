@@ -1,7 +1,9 @@
 package UI;
 
 import dao.JpaAnnonceDao;
+import dao.JpaUtilisateurDao;
 import metier.AnnonceEntity;
+import metier.UtilisateurEntity;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +30,6 @@ public class Acceuil extends JFrame {
 
         JPanel jPanelOptions = new JPanel();
         JPanel jPanelAnnonce = new JPanel();
-
         JpaAn = new JpaAnnonceDao();
         jPanelAnnonce.setBackground(Color.BLUE);
         AnnonceE = new AnnonceEntity();
@@ -36,7 +37,7 @@ public class Acceuil extends JFrame {
         jTextFieldEmail = new JTextField();
         jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
 
-        jTextFieldPassword = new JTextField();
+        jTextFieldPassword = new JPasswordField();
         jTextFieldPassword.setPreferredSize(new Dimension(500, 50));
 
         jTextFieldRecherche = new JTextField();
@@ -47,22 +48,26 @@ public class Acceuil extends JFrame {
         jButtonRecherche.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
-                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText());
-                //Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
-                System.out.println(mesAnnonces);// a continuer
-                for (AnnonceEntity an : mesAnnonces) {
-                    System.out.println(an.getIdAnnonce());
-                    JLabel anText = new JLabel();
-                    anText.setPreferredSize(new Dimension(250, 30));
-                    anText.setText(an.getTitreAnnonce());
-                    jPanelAnnonce.add(anText);
-                }
+                // if (jTextFieldRecherche.getText() != "") {
+                //JpaAn.findFirstAvailable();
+                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
+                System.out.println("test");// a continuer
+                // }
             }
         });
 
         jButtonConnexion = new JButton("Connexion");
         jButtonConnexion.setPreferredSize(new Dimension(500, 50));
+        jButtonConnexion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                JpaUtilisateurDao utilisateurDao = new JpaUtilisateurDao();
+                UtilisateurEntity user = utilisateurDao.connexionUser(jTextFieldEmail.getText(), jTextFieldPassword.getText());
+                System.out.println(user.toString());
+            }
+        });
+
 
         jButtonInscription = new JButton("Inscription");
         jButtonInscription.setPreferredSize(new Dimension(500, 50));
