@@ -23,10 +23,10 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
 
-    public UtilisateurEntity Connexion(String mEmail, String mPassword) {
-        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE login =  ?  AND password = ?");
-        query.setParameter(1, mEmail); // replace first ? with value for first name
-        query.setParameter(2, mPassword);
+    public UtilisateurEntity connexionUser(String mEmail, String mPassword) {
+        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE t.login =  :mEmail  AND t.password = :mPassword");
+        query.setParameter("mEmail", mEmail); // replace first ? with value for first name
+        query.setParameter("mPassword", mPassword);
         return (UtilisateurEntity) query.getSingleResult();
     }
 
@@ -45,12 +45,6 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     //endregion
-
-
-    public UtilisateurEntity connexionUser(String loginUser, String passwordUser) {
-        Query query = session.createQuery("SELECT t FROM UtilisateurEntity t WHERE login = " + loginUser + " AND password = " + passwordUser);
-        return (UtilisateurEntity) query.getResultList();
-    }
 
 
     public void inscriptionUser(UtilisateurEntity utilisateur) {
