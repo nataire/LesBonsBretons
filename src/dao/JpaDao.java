@@ -39,9 +39,17 @@ public abstract class JpaDao<T> implements Dao<T> {
     @Override
     public boolean create(T obj) {
         Transaction tx = session.beginTransaction();
-        session.save(obj);
-        tx.commit();
-        return false;
+        try {
+
+            session.save(obj);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+
+            tx.rollback();
+            return false;
+        }
+
     }
 
     @Override
@@ -77,5 +85,9 @@ public abstract class JpaDao<T> implements Dao<T> {
     public void close() {
         session.close();
         ourSessionFactory.close();
+    }
+
+    public void flushSession() {
+        session.flush();
     }
 }
