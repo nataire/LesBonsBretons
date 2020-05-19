@@ -15,7 +15,6 @@ public class AnnonceEntity {
 
     @Basic
     @Column(name = "titreAnnonce")
-
     private String titreAnnonce;
 
     @Basic

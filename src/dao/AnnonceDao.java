@@ -7,5 +7,5 @@ import java.util.Collection;
 public interface AnnonceDao extends Dao<AnnonceEntity> {
     public AnnonceEntity findFirstAvailable();
 
-    public Collection<AnnonceEntity> findAnnonce(String Annonce);
+    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce);
 }

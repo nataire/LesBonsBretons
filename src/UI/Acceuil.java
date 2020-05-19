@@ -28,6 +28,7 @@ public class Acceuil extends JFrame {
 
         JPanel jPanelOptions = new JPanel();
         JPanel jPanelAnnonce = new JPanel();
+
         JpaAn = new JpaAnnonceDao();
         jPanelAnnonce.setBackground(Color.BLUE);
         AnnonceE = new AnnonceEntity();
@@ -46,11 +47,17 @@ public class Acceuil extends JFrame {
         jButtonRecherche.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-               // if (jTextFieldRecherche.getText() != "") {
-                    //JpaAn.findFirstAvailable();
-                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
-                System.out.println("test");// a continuer
-               // }
+
+                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText());
+                //Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
+                System.out.println(mesAnnonces);// a continuer
+                for (AnnonceEntity an : mesAnnonces) {
+                    System.out.println(an.getIdAnnonce());
+                    JLabel anText = new JLabel();
+                    anText.setPreferredSize(new Dimension(250, 30));
+                    anText.setText(an.getTitreAnnonce());
+                    jPanelAnnonce.add(anText);
+                }
             }
         });
 
