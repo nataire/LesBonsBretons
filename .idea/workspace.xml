@@ -26,13 +26,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="">
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Faut mettre une close where pour ajout de la catégorie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Acceuil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Acceuil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCaracteristiqueDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCaracteristiqueDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/AnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AnnonceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CaracteristiqueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CaracteristiqueDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaCaracteristiqueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaCaracteristiqueDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +159,8 @@
       <workItem from="1589802724921" duration="13457000" />
       <workItem from="1589816228625" duration="181000" />
       <workItem from="1589867898457" duration="636000" />
-      <workItem from="1589904546483" duration="2358000" />
+      <workItem from="1589904546483" duration="3236000" />
+      <workItem from="1589911092643" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -267,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589872993939</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Faut mettre une close where pour ajout de la catégorie">
+      <created>1589907167407</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1589907167407</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +317,8 @@
     <MESSAGE value="Ajout map des entités + test SQL" />
     <MESSAGE value="ajout de l'inscription" />
     <MESSAGE value="recherche par mot cle fait" />
-    <option name="LAST_COMMIT_MESSAGE" value="recherche par mot cle fait" />
+    <MESSAGE value="Faut mettre une close where pour ajout de la catégorie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Faut mettre une close where pour ajout de la catégorie" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -351,11 +359,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584097402201" />
-    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1589872993353">
+    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1589907166624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589872993353" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589907166624" />
     <state width="502" height="466" key="DebuggerActiveHint" timestamp="1589814574517">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -365,26 +373,26 @@
     </state>
     <state x="592" y="228" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589814986346" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1589907125752">
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1589907815178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589868547246" />
-    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589907125752" />
-    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1589907125752">
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589907815178" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1589907815178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589868547246" />
-    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589907125752" />
-    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1589907125751">
+    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589907815178" />
+    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1589907815178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589868547246" />
-    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589907125751" />
-    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1589907125752">
+    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589907815178" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1589907815178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589868547246" />
-    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589907125752" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589907815178" />
     <state width="746" height="277" key="GridCell.Tab.1.bottom" timestamp="1589830181307">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -410,24 +418,24 @@
     </state>
     <state width="189" height="380" key="HiddenNamespacesPopup/0.0.1536.864@0.0.1536.864" timestamp="1588938228900" />
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1584103115215" />
-    <state x="184" y="85" key="MergeDialog" timestamp="1584106547470">
+    <state x="184" y="85" key="MergeDialog" timestamp="1589907181719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584106547470" />
-    <state x="214" y="282" width="388" height="263" key="MultipleFileMergeDialog" timestamp="1588939453557">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="184" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589907181719" />
+    <state x="672" y="235" width="388" height="263" key="MultipleFileMergeDialog" timestamp="1589907184254">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="214" y="282" width="388" height="263" key="MultipleFileMergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1588939453557" />
-    <state x="672" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584106547477" />
+    <state x="672" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589907184254" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1581674636661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581674636661" />
-    <state x="875" y="244" key="Vcs.Push.Dialog.v2" timestamp="1589872997272">
+    <state x="875" y="244" key="Vcs.Push.Dialog.v2" timestamp="1589907168968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589816393548" />
-    <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589872997272" />
+    <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589907168968" />
     <state x="999" y="164" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584106706511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

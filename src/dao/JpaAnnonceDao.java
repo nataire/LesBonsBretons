@@ -9,7 +9,7 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
 
     private Class classAnnonce = new AnnonceEntity().getClass();
 
-    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, String nomCategorie) {
+    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce) {
         Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.titreAnnonce LIKE :nomAnnonce");
         query.setParameter("nomAnnonce", "%" + nomAnnonce + "%");
         return (Collection<AnnonceEntity>) query.getResultList();
