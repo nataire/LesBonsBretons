@@ -17,12 +17,6 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
         return (Collection<AnnonceEntity>) query.getResultList();
     }
 
-    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce) {
-        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.titreAnnonce LIKE :nomAnnonce");
-        query.setParameter("nomAnnonce", "%" + nomAnnonce + "%");
-        return (Collection<AnnonceEntity>) query.getResultList();
-    }
-
     @Override
     public AnnonceEntity find(Integer id) {
         return null;
