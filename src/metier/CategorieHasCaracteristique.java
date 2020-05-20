@@ -1,9 +1,6 @@
 package metier;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,30 +8,32 @@ import java.util.Objects;
 @Table(name = "CategorieHasCaracteristique")
 public class CategorieHasCaracteristique implements Serializable {
     @Id
-    @Column(name = "idCaracteristique", nullable = false, insertable = false, updatable = false)
-    private int idCaracteristique;
+    @OneToOne
+    @JoinColumn(name = "idCaracteristique", referencedColumnName = "idCaracteristique")
+    private CaracteristiqueEntity idCaracteristique;
 
     @Id
-    @Column(name = "idCategorie", nullable = false, insertable = false, updatable = false)
-    private int idCategorie;
+    @OneToOne
+    @JoinColumn(name = "idCategorie", referencedColumnName = "idCategorie")
+    private CategorieEntity idCategorie;
 
     public CategorieHasCaracteristique() {
     }
 
     //region getter/setter
-    public int getIdCaracteristique() {
+    public CaracteristiqueEntity getIdCaracteristique() {
         return idCaracteristique;
     }
 
-    public void setIdCaracteristique(int idCaracteristique) {
+    public void setIdCaracteristique(CaracteristiqueEntity idCaracteristique) {
         this.idCaracteristique = idCaracteristique;
     }
 
-    public int getIdCategorie() {
+    public CategorieEntity getIdCategorie() {
         return idCategorie;
     }
 
-    public void setIdCategorie(int idCategorie) {
+    public void setIdCategorie(CategorieEntity idCategorie) {
         this.idCategorie = idCategorie;
     }
 

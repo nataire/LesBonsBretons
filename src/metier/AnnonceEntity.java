@@ -2,7 +2,6 @@ package metier;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -25,17 +24,20 @@ public class AnnonceEntity {
     @Column(name = "isOffreAnnonce")
     private boolean isOffreAnnonce;
 
-    @OneToMany(mappedBy = "AnnonceCategorie", cascade = CascadeType.ALL, orphanRemoval = true)
-    //@JoinColumn(name = "idCategorie")
-    private List<CategorieEntity> categorie;
+    //@OneToMany(mappedBy = "AnnonceCategorie", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne
+    @JoinColumn(name = "idCategorieAnnonce", referencedColumnName = "idCategorie")
+    private CategorieEntity categorie;
 
-   /* @OneToMany(mappedBy = "AnnonceUser", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Column(name = "idUtilisateur")
-    private List<UtilisateurEntity> user;*/
 
-    @Basic
-    @Column(name = "idAnnonceLocalisation")
-    private int idAnnonceLocalisation;
+    @OneToOne
+    @JoinColumn(name = "idUtilisateurAnnonce", referencedColumnName = "idUtilisateur")
+    private UtilisateurEntity idUtilisateurAnnonce;
+
+
+    @OneToOne
+    @JoinColumn(name = "idAnnonceLocalisation", referencedColumnName = "ville_id")
+    private LocalisationEntity idAnnonceLocalisation;
 
     @Basic
     @Column(name = "dateAnnonce")
@@ -45,7 +47,7 @@ public class AnnonceEntity {
 
     }
 
-    public AnnonceEntity(String titreAnnonce, String descriptionAnnonce, boolean isOffreAnnonce, int idCategorieAnnonce, int idUtilisateurAnnonce, int idAnnonceLocalisation) {
+    public AnnonceEntity(String titreAnnonce, String descriptionAnnonce, boolean isOffreAnnonce, int idCategorieAnnonce, int idUtilisateurAnnonce, LocalisationEntity idAnnonceLocalisation) {
         this.titreAnnonce = titreAnnonce;
         this.descriptionAnnonce = descriptionAnnonce;
         this.isOffreAnnonce = isOffreAnnonce;
@@ -87,11 +89,11 @@ public class AnnonceEntity {
         isOffreAnnonce = offreAnnonce;
     }
 
-    public List<CategorieEntity> getCategorie() {
+    public CategorieEntity getCategorie() {
         return categorie;
     }
 
-    public void setCategorie(List<CategorieEntity> categorie) {
+    public void setCategorie(CategorieEntity categorie) {
         this.categorie = categorie;
     }
 
@@ -103,11 +105,11 @@ public class AnnonceEntity {
         this.user = user;
     }*/
 
-    public int getIdAnnonceLocalisation() {
+    public LocalisationEntity getIdAnnonceLocalisation() {
         return idAnnonceLocalisation;
     }
 
-    public void setIdAnnonceLocalisation(int idAnnonceLocalisation) {
+    public void setIdAnnonceLocalisation(LocalisationEntity idAnnonceLocalisation) {
         this.idAnnonceLocalisation = idAnnonceLocalisation;
     }
 

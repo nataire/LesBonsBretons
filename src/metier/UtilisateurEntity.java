@@ -27,12 +27,7 @@ public class UtilisateurEntity {
     @Column(name = "numrue")
     private int numRue;
 
-    // @Column(name = "idLocalisationUtilisateur")
-    //@JoinColumn(name="ville_id")
-
-    //@JoinColumn(name = "idLocalisationUtilisateur")
-    //@JoinColumn(name="idLocalisationUtilisateur", referencedColumnName="ville_id")
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "idLocalisationUtilisateur", referencedColumnName = "ville_id")
     private LocalisationEntity idLocalisationUtilisateur;
 

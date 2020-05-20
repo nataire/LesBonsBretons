@@ -16,8 +16,9 @@ public class CategorieEntity {
     @Column(name = "nomCategorie")
     private String nomCategorie;
 
-    @Column(name = "idSurCategorieCtg")
-    private int idSurCategorie;
+    @OneToOne
+    @JoinColumn(name = "idSurCategorieCtg", referencedColumnName = "idSurCategorie")
+    private SurCategorieEntity idSurCategorie;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private AnnonceEntity AnnonceCategorie;
@@ -42,11 +43,11 @@ public class CategorieEntity {
         this.nomCategorie = nomCategorie;
     }
 
-    public int getIdSurCategorie() {
+    public SurCategorieEntity getIdSurCategorie() {
         return idSurCategorie;
     }
 
-    public void setIdSurCategorie(int idSurCategorie) {
+    public void setIdSurCategorie(SurCategorieEntity idSurCategorie) {
         this.idSurCategorie = idSurCategorie;
     }
 
