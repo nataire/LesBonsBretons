@@ -8,4 +8,7 @@ public interface AnnonceDao extends Dao<AnnonceEntity> {
     public AnnonceEntity findFirstAvailable();
 
     public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, int idCategorie);
+
+    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce);
+
 }
