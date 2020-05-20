@@ -1,6 +1,7 @@
 package dao;
 
 import metier.AnnonceEntity;
+import metier.CategorieEntity;
 import metier.SurCategorieEntity;
 import org.hibernate.query.Query;
 
@@ -11,9 +12,16 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
     private Class classAnnonce = new AnnonceEntity().getClass();
 
     public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, SurCategorieEntity id) {
-        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.categorie = :idCategorie AND a.titreAnnonce LIKE :nomAnnonce");
+        Query query = session.createQuery("SELECT a FROM AnnonceEntity a, CategorieEntity b WHERE b.idSurCategorie = :idCategorie AND b.idCategorie= a.categorie.id AND a.titreAnnonce LIKE :nomAnnonce");
         query.setParameter("nomAnnonce", "%" + nomAnnonce + "%");
         query.setParameter("idCategorie", (SurCategorieEntity) id);
+        return (Collection<AnnonceEntity>) query.getResultList();
+    }
+
+    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, SurCategorieEntity surCategorieEntity, CategorieEntity category) {
+        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.categorie = :idCategorie AND a.titreAnnonce LIKE :nomAnnonce");
+        query.setParameter("nomAnnonce", "%" + nomAnnonce + "%");
+        query.setParameter("idCategorie", (CategorieEntity) category);
         return (Collection<AnnonceEntity>) query.getResultList();
     }
 
