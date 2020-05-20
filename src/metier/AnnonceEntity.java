@@ -1,15 +1,16 @@
 package metier;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Annonce")
-public class AnnonceEntity {
+public class AnnonceEntity implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "idAnnonce",nullable = false,insertable = false,updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idAnnonce", nullable = false, insertable = false, updatable = false)
     private int idAnnonce;
 
     @Basic

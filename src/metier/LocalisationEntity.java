@@ -2,15 +2,16 @@ package metier;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Ville")
-public class LocalisationEntity {
+public class LocalisationEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "ville_id",nullable = false,insertable = false,updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ville_id", nullable = false, insertable = false, updatable = false)
     private int idVille;
 
     @Column(name = "ville_nom")

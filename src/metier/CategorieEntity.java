@@ -1,12 +1,13 @@
 package metier;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Categorie")
 
-public class CategorieEntity {
+public class CategorieEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,11 +69,7 @@ public class CategorieEntity {
 
     @Override
     public String toString() {
-        return "CategorieEntity{" +
-                "idCategorie=" + idCategorie +
-                ", nomCategorie='" + nomCategorie + '\'' +
-                ", idSurCategorie=" + idSurCategorie +
-                '}';
+        return nomCategorie;
     }
     //endregion
 }

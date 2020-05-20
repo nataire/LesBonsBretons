@@ -1,15 +1,16 @@
 package metier;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Utilisateur")
-public class UtilisateurEntity {
+public class UtilisateurEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "idUtilisateur",nullable = false,insertable = false,updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idUtilisateur", nullable = false, insertable = false, updatable = false)
     private int idUtilisateur;
 
     @Column(name = "login")

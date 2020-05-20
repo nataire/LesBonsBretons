@@ -1,6 +1,7 @@
 package dao;
 
 import metier.AnnonceEntity;
+import metier.CategorieEntity;
 import org.hibernate.query.Query;
 
 import java.util.Collection;
@@ -9,10 +10,10 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
 
     private Class classAnnonce = new AnnonceEntity().getClass();
 
-    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, int idCategorie) {
-        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.titreAnnonce LIKE :nomAnnonce AND a.categorie = :idCategorie");
+    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, CategorieEntity id) {
+        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.categorie = :idCategorie AND a.titreAnnonce LIKE :nomAnnonce");
         query.setParameter("nomAnnonce", "%" + nomAnnonce + "%");
-        query.setParameter("idCategorie", idCategorie);
+        query.setParameter("idCategorie", (CategorieEntity) id);
         return (Collection<AnnonceEntity>) query.getResultList();
     }
 

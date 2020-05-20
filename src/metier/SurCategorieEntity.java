@@ -1,15 +1,16 @@
 package metier;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Surcategorie")
-public class SurCategorieEntity {
+public class SurCategorieEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "idSurCategorie",nullable = false,insertable = false,updatable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idSurCategorie", nullable = false, insertable = false, updatable = false)
     private int idSurCategorie;
 
     @Column(name = "nomSurCategorie")
