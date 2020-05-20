@@ -26,13 +26,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Inscription sur nouvelle fenetre">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="mise à jour PAO one to one (Categorie, Caracteristique, ANnonce)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/CategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CategorieEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/CategorieHasCaracteristique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/CategorieHasCaracteristique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieHasCaracteristique.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieHasCaracteristique.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +144,7 @@
       <workItem from="1589802724921" duration="13457000" />
       <workItem from="1589816228625" duration="181000" />
       <workItem from="1589867898457" duration="636000" />
-      <workItem from="1589957837107" duration="3766000" />
+      <workItem from="1589957837107" duration="6406000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -248,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589916719828</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="mise à jour PAO one to one (Categorie, Caracteristique, ANnonce)">
+      <created>1589963376777</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1589963376777</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +301,8 @@
     <MESSAGE value="Ajout map des entités + test SQL" />
     <MESSAGE value="ajout de l'inscription" />
     <MESSAGE value="Inscription sur nouvelle fenetre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inscription sur nouvelle fenetre" />
+    <MESSAGE value="mise à jour PAO one to one (Categorie, Caracteristique, ANnonce)" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise à jour PAO one to one (Categorie, Caracteristique, ANnonce)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -346,25 +357,25 @@
     </state>
     <state x="592" y="228" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589814986346" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1589962882505">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1589963222994">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589962882505" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589963222994" />
     <state width="1410" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589872967261" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1589962882504">
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1589963222993">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589962882504" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589963222993" />
     <state width="1410" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589872967260" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1589962882504">
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1589963222993">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589962882504" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589963222993" />
     <state width="1410" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589872967260" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1589962882505">
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1589963222993">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589962882505" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589963222993" />
     <state width="1410" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589872967261" />
     <state width="746" height="277" key="GridCell.Tab.1.bottom" timestamp="1589830181307">
       <screen x="0" y="0" width="1536" height="864" />
@@ -404,10 +415,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581674636661" />
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1589916722589">
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1589963378831">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589916722589" />
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589963378831" />
     <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588928927502" />
     <state x="999" y="164" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584106706511">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -416,10 +427,10 @@
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581673550479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589963030586">
+    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589963335324">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1589963030586" />
+    <state x="999" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1589963335324" />
     <state x="1249" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584114230254" />
     <state x="822" y="69" width="549" height="795" key="find.popup" timestamp="1589809009867">
       <screen x="0" y="0" width="1536" height="864" />
@@ -440,7 +451,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/metier/AnnonceEntity.java</url>
-          <line>59</line>
+          <line>58</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

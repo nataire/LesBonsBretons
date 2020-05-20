@@ -1,6 +1,5 @@
 package dao;
 
-import metier.CaracteristiqueEntity;
 import org.hibernate.query.Query;
 
 import java.util.Collection;
