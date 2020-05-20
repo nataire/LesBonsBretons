@@ -60,7 +60,7 @@ public class Acceuil extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
 
 
-                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText()); //jComboBox.getSelectedItem().toString()
+                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText(), jComboBox.getSelectedIndex()); //jComboBox.getSelectedItem().toString()
                 //Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
                 System.out.println(mesAnnonces);// a continuer
                 for (AnnonceEntity an : mesAnnonces) {
