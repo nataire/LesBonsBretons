@@ -51,7 +51,7 @@ public class Acceuil extends JFrame {
         jComboBox = new JComboBox();
         Collection<CategorieEntity> categorie = JpaCat.findAll();
         for (CategorieEntity c : categorie) {
-            jComboBox.addItem(c);
+            jComboBox.addItem(c.getNomCategorie());
         }
         jButtonRecherche = new JButton("Recherche");
         jButtonRecherche.setPreferredSize(new Dimension(250, 30));
@@ -60,9 +60,7 @@ public class Acceuil extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
 
 
-                CategorieEntity test = (CategorieEntity) jComboBox.getItemAt(jComboBox.getSelectedIndex());
-                //test.setNomCategorie(jComboBox.get);
-                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText(), test); //jComboBox.getSelectedItem().toString()
+                Collection<AnnonceEntity> mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText(), jComboBox.getSelectedIndex()); //jComboBox.getSelectedItem().toString()
                 //Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
                 System.out.println(mesAnnonces);// a continuer
                 for (AnnonceEntity an : mesAnnonces) {
