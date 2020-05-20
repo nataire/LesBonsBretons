@@ -2,9 +2,10 @@ package UI;
 
 import dao.JpaAnnonceDao;
 import dao.JpaCategorieDao;
+import dao.JpaSurCategorieDao;
 import dao.JpaUtilisateurDao;
 import metier.AnnonceEntity;
-import metier.CategorieEntity;
+import metier.SurCategorieEntity;
 import metier.UtilisateurEntity;
 
 import javax.swing.*;
@@ -27,6 +28,7 @@ public class Acceuil extends JFrame {
 
     private JpaAnnonceDao JpaAn;
     private JpaCategorieDao JpaCat;
+    private JpaSurCategorieDao JpaSurCat;
 
     public Acceuil() {
         this.setSize(600, 600);
@@ -38,6 +40,7 @@ public class Acceuil extends JFrame {
         jPanelAnnonce.setBackground(Color.BLUE);
         AnnonceE = new AnnonceEntity();
         JpaCat = new JpaCategorieDao();
+        JpaSurCat = new JpaSurCategorieDao();
 
         jTextFieldEmail = new JTextField();
         jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
@@ -50,8 +53,9 @@ public class Acceuil extends JFrame {
 
         jComboBox = new JComboBox();
         jComboBox.addItem("");
-        Collection<CategorieEntity> categorie = JpaCat.findAll();
-        for (CategorieEntity c : categorie) {
+        Collection<SurCategorieEntity> surCategorie = JpaSurCat.findAll();
+        //Collection<CategorieEntity> categorie = JpaCat.findAll();
+        for (SurCategorieEntity c : surCategorie) {
             jComboBox.addItem(c);
         }
 
@@ -62,7 +66,7 @@ public class Acceuil extends JFrame {
             public void actionPerformed(ActionEvent actionEvent) {
                 Collection<AnnonceEntity> mesAnnonces = null;
                 if (jComboBox.getSelectedIndex() != 0) {
-                    mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText(), (CategorieEntity) jComboBox.getItemAt(jComboBox.getSelectedIndex()));
+                    mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText(), (SurCategorieEntity) jComboBox.getItemAt(jComboBox.getSelectedIndex()));
                 } else {
                     mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText());
                 }

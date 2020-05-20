@@ -1,14 +1,14 @@
 package dao;
 
 import metier.AnnonceEntity;
-import metier.CategorieEntity;
+import metier.SurCategorieEntity;
 
 import java.util.Collection;
 
 public interface AnnonceDao extends Dao<AnnonceEntity> {
     public AnnonceEntity findFirstAvailable();
 
-    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, CategorieEntity idCategorie);
+    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce, SurCategorieEntity idCategorie);
 
     public Collection<AnnonceEntity> findAnnonce(String nomAnnonce);
 }
