@@ -53,10 +53,7 @@ public class SurCategorieEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "SurCategorieEntity{" +
-                "idSurCategorie=" + idSurCategorie +
-                ", nomSurCategorie='" + nomSurCategorie + '\'' +
-                '}';
+        return idSurCategorie + " - " + nomSurCategorie;
     }
     //endregion
 }

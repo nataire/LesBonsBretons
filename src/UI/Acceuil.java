@@ -3,127 +3,152 @@ package UI;
 import dao.JpaAnnonceDao;
 import dao.JpaCategorieDao;
 import dao.JpaSurCategorieDao;
-import dao.JpaUtilisateurDao;
 import metier.AnnonceEntity;
+import metier.CategorieEntity;
 import metier.SurCategorieEntity;
-import metier.UtilisateurEntity;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class Acceuil extends JFrame {
 
-    public JTextField jTextFieldEmail;
-    public JTextField jTextFieldPassword;
-    public JButton jButtonConnexion;
-    public JButton jButtonInscription;
-    public JTextField jTextFieldRecherche;
-    public JButton jButtonRecherche;
-    public JComboBox jComboBox;
-    public JList<AnnonceEntity> jListAnnonce;
-    public AnnonceEntity AnnonceE;
+    Collection<AnnonceEntity> annonceEntities = null;
+    JComboBox<AnnonceEntity> annonceEntityJComboBox = new JComboBox<>();
 
-    private JpaAnnonceDao JpaAn;
-    private JpaCategorieDao JpaCat;
-    private JpaSurCategorieDao JpaSurCat;
+    private JPanel jPanelParent;
+    private JPanel jPanelHeader;
+    private JPanel jPanelBody;
+    private JPanel jPanelListAnnonce = new JPanel();
+    private JPanel jPanelFooter;
 
     public Acceuil() {
-        this.setSize(600, 600);
-        this.setLayout(new GridLayout(1, 2));
 
-        JPanel jPanelOptions = new JPanel();
-        JPanel jPanelAnnonce = new JPanel();
-        JpaAn = new JpaAnnonceDao();
-        jPanelAnnonce.setBackground(Color.BLUE);
-        AnnonceE = new AnnonceEntity();
-        JpaCat = new JpaCategorieDao();
-        JpaSurCat = new JpaSurCategorieDao();
+        jPanelParent = new JPanel();
 
-        jTextFieldEmail = new JTextField();
-        jTextFieldEmail.setPreferredSize(new Dimension(500, 50));
+        setjPanelHeader();
+        jPanelHeader.setPreferredSize(new Dimension(1000, 75));
+        jPanelHeader.setBackground(getHSBFromRGB(255, 87, 51));
 
-        jTextFieldPassword = new JPasswordField();
-        jTextFieldPassword.setPreferredSize(new Dimension(500, 50));
+        setjPanelBody();
+        jPanelBody.setPreferredSize(new Dimension(1000, 900));
 
-        jTextFieldRecherche = new JTextField();
-        jTextFieldRecherche.setPreferredSize(new Dimension(500, 30));
+        jPanelFooter = new JPanel();
+        jPanelFooter.setPreferredSize(new Dimension(1000, 25));
+        jPanelFooter.setBackground(getHSBFromRGB(255, 87, 51));
 
-        jComboBox = new JComboBox();
-        jComboBox.addItem("");
-        Collection<SurCategorieEntity> surCategorie = JpaSurCat.findAll();
-        //Collection<CategorieEntity> categorie = JpaCat.findAll();
+        jPanelParent.setLayout(new BorderLayout());
+        jPanelParent.add(jPanelHeader, BorderLayout.NORTH);
+        jPanelParent.add(jPanelBody, BorderLayout.CENTER);
+        jPanelParent.add(jPanelFooter, BorderLayout.SOUTH);
+
+        this.setContentPane(jPanelParent);
+        this.setSize(1000, 1000);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+    }
+
+    private void setjPanelHeader() {
+
+        jPanelHeader = new JPanel();
+        jPanelHeader.setLayout(new GridBagLayout());
+
+        JLabel jLabelTitle = new JLabel("<html><h1>Les Bons Bretons</h1></html>");
+
+        JButton jButtonConnexion = new JButton("Connexion");
+        jButtonConnexion.setPreferredSize(new Dimension(200, 25));
+        JButton jButtonInscription = new JButton("Inscription");
+        jButtonInscription.setPreferredSize(new Dimension(200, 25));
+
+
+        addComponentInPanel(jPanelHeader, jLabelTitle, 0, 0, 1, 10, 1, GridBagConstraints.LINE_START, GridBagConstraints.BASELINE, new int[]{0, 25, 0, 0});
+        addComponentInPanel(jPanelHeader, jButtonConnexion, 1, 0, 1, 0.1, 1, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 0});
+        addComponentInPanel(jPanelHeader, jButtonInscription, 2, 0, 1, 0.1, 1, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 5});
+    }
+
+    private void setjPanelBody() {
+        jPanelBody = new JPanel();
+        jPanelBody.setLayout(new GridBagLayout());
+
+        JTextField jTextFieldRecherche = new JTextField();
+        jTextFieldRecherche.setPreferredSize(new Dimension(200, 25));
+
+        JComboBox jComboBoxSurCat = new JComboBox();
+        jComboBoxSurCat.setPreferredSize(new Dimension(200, 25));
+        JpaSurCategorieDao jpaSurCategorieDao = new JpaSurCategorieDao();
+        Collection<SurCategorieEntity> surCategorie = jpaSurCategorieDao.findAll();
         for (SurCategorieEntity c : surCategorie) {
-            jComboBox.addItem(c);
+            jComboBoxSurCat.addItem(c);
+        }
+        JComboBox jComboBoxCat = new JComboBox();
+        jComboBoxCat.setPreferredSize(new Dimension(200, 25));
+        JpaCategorieDao jpaCategorieDao = new JpaCategorieDao();
+        Collection<CategorieEntity> categorie = jpaCategorieDao.findAll();
+        for (CategorieEntity c : categorie) {
+            jComboBoxCat.addItem(c);
         }
 
-        jButtonRecherche = new JButton("Recherche");
-        jButtonRecherche.setPreferredSize(new Dimension(250, 30));
+        JButton jButtonRecherche = new JButton("Rechercher");
+        jButtonRecherche.setPreferredSize(new Dimension(200, 25));
         jButtonRecherche.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Collection<AnnonceEntity> mesAnnonces = null;
-                if (jComboBox.getSelectedIndex() != 0) {
-                    mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText(), (SurCategorieEntity) jComboBox.getItemAt(jComboBox.getSelectedIndex()));
-                } else {
-                    mesAnnonces = JpaAn.findAnnonce(jTextFieldRecherche.getText());
-                }
-                //jComboBox.getSelectedItem().toString()
-                //Collection<AnnonceEntity> mesAnnonces = JpaAn.findAll();
-                System.out.println(mesAnnonces);// a continuer
-                for (AnnonceEntity an : mesAnnonces) {
-                    System.out.println(an.getIdAnnonce());
-                    JLabel anText = new JLabel();
-                    anText.setPreferredSize(new Dimension(250, 30));
-                    anText.setText(an.getTitreAnnonce());
-                    jPanelAnnonce.add(anText);
-                }
+            public void actionPerformed(ActionEvent e) {
+                JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
+                annonceEntities = jpaAnnonceDao.findAnnonce(
+                        jTextFieldRecherche.getText(),
+                        (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex())
+                );
+                setjPanelListAnnonce();
             }
         });
 
-        jButtonConnexion = new JButton("Connexion");
-        jButtonConnexion.setPreferredSize(new Dimension(500, 50));
-        jButtonConnexion.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
+        addComponentInPanel(jPanelBody, jTextFieldRecherche, 0, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 0, 0, 10});
+        addComponentInPanel(jPanelBody, jComboBoxSurCat, 1, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 10});
+        addComponentInPanel(jPanelBody, jComboBoxCat, 2, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 10});
+        addComponentInPanel(jPanelBody, jButtonRecherche, 3, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 0});
 
-                try {
-                    JpaUtilisateurDao utilisateurDao = new JpaUtilisateurDao();
-                    UtilisateurEntity user = utilisateurDao.connexionUser(jTextFieldEmail.getText(), jTextFieldPassword.getText());
-                    System.out.println(user.toString());
-                } catch (javax.persistence.NoResultException e) {
-                    System.out.println("Non trouvé");
-                }
+        addComponentInPanel(jPanelBody, setjPanelListAnnonce(), 0, 1, 4, 0, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new int[]{0, 0, 25, 0});
 
-            }
-        });
+    }
 
+    private JPanel setjPanelListAnnonce() {
+        jPanelListAnnonce.setLayout(new GridBagLayout());
 
-        jButtonInscription = new JButton("Inscription");
-        jButtonInscription.setPreferredSize(new Dimension(500, 50));
-        jButtonInscription.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Acceuil acc = new Acceuil();
-                Inscription inscription = new Inscription(acc, true);
-                inscription.setVisible(true);
-            }
-        });
+        ArrayList<AnnonceEntity> list = new ArrayList<>();
+        if (annonceEntities != null) list.addAll(annonceEntities);
 
-        jPanelOptions.add(jTextFieldEmail);
-        jPanelOptions.add(jTextFieldPassword);
-        jPanelOptions.add(jButtonConnexion);
-        jPanelOptions.add(jButtonInscription);
+        for (int i = 0; i < list.size(); i++) {
+            addComponentInPanel(jPanelListAnnonce, new JLabel(list.get(i).getTitreAnnonce()), 0, i, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 0});
+        }
 
-        jPanelAnnonce.add(jTextFieldRecherche);
-        jPanelAnnonce.add(jButtonRecherche);
-        jPanelAnnonce.add(jComboBox);
+        jPanelListAnnonce.updateUI();
 
-        this.add(jPanelAnnonce);
-        this.add(jPanelOptions);
+        return jPanelListAnnonce;
+    }
 
+    private Color getHSBFromRGB(int red, int green, int blue) {
+        float[] hsb = new float[3];
+        Color.RGBtoHSB(red, green, blue, hsb);
+        // brightness
+        hsb[2] *= 1f;
+        // saturation
+        hsb[1] *= 1f;
+        return Color.getHSBColor(hsb[0], hsb[1], hsb[2]);
+    }
 
+    private void addComponentInPanel(JPanel jPanel, JComponent jComponent, int gridx, int gridy, int gridwith, double weightx, double weighty, int anchor, int fill, int[] insets) {
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.fill = fill;
+        gridBagConstraints.gridx = gridx;
+        gridBagConstraints.gridy = gridy;
+        gridBagConstraints.gridwidth = gridwith;
+        if (weightx != 0) gridBagConstraints.weightx = weightx;
+        if (weighty != 0) gridBagConstraints.weighty = weighty;
+        gridBagConstraints.anchor = anchor;
+        gridBagConstraints.insets = new Insets(insets[0], insets[1], insets[2], insets[3]);
+        jPanel.add(jComponent, gridBagConstraints);
     }
 }

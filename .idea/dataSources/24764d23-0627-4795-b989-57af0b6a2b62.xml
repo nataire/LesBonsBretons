@@ -815,393 +815,366 @@
     <table id="257" parent="5" name="Annonce">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="258" parent="5" name="Caracteristique">
+    <table id="258" parent="5" name="Categorie">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="259" parent="5" name="Categorie">
+    <table id="259" parent="5" name="Surcategorie">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="260" parent="5" name="Surcategorie">
+    <table id="260" parent="5" name="Utilisateur">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="261" parent="5" name="Utilisateur">
+    <table id="261" parent="5" name="Ville">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="262" parent="5" name="Ville">
-      <Collation>utf8_general_ci</Collation>
-    </table>
-    <routine id="263" parent="5" name="fn_count_phones">
+    <routine id="262" parent="5" name="fn_count_phones">
       <SourceTextLength>73</SourceTextLength>
       <Definer>cchabot@%</Definer>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="264" parent="5" name="inscription">
+    <routine id="263" parent="5" name="inscription">
       <SourceTextLength>384</SourceTextLength>
       <Definer>cchabot@%</Definer>
       <RoutineKind>function</RoutineKind>
     </routine>
-    <routine id="265" parent="5" name="rechercheUtilisateur">
+    <routine id="264" parent="5" name="rechercheUtilisateur">
       <SourceTextLength>96</SourceTextLength>
       <Definer>nataire@localhost</Definer>
       <RoutineKind>procedure</RoutineKind>
     </routine>
-    <column id="266" parent="257" name="idAnnonce">
+    <column id="265" parent="257" name="idAnnonce">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="257" name="titreAnnonce">
+    <column id="266" parent="257" name="titreAnnonce">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="257" name="descriptionAnnonce">
+    <column id="267" parent="257" name="descriptionAnnonce">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="257" name="isOffreAnnonce">
+    <column id="268" parent="257" name="isOffreAnnonce">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="257" name="idCategorieAnnonce">
+    <column id="269" parent="257" name="idCategorieAnnonce">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="257" name="idUtilisateurAnnonce">
+    <column id="270" parent="257" name="idUtilisateurAnnonce">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="257" name="idAnnonceLocalisation">
+    <column id="271" parent="257" name="idAnnonceLocalisation">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="257" name="dateAnnonce">
+    <column id="272" parent="257" name="dateAnnonce">
       <Position>8</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="257" name="prix">
+    <column id="273" parent="257" name="prix">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="275" parent="257" name="fkAnnonceCategorie">
+    <index id="274" parent="257" name="fkAnnonceCategorie">
       <ColNames>idCategorieAnnonce</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="276" parent="257" name="fkAnnonceUtilisateur">
+    <index id="275" parent="257" name="fkAnnonceUtilisateur">
       <ColNames>idUtilisateurAnnonce</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="277" parent="257" name="fkAnnonceLocalisation">
+    <index id="276" parent="257" name="fkAnnonceLocalisation">
       <ColNames>idAnnonceLocalisation</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="278" parent="257" name="PRIMARY">
+    <key id="277" parent="257" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idAnnonce</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="279" parent="257" name="FKhkh7buiuk7ll8km4gb5qur8dp">
+    <foreign-key id="278" parent="257" name="FKhkh7buiuk7ll8km4gb5qur8dp">
       <ColNames>idCategorieAnnonce</ColNames>
       <RefTableName>Categorie</RefTableName>
       <RefColNames>idCategorie</RefColNames>
     </foreign-key>
-    <foreign-key id="280" parent="257" name="fkAnnonceCategorie">
+    <foreign-key id="279" parent="257" name="fkAnnonceCategorie">
       <ColNames>idCategorieAnnonce</ColNames>
       <RefTableName>Categorie</RefTableName>
       <RefColNames>idCategorie</RefColNames>
     </foreign-key>
-    <foreign-key id="281" parent="257" name="FKk4kprqxgrsxjxuahqw5bk3xro">
+    <foreign-key id="280" parent="257" name="FKk4kprqxgrsxjxuahqw5bk3xro">
       <ColNames>idUtilisateurAnnonce</ColNames>
       <RefTableName>Utilisateur</RefTableName>
       <RefColNames>idUtilisateur</RefColNames>
     </foreign-key>
-    <foreign-key id="282" parent="257" name="fkAnnonceUtilisateur">
+    <foreign-key id="281" parent="257" name="fkAnnonceUtilisateur">
       <ColNames>idUtilisateurAnnonce</ColNames>
       <RefTableName>Utilisateur</RefTableName>
       <RefColNames>idUtilisateur</RefColNames>
     </foreign-key>
-    <foreign-key id="283" parent="257" name="FKg15xevva6mv2wdt7b232drlrx">
+    <foreign-key id="282" parent="257" name="FKg15xevva6mv2wdt7b232drlrx">
       <ColNames>idAnnonceLocalisation</ColNames>
       <RefTableName>Ville</RefTableName>
       <RefColNames>ville_id</RefColNames>
     </foreign-key>
-    <foreign-key id="284" parent="257" name="fkAnnonceLocalisation">
+    <foreign-key id="283" parent="257" name="fkAnnonceLocalisation">
       <ColNames>idAnnonceLocalisation</ColNames>
       <RefTableName>Ville</RefTableName>
       <RefColNames>ville_id</RefColNames>
     </foreign-key>
-    <column id="285" parent="258" name="idCaracteristique">
+    <column id="284" parent="258" name="idCategorie">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="258" name="nomCaracteristique">
+    <column id="285" parent="258" name="nomCategorie">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="258" name="typeCaracteristique">
-      <Position>3</Position>
-      <DataType>varchar(25)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="288" parent="258" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>idCaracteristique</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="289" parent="259" name="idCategorie">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="290" parent="259" name="nomCategorie">
-      <Position>2</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="291" parent="259" name="idSurCategorieCtg">
+    <column id="286" parent="258" name="idSurCategorieCtg">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="259" name="AnnonceCategorie_idAnnonce">
+    <column id="287" parent="258" name="AnnonceCategorie_idAnnonce">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="293" parent="259" name="fk_Categorie_SurCategorie1">
+    <index id="288" parent="258" name="fk_Categorie_SurCategorie1">
       <ColNames>idSurCategorieCtg</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="294" parent="259" name="FKjtk3v5n658r8c0uq07kuw7nkw">
+    <index id="289" parent="258" name="FKjtk3v5n658r8c0uq07kuw7nkw">
       <ColNames>AnnonceCategorie_idAnnonce</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="295" parent="259" name="PRIMARY">
+    <key id="290" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idCategorie</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="296" parent="259" name="FKj5pxi0p5y7k1uhbpbny20utlw">
+    <foreign-key id="291" parent="258" name="FKj5pxi0p5y7k1uhbpbny20utlw">
       <ColNames>idSurCategorieCtg</ColNames>
       <RefTableName>Surcategorie</RefTableName>
       <RefColNames>idSurCategorie</RefColNames>
     </foreign-key>
-    <foreign-key id="297" parent="259" name="fk_Categorie_SurCategorie1">
+    <foreign-key id="292" parent="258" name="fk_Categorie_SurCategorie1">
       <ColNames>idSurCategorieCtg</ColNames>
       <RefTableName>Surcategorie</RefTableName>
       <RefColNames>idSurCategorie</RefColNames>
     </foreign-key>
-    <foreign-key id="298" parent="259" name="FKjtk3v5n658r8c0uq07kuw7nkw">
+    <foreign-key id="293" parent="258" name="FKjtk3v5n658r8c0uq07kuw7nkw">
       <ColNames>AnnonceCategorie_idAnnonce</ColNames>
       <RefTableName>Annonce</RefTableName>
       <RefColNames>idAnnonce</RefColNames>
     </foreign-key>
-    <column id="299" parent="260" name="idSurCategorie">
+    <column id="294" parent="259" name="idSurCategorie">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="260" name="nomSurCategorie">
+    <column id="295" parent="259" name="nomSurCategorie">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="301" parent="260" name="PRIMARY">
+    <key id="296" parent="259" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idSurCategorie</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="302" parent="261" name="idUtilisateur">
+    <column id="297" parent="260" name="idUtilisateur">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="261" name="login">
+    <column id="298" parent="260" name="login">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="261" name="password">
+    <column id="299" parent="260" name="password">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="261" name="numTel">
+    <column id="300" parent="260" name="numTel">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="261" name="rue">
+    <column id="301" parent="260" name="rue">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="261" name="numRue">
+    <column id="302" parent="260" name="numRue">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="261" name="idLocalisationUtilisateur">
+    <column id="303" parent="260" name="idLocalisationUtilisateur">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="261" name="ville">
+    <column id="304" parent="260" name="ville">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="261" name="AnnonceUser_idAnnonce">
+    <column id="305" parent="260" name="AnnonceUser_idAnnonce">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="311" parent="261" name="login">
+    <index id="306" parent="260" name="login">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="312" parent="261" name="fkUtilisateurVille">
+    <index id="307" parent="260" name="fkUtilisateurVille">
       <ColNames>idLocalisationUtilisateur</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="313" parent="261" name="FKkdob0xjsctcvoiuancp5loh1v">
+    <index id="308" parent="260" name="FKkdob0xjsctcvoiuancp5loh1v">
       <ColNames>AnnonceUser_idAnnonce</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="314" parent="261" name="PRIMARY">
+    <key id="309" parent="260" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idUtilisateur</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="315" parent="261" name="login">
+    <key id="310" parent="260" name="login">
       <ColNames>login</ColNames>
       <UnderlyingIndexName>login</UnderlyingIndexName>
     </key>
-    <foreign-key id="316" parent="261" name="FKkd3io0ruqqfaiwh303852u00w">
+    <foreign-key id="311" parent="260" name="FKkd3io0ruqqfaiwh303852u00w">
       <ColNames>idLocalisationUtilisateur</ColNames>
       <RefTableName>Ville</RefTableName>
       <RefColNames>ville_id</RefColNames>
     </foreign-key>
-    <foreign-key id="317" parent="261" name="fkUtilisateurVille">
+    <foreign-key id="312" parent="260" name="fkUtilisateurVille">
       <ColNames>idLocalisationUtilisateur</ColNames>
       <RefTableName>Ville</RefTableName>
       <RefColNames>ville_id</RefColNames>
     </foreign-key>
-    <foreign-key id="318" parent="261" name="FKkdob0xjsctcvoiuancp5loh1v">
+    <foreign-key id="313" parent="260" name="FKkdob0xjsctcvoiuancp5loh1v">
       <ColNames>AnnonceUser_idAnnonce</ColNames>
       <RefTableName>Annonce</RefTableName>
       <RefColNames>idAnnonce</RefColNames>
     </foreign-key>
-    <column id="319" parent="262" name="ville_id">
+    <column id="314" parent="261" name="ville_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="262" name="ville_nom">
+    <column id="315" parent="261" name="ville_nom">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="262" name="ville_code_postal">
+    <column id="316" parent="261" name="ville_code_postal">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="322" parent="262" name="ville_nom">
+    <index id="317" parent="261" name="ville_nom">
       <ColNames>ville_nom</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="323" parent="262" name="ville_code_postal">
+    <index id="318" parent="261" name="ville_code_postal">
       <ColNames>ville_code_postal</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="324" parent="262" name="PRIMARY">
+    <key id="319" parent="261" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ville_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <argument id="325" parent="263">
+    <argument id="320" parent="262">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>int(11)|0s</DataType>
     </argument>
-    <argument id="326" parent="263" name="personId">
+    <argument id="321" parent="262" name="personId">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
     </argument>
-    <argument id="327" parent="264">
+    <argument id="322" parent="263">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>tinyint(1)|0s</DataType>
     </argument>
-    <argument id="328" parent="264" name="mLogin">
+    <argument id="323" parent="263" name="mLogin">
       <Position>1</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="329" parent="264" name="mPassword">
+    <argument id="324" parent="263" name="mPassword">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="330" parent="264" name="mNumTel">
+    <argument id="325" parent="263" name="mNumTel">
       <Position>3</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="331" parent="264" name="mRue">
+    <argument id="326" parent="263" name="mRue">
       <Position>4</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="332" parent="264" name="mNumRue">
+    <argument id="327" parent="263" name="mNumRue">
       <Position>5</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="333" parent="264" name="mVille">
+    <argument id="328" parent="263" name="mVille">
       <Position>6</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="334" parent="265" name="loginConnexion">
+    <argument id="329" parent="264" name="loginConnexion">
       <Position>1</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="335" parent="265" name="paswwordConnexion">
+    <argument id="330" parent="264" name="paswwordConnexion">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
     </argument>
-    <argument id="336" parent="265" name="resultat">
+    <argument id="331" parent="264" name="resultat">
       <Position>3</Position>
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>tinyint(1)|0s</DataType>
