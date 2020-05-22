@@ -1,4 +1,4 @@
-package UI;
+package view;
 
 import dao.JpaLocalisationDao;
 import dao.JpaUtilisateurDao;
@@ -6,8 +6,6 @@ import metier.UtilisateurEntity;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Inscription extends JDialog {
 
@@ -56,49 +54,46 @@ public class Inscription extends JDialog {
 
         JButton jButton = new JButton("Inscription");
 
-        jButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
+        jButton.addActionListener(actionEvent -> {
 
-                String password = new String(jTextFieldPassword.getPassword());
-                String confirmPassword = new String(jTextFieldPasswordConfirm.getPassword());
+            String password = new String(jTextFieldPassword.getPassword());
+            String confirmPassword = new String(jTextFieldPasswordConfirm.getPassword());
 
-                if (password.equals(confirmPassword)) {
+            if (password.equals(confirmPassword)) {
 
-                    String email = jTextFieldEmail.getText();
-                    String ville = jTextFieldVille.getText();
-                    String rue = jTextFieldRue.getText();
-                    int numRue = Integer.parseInt(jTextFieldNumRue.getText());
-                    String numTel = jTextFieldNumTel.getText();
+                String email = jTextFieldEmail.getText();
+                String ville = jTextFieldVille.getText();
+                String rue = jTextFieldRue.getText();
+                int numRue = Integer.parseInt(jTextFieldNumRue.getText());
+                String numTel = jTextFieldNumTel.getText();
 
-                    UtilisateurEntity user = new UtilisateurEntity();
-                    user.setLogin(email);
-                    user.setPassword(password);
-                    user.setVille(ville);
-                    user.setRue(rue);
-                    user.setNumRue(numRue);
-                    user.setNumTel(numTel);
+                UtilisateurEntity user = new UtilisateurEntity();
+                user.setLogin(email);
+                user.setPassword(password);
+                user.setVille(ville);
+                user.setRue(rue);
+                user.setNumRue(numRue);
+                user.setNumTel(numTel);
 
-                    JpaLocalisationDao localisationDao = new JpaLocalisationDao();
-                    JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+                JpaLocalisationDao localisationDao = new JpaLocalisationDao();
+                JpaUtilisateurDao userDao = new JpaUtilisateurDao();
 
 
-                    try {
-                        user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
-                        if (userDao.create(user)) {
-                            System.out.println("reussi");
-                            dispose();
-                        } else
-                            System.out.println("echec");
+                try {
+                    user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
+                    if (userDao.create(user)) {
+                        System.out.println("reussi");
+                        dispose();
+                    } else
+                        System.out.println("echec");
 
-                    } catch (Exception e) {
-                        System.out.println("code postal faux");
-                    }
-
-
+                } catch (Exception e) {
+                    System.out.println("code postal faux");
                 }
 
+
             }
+
         });
 
 
@@ -136,6 +131,7 @@ public class Inscription extends JDialog {
         jPanel.add(jButton, gridBagConstraints);
 
         this.setContentPane(jPanel);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setVisible(true);
 
 

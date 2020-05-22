@@ -1,4 +1,4 @@
-import UI.Acceuil;
+import view.Acceuil;
 
 public class Main {
    /* private static final SessionFactory ourSessionFactory;

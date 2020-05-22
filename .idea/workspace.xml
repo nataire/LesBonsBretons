@@ -26,30 +26,19 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/24764d23-0627-4795-b989-57af0b6a2b62.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_05_2020_21_24__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_05_2020_21_24__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Avancement design accueil">
+      <change afterPath="$PROJECT_DIR$/src/view/AnnonceList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaSurCategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaSurCategorieDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/CategorieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/LocalisationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/LocalisationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/SurCategorieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/SurCategorieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Acceuil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Acceuil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/SurCategorieEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Acceuil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/UI/Inscription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Acceuil.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Acceuil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Acceuil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Inscription.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +151,7 @@
       <workItem from="1589816228625" duration="181000" />
       <workItem from="1589867898457" duration="636000" />
       <workItem from="1589957837107" duration="6406000" />
+      <workItem from="1590136468235" duration="10277000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -282,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589968203708</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Avancement design accueil">
+      <created>1590074665974</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1590074665974</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +324,8 @@
     <MESSAGE value="Inscription sur nouvelle fenetre" />
     <MESSAGE value="mise à jour PAO one to one (Categorie, Caracteristique, ANnonce)" />
     <MESSAGE value="recuperation annonce avec filtre categorie" />
-    <option name="LAST_COMMIT_MESSAGE" value="recuperation annonce avec filtre categorie" />
+    <MESSAGE value="Avancement design accueil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avancement design accueil" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -382,46 +380,46 @@
     </state>
     <state x="592" y="228" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589814986346" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom" timestamp="1590073403562">
+    <state width="1877" height="222" key="GridCell.Tab.0.bottom" timestamp="1590151232890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589974301711" />
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590073403562" />
-    <state width="1877" height="222" key="GridCell.Tab.0.center" timestamp="1590073403562">
+    <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
+    <state width="1877" height="222" key="GridCell.Tab.0.center" timestamp="1590151232890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589974301711" />
-    <state width="1877" height="222" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590073403562" />
-    <state width="1877" height="222" key="GridCell.Tab.0.left" timestamp="1590073403562">
+    <state width="1877" height="222" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
+    <state width="1877" height="222" key="GridCell.Tab.0.left" timestamp="1590151232890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589974301711" />
-    <state width="1877" height="222" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590073403562" />
-    <state width="1877" height="222" key="GridCell.Tab.0.right" timestamp="1590073403562">
+    <state width="1877" height="222" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
+    <state width="1877" height="222" key="GridCell.Tab.0.right" timestamp="1590151232890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589974301711" />
-    <state width="1877" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590073403562" />
-    <state width="746" height="277" key="GridCell.Tab.1.bottom" timestamp="1589830181307">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1877" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
+    <state width="1124" height="350" key="GridCell.Tab.1.bottom" timestamp="1590078210184">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589830181307" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="746" height="277" key="GridCell.Tab.1.center" timestamp="1589830181307">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1124" height="350" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590078210184" />
+    <state width="1124" height="350" key="GridCell.Tab.1.center" timestamp="1590078210184">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1589830181307" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="746" height="277" key="GridCell.Tab.1.left" timestamp="1589830181307">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1124" height="350" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590078210184" />
+    <state width="1124" height="350" key="GridCell.Tab.1.left" timestamp="1590078210184">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1589830181307" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
-    <state width="746" height="277" key="GridCell.Tab.1.right" timestamp="1589830181307">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1124" height="350" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590078210184" />
+    <state width="1124" height="350" key="GridCell.Tab.1.right" timestamp="1590078210184">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="746" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1589830181307" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584117325998" />
+    <state width="1124" height="350" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590078210184" />
     <state width="189" height="380" key="HiddenNamespacesPopup" timestamp="1588938228900">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -440,11 +438,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581674636661" />
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1589963378831">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="875" y="244" key="Vcs.Push.Dialog.v2" timestamp="1590074671581">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589963378831" />
-    <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588928927502" />
+    <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590074671581" />
     <state x="999" y="164" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584106706511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,14 +479,9 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI/Inscription.java</url>
+          <url>file://$PROJECT_DIR$/src/view/Inscription.java</url>
           <line>112</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UI/Inscription.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
