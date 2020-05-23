@@ -1,6 +1,7 @@
 package view;
 
 import metier.AnnonceEntity;
+import utils.DesignJPanelUtils;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -13,20 +14,31 @@ import java.util.ArrayList;
 
 public class AnnonceList extends JPanel {
 
+    public static int[] grayLight = new int[]{215, 219, 211};
+    public static int[] red = new int[]{255, 87, 51};
+    public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
+
+    private ArrayList<AnnonceEntity> annonceEntities;
+
     public AnnonceList(ArrayList<AnnonceEntity> list) {
         this.setLayout(new GridBagLayout());
+        this.annonceEntities = list;
+        setComponent();
+    }
 
-        for (int i = 0; i < list.size(); i++) {
-            AnnonceEntity currentAnnonceEntity = list.get(i);
+    private void setComponent() {
+
+        for (int i = 0; i < annonceEntities.size(); i++) {
+            AnnonceEntity currentAnnonceEntity = annonceEntities.get(i);
 
             JPanel tmpJPanel = new JPanel();
             tmpJPanel.setBorder(
                     BorderFactory.createTitledBorder(
                             BorderFactory.createEtchedBorder(EtchedBorder.LOWERED),
-                            list.get(i).getDateAnnonce().toString(), TitledBorder.RIGHT, TitledBorder.BOTTOM,
-                            new Font("Comic Sans Ms", Font.BOLD + Font.ITALIC, 12), getHSBFromRGB(255, 87, 51))
+                            annonceEntities.get(i).getDateAnnonce().toString(), TitledBorder.RIGHT, TitledBorder.BOTTOM,
+                            new Font("Comic Sans Ms", Font.BOLD + Font.ITALIC, 12), designJPanelUtils.getHSBFromRGB(red))
             );
-            tmpJPanel.setBackground(getHSBFromRGB(215, 219, 221));
+            tmpJPanel.setBackground(designJPanelUtils.getHSBFromRGB(grayLight));
             tmpJPanel.setLayout(new GridBagLayout());
 
             addComponentInPanel(tmpJPanel, new JLabel(new ImageIcon(getImage("https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg"))), 0, 0, 1, 2, 0, 1, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 0}, 10, 10);
@@ -36,7 +48,7 @@ public class AnnonceList extends JPanel {
 
             addComponentInPanel(this, tmpJPanel, 0, i, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, new int[]{0, 0, 5, 0}, 0, 0);
         }
-        addComponentInPanel(this, new JLabel(), 0, list.size(), 1, 1, 0, 100, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 0}, 0, 0);
+        addComponentInPanel(this, new JLabel(), 0, annonceEntities.size(), 1, 1, 0, 100, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 0}, 0, 0);
     }
 
     private void addComponentInPanel(JPanel jPanel, JComponent jComponent, int gridx, int gridy, int gridwith, int gridheigth, double weightx, double weighty, int anchor, int fill, int[] insets, int ipadx, int ipady) {
@@ -64,16 +76,6 @@ public class AnnonceList extends JPanel {
             e.printStackTrace();
         }
         return null;
-    }
-
-    private Color getHSBFromRGB(int red, int green, int blue) {
-        float[] hsb = new float[3];
-        Color.RGBtoHSB(red, green, blue, hsb);
-        // brightness
-        hsb[2] *= 1f;
-        // saturation
-        hsb[1] *= 1f;
-        return Color.getHSBColor(hsb[0], hsb[1], hsb[2]);
     }
 
 }

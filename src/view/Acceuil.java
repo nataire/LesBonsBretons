@@ -1,48 +1,35 @@
 package view;
 
-import dao.JpaAnnonceDao;
-import dao.JpaCategorieDao;
-import dao.JpaSurCategorieDao;
-import metier.AnnonceEntity;
-import metier.CategorieEntity;
-import metier.SurCategorieEntity;
+import utils.DesignJPanelUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class Acceuil extends JFrame {
 
-    Collection<AnnonceEntity> annonceEntities = null;
-    JComboBox<AnnonceEntity> annonceEntityJComboBox = new JComboBox<>();
-
-    private JPanel jPanelParent;
-    private JPanel jPanelHeader;
-    private JPanel jPanelBody;
-    private JPanel jPanelListAnnonce = new JPanel();
-    private JPanel jPanelFooter;
+    public static int[] orange = new int[]{255, 87, 51};
+    public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
 
     public Acceuil() {
 
-        jPanelParent = new JPanel();
+        JPanel jPanelParent = new JPanel();
 
-        setjPanelHeader();
+        JPanel jPanelHeader = new Header();
         jPanelHeader.setPreferredSize(new Dimension(1000, 75));
-        jPanelHeader.setBackground(getHSBFromRGB(255, 87, 51));
+        jPanelHeader.setBackground(designJPanelUtils.getHSBFromRGB(orange));
 
-        setjPanelBody();
-        jPanelBody.setPreferredSize(new Dimension(1000, 900));
+        JPanel jpanelBody1 = new Body();
+        jpanelBody1.setPreferredSize(new Dimension(1000, 900));
 
-        jPanelFooter = new JPanel();
+        JPanel jPanelFooter = new Footer();
         jPanelFooter.setPreferredSize(new Dimension(1000, 25));
-        jPanelFooter.setBackground(getHSBFromRGB(255, 87, 51));
+        jPanelFooter.setBackground(designJPanelUtils.getHSBFromRGB(orange));
 
         jPanelParent.setLayout(new BorderLayout());
         jPanelParent.add(jPanelHeader, BorderLayout.NORTH);
-        jPanelParent.add(jPanelBody, BorderLayout.CENTER);
+        jPanelParent.add(jpanelBody1, BorderLayout.CENTER);
         jPanelParent.add(jPanelFooter, BorderLayout.SOUTH);
 
         this.setContentPane(jPanelParent);
@@ -53,38 +40,9 @@ public class Acceuil extends JFrame {
 
     }
 
-    private void setjPanelHeader() {
-
-        jPanelHeader = new JPanel();
-        jPanelHeader.setLayout(new GridBagLayout());
-
-        JLabel jLabelTitle = new JLabel("<html><h1>Les Bons Bretons</h1></html>");
-
-        JButton jButtonConnexion = new JButton("Connexion");
-        jButtonConnexion.setPreferredSize(new Dimension(200, 25));
-        JButton jButtonInscription = new JButton("Inscription");
-        jButtonInscription.setPreferredSize(new Dimension(200, 25));
-
-
-        addComponentInPanel(jPanelHeader, jLabelTitle, 0, 0, 1, 10, 1, GridBagConstraints.LINE_START, GridBagConstraints.BASELINE, new int[]{0, 25, 0, 0});
-        addComponentInPanel(jPanelHeader, jButtonConnexion, 1, 0, 1, 0.1, 1, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 0});
-        addComponentInPanel(jPanelHeader, jButtonInscription, 2, 0, 1, 0.1, 1, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, new int[]{0, 0, 0, 5});
-    }
-
-    private void setjPanelBody() {
-        jPanelBody = new JPanel();
-        jPanelBody.setLayout(new GridBagLayout());
-
-        JTextField jTextFieldRecherche = new JTextField();
-        jTextFieldRecherche.setPreferredSize(new Dimension(200, 25));
-
-        JTextField jTextFieldPrix = new JTextField();
-        jTextFieldPrix.setPreferredSize(new Dimension(200, 25));
 
         JComboBox jComboBoxSurCat = new JComboBox();
         jComboBoxSurCat.setPreferredSize(new Dimension(200, 25));
-
-
         JpaSurCategorieDao jpaSurCategorieDao = new JpaSurCategorieDao();
         Collection<SurCategorieEntity> surCategorie = jpaSurCategorieDao.findAll();
         for (SurCategorieEntity c : surCategorie) {
@@ -93,12 +51,10 @@ public class Acceuil extends JFrame {
         JComboBox jComboBoxCat = new JComboBox();
         jComboBoxCat.setPreferredSize(new Dimension(200, 25));
         JpaCategorieDao jpaCategorieDao = new JpaCategorieDao();
-        SurCategorieEntity test = (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex());
-        Collection<CategorieEntity> categorie = (Collection<CategorieEntity>) jpaCategorieDao.find(test);
+        Collection<CategorieEntity> categorie = jpaCategorieDao.findAll();
         for (CategorieEntity c : categorie) {
             jComboBoxCat.addItem(c);
         }
-
 
         JButton jButtonRecherche = new JButton("Rechercher");
         jButtonRecherche.setPreferredSize(new Dimension(200, 25));
@@ -106,7 +62,7 @@ public class Acceuil extends JFrame {
             JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
             annonceEntities = jpaAnnonceDao.findAnnonce(
                     jTextFieldRecherche.getText(),
-                    (CategorieEntity) jComboBoxCat.getItemAt(jComboBoxCat.getSelectedIndex())
+                    (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex())
             );
             setAnnonceList();
         });
@@ -115,21 +71,8 @@ public class Acceuil extends JFrame {
         addComponentInPanel(jPanelBody, jComboBoxSurCat, 1, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 10});
         addComponentInPanel(jPanelBody, jComboBoxCat, 2, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 10});
         addComponentInPanel(jPanelBody, jButtonRecherche, 3, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 0});
-        // addComponentInPanel(jPanelBody, jTextFieldPrix, 4, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 0});
 
         setAnnonceList();
-
-        jComboBoxSurCat.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                SurCategorieEntity test = (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex());
-                JpaCategorieDao jpaCategorieDao = new JpaCategorieDao();
-                Collection<CategorieEntity> categories = (Collection<CategorieEntity>) jpaCategorieDao.find(test);
-                jComboBoxCat.removeAllItems();
-                for (CategorieEntity c : categories) {
-                    jComboBoxCat.addItem(c);
-                }
-            }
-        });
 
     }
 
