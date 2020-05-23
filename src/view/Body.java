@@ -10,6 +10,8 @@ import utils.DesignJPanelUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -51,7 +53,7 @@ public class Body extends JPanel {
             JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
             annonceEntities = jpaAnnonceDao.findAnnonce(
                     jTextField.getText(),
-                    jComboBoxSurCategorie.getItemAt(jComboBoxSurCategorie.getSelectedIndex())
+                    (CategorieEntity) jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex())
             );
             updateAnnonceList();
         });
@@ -62,6 +64,19 @@ public class Body extends JPanel {
         designJPanelUtils.addComponent(this, jButtonRecherche, 3, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
 
         updateAnnonceList();
+
+
+        jComboBoxSurCategorie.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SurCategorieEntity test = (SurCategorieEntity) jComboBoxSurCategorie.getItemAt(jComboBoxSurCategorie.getSelectedIndex());
+                JpaCategorieDao jpaCategorieDao = new JpaCategorieDao();
+                Collection<CategorieEntity> categories = (Collection<CategorieEntity>) jpaCategorieDao.find(test);
+                jComboBoxCategorie.removeAllItems();
+                for (CategorieEntity c : categories) {
+                    jComboBoxCategorie.addItem(c);
+                }
+            }
+        });
     }
 
     private void updateAnnonceList() {
