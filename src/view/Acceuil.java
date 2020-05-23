@@ -9,6 +9,8 @@ import metier.SurCategorieEntity;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -76,8 +78,13 @@ public class Acceuil extends JFrame {
         JTextField jTextFieldRecherche = new JTextField();
         jTextFieldRecherche.setPreferredSize(new Dimension(200, 25));
 
+        JTextField jTextFieldPrix = new JTextField();
+        jTextFieldPrix.setPreferredSize(new Dimension(200, 25));
+
         JComboBox jComboBoxSurCat = new JComboBox();
         jComboBoxSurCat.setPreferredSize(new Dimension(200, 25));
+
+
         JpaSurCategorieDao jpaSurCategorieDao = new JpaSurCategorieDao();
         Collection<SurCategorieEntity> surCategorie = jpaSurCategorieDao.findAll();
         for (SurCategorieEntity c : surCategorie) {
@@ -86,10 +93,12 @@ public class Acceuil extends JFrame {
         JComboBox jComboBoxCat = new JComboBox();
         jComboBoxCat.setPreferredSize(new Dimension(200, 25));
         JpaCategorieDao jpaCategorieDao = new JpaCategorieDao();
-        Collection<CategorieEntity> categorie = jpaCategorieDao.findAll();
+        SurCategorieEntity test = (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex());
+        Collection<CategorieEntity> categorie = (Collection<CategorieEntity>) jpaCategorieDao.find(test);
         for (CategorieEntity c : categorie) {
             jComboBoxCat.addItem(c);
         }
+
 
         JButton jButtonRecherche = new JButton("Rechercher");
         jButtonRecherche.setPreferredSize(new Dimension(200, 25));
@@ -97,7 +106,7 @@ public class Acceuil extends JFrame {
             JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
             annonceEntities = jpaAnnonceDao.findAnnonce(
                     jTextFieldRecherche.getText(),
-                    (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex())
+                    (CategorieEntity) jComboBoxCat.getItemAt(jComboBoxCat.getSelectedIndex())
             );
             setAnnonceList();
         });
@@ -106,8 +115,21 @@ public class Acceuil extends JFrame {
         addComponentInPanel(jPanelBody, jComboBoxSurCat, 1, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 10});
         addComponentInPanel(jPanelBody, jComboBoxCat, 2, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 10});
         addComponentInPanel(jPanelBody, jButtonRecherche, 3, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 0});
+        // addComponentInPanel(jPanelBody, jTextFieldPrix, 4, 0, 1, 0, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, new int[]{25, 10, 0, 0});
 
         setAnnonceList();
+
+        jComboBoxSurCat.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SurCategorieEntity test = (SurCategorieEntity) jComboBoxSurCat.getItemAt(jComboBoxSurCat.getSelectedIndex());
+                JpaCategorieDao jpaCategorieDao = new JpaCategorieDao();
+                Collection<CategorieEntity> categories = (Collection<CategorieEntity>) jpaCategorieDao.find(test);
+                jComboBoxCat.removeAllItems();
+                for (CategorieEntity c : categories) {
+                    jComboBoxCat.addItem(c);
+                }
+            }
+        });
 
     }
 

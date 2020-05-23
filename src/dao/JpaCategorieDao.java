@@ -1,11 +1,12 @@
 package dao;
 
 import metier.CategorieEntity;
+import metier.SurCategorieEntity;
 import org.hibernate.query.Query;
 
 import java.util.Collection;
 
-public class JpaCategorieDao extends JpaDao<CategorieEntity> implements CategorieDao{
+public class JpaCategorieDao extends JpaDao<CategorieEntity> implements CategorieDao {
 
 
     @Override
@@ -14,9 +15,14 @@ public class JpaCategorieDao extends JpaDao<CategorieEntity> implements Categori
         return (CategorieEntity) query.getResultList();
     }
 
+    public Collection<CategorieEntity> find(SurCategorieEntity surCategorie) {
+        Query query = session.createQuery("SELECT t FROM CategorieEntity t WHERE idSurCategorie = " + surCategorie.getIdSurCategorie());
+        return (Collection<CategorieEntity>) query.getResultList();
+    }
+
     @Override
     public boolean deleteAll() {
-        if(session.createQuery("DELETE FROM CategorieEntity").executeUpdate() > 0){
+        if (session.createQuery("DELETE FROM CategorieEntity").executeUpdate() > 0) {
             return true;
         }
         return false;
