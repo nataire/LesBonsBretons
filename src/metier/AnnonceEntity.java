@@ -48,6 +48,10 @@ public class AnnonceEntity implements Serializable {
     @Column(name = "prix")
     private int prix;
 
+    @Basic
+    @Column(name = "lienImage")
+    private String lienImage;
+
     public AnnonceEntity() {
 
     }
@@ -117,7 +121,16 @@ public class AnnonceEntity implements Serializable {
     public void setPrix(int prix) {
         this.prix = prix;
     }
-/*  public List<UtilisateurEntity> getUser() {
+
+    public String getLienImage() {
+        return lienImage;
+    }
+
+    public void setLienImage(String lienImage) {
+        this.lienImage = lienImage;
+    }
+
+    /*  public List<UtilisateurEntity> getUser() {
         return user;
     }
 
