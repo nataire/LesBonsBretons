@@ -76,9 +76,18 @@ public abstract class JpaDao<T> implements Dao<T> {
 
     @Override
     public boolean delete(T obj) {
-        /*Query query = session.createQuery("DELETE FROM );
-        return (TacheE) query.getResultList();*/
-        return false;
+        Transaction tx = session.beginTransaction();
+        try {
+
+            session.delete(obj);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+
+            tx.rollback();
+            return false;
+        }
+
     }
 
     @Override

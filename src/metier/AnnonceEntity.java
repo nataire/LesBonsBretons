@@ -44,6 +44,10 @@ public class AnnonceEntity implements Serializable {
     @Column(name = "dateAnnonce")
     private Timestamp dateAnnonce;
 
+    @Basic
+    @Column(name = "prix")
+    private int prix;
+
     public AnnonceEntity() {
 
     }
@@ -98,7 +102,22 @@ public class AnnonceEntity implements Serializable {
         this.categorie = categorie;
     }
 
-  /*  public List<UtilisateurEntity> getUser() {
+    public UtilisateurEntity getIdUtilisateurAnnonce() {
+        return idUtilisateurAnnonce;
+    }
+
+    public void setIdUtilisateurAnnonce(UtilisateurEntity idUtilisateurAnnonce) {
+        this.idUtilisateurAnnonce = idUtilisateurAnnonce;
+    }
+
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
+    }
+/*  public List<UtilisateurEntity> getUser() {
         return user;
     }
 
