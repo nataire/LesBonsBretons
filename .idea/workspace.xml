@@ -26,14 +26,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="recherche annonce avec category + maj liste category en fonction de la surCategory">
-      <change afterPath="$PROJECT_DIR$/code/exemple code" afterDir="false" />
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="création fonction suppression et ajout annonce">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/JpaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/AnnonceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaLocalisationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaLocalisationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Inscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Inscription.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590223002771</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="création fonction suppression et ajout annonce">
+      <created>1590226172627</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1590226172627</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +334,8 @@
     <MESSAGE value="recuperation annonce avec filtre categorie" />
     <MESSAGE value="Avancement design accueil" />
     <MESSAGE value="recherche annonce avec category + maj liste category en fonction de la surCategory" />
-    <option name="LAST_COMMIT_MESSAGE" value="recherche annonce avec category + maj liste category en fonction de la surCategory" />
+    <MESSAGE value="création fonction suppression et ajout annonce" />
+    <option name="LAST_COMMIT_MESSAGE" value="création fonction suppression et ajout annonce" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -387,25 +394,25 @@
     </state>
     <state x="592" y="228" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589814986346" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1590225559024">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1590229834525">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590225559024" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1590225559024">
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1590229834525">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590225559024" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="222" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1590225559024">
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1590229834525">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590225559024" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="222" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1590225559024">
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1590229834525">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590225559024" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590151232890" />
     <state width="1124" height="350" key="GridCell.Tab.1.bottom" timestamp="1590078210184">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -445,10 +452,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581674636661" />
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1590223016299">
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2" timestamp="1590226174485">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1590223016299" />
+    <state x="700" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1590226174485" />
     <state x="875" y="244" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590074671581" />
     <state x="999" y="164" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584106706511">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -487,7 +494,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/Inscription.java</url>
-          <line>112</line>
+          <line>110</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

@@ -90,8 +90,6 @@ public class Inscription extends JDialog {
                 } catch (Exception e) {
                     System.out.println("code postal faux");
                 }
-
-
             }
 
         });
