@@ -18,7 +18,7 @@ public class LocalisationEntity implements Serializable {
     private String nomVille;
 
     @Column(name = "ville_code_postal")
-    private int code_postal;
+    private String code_postal;
 
     public LocalisationEntity() {
     }
@@ -40,11 +40,11 @@ public class LocalisationEntity implements Serializable {
         this.nomVille = nomVille;
     }
 
-    public int getCode_postal() {
+    public String getCode_postal() {
         return code_postal;
     }
 
-    public void setCode_postal(int code_postal) {
+    public void setCode_postal(String code_postal) {
         this.code_postal = code_postal;
     }
 
@@ -65,11 +65,7 @@ public class LocalisationEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "LocalisationEntity{" +
-                "idVille=" + idVille +
-                ", nomVille='" + nomVille + '\'' +
-                ", code_postal=" + code_postal +
-                '}';
+        return code_postal + " - " + nomVille;
     }
     //endregion
 }

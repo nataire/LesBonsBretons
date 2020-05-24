@@ -1,26 +1,27 @@
 package view;
 
 import dao.JpaLocalisationDao;
+import dao.JpaUtilisateurDao;
 import metier.LocalisationEntity;
+import metier.UtilisateurEntity;
 import utils.DesignJPanelUtils;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.Collection;
 
 public class Inscription extends JDialog {
 
-    public static Dimension componentDimension = new Dimension(300, 50);
-    public static int[] orange = new int[]{255, 87, 51};
-    public static int[] grayLight = new int[]{215, 219, 211};
-    public static Font font = new Font("Comic Sans Ms", Font.BOLD + Font.ITALIC, 12);
     public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
+
     private JLabel jLabelTitle;
     private JLabel[] labels;
     private JComponent[] components;
     private JButton jButtonConfirmer;
     private JPanel jPanel;
+    private LocalisationEntity localisationEntity;
 
     public Inscription(Frame owner, boolean modal) {
         super(owner, modal);
@@ -67,21 +68,67 @@ public class Inscription extends JDialog {
         jTextFieldCodePostal.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
+                jComboBoxLocalisation.removeAllItems();
                 JpaLocalisationDao jpaLocalisationDao = new JpaLocalisationDao();
+                Collection<LocalisationEntity> localisationEntities = jpaLocalisationDao.findVilles(jTextFieldCodePostal.getText());
+                for (LocalisationEntity currentLocalisation : localisationEntities) {
+                    jComboBoxLocalisation.addItem(currentLocalisation);
+                }
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-
+                jComboBoxLocalisation.removeAllItems();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-
             }
         });
+        jComboBoxLocalisation.addActionListener(actionEvent -> localisationEntity = jComboBoxLocalisation.getItemAt(jComboBoxLocalisation.getSelectedIndex()));
 
         jButtonConfirmer = new JButton("Confirmer l'inscription");
+
+        jButtonConfirmer.addActionListener(actionEvent -> {
+
+            String password = new String(jPasswordFieldPassword.getPassword());
+            String confirmPassword = new String(jPasswordFieldPasswordConfirm.getPassword());
+
+            if (password.equals(confirmPassword)) {
+
+                String email = jTextFieldEmail.getText();
+                String rue = jTextFieldRue.getText();
+                int numRue = Integer.parseInt(jTextFieldNumRue.getText());
+                String numTel = jTextFieldNumTel.getText();
+
+                UtilisateurEntity utilisateurEntity = new UtilisateurEntity();
+                utilisateurEntity.setLogin(email);
+                utilisateurEntity.setPassword(password);
+                utilisateurEntity.setVille(localisationEntity.getNomVille());
+                utilisateurEntity.setIdLocalisationUtilisateur(localisationEntity);
+                utilisateurEntity.setRue(rue);
+                utilisateurEntity.setNumRue(numRue);
+                utilisateurEntity.setNumTel(numTel);
+
+                JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+
+                try {
+                    if (userDao.create(utilisateurEntity)) {
+                        System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription réussie");
+
+                        Acceuil acceuil = (Acceuil) getOwner();
+                        acceuil.setUser(utilisateurEntity);
+
+                        this.setVisible(false);
+                        this.dispose();
+                    } else
+                        System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription échouée");
+
+                } catch (Exception exception) {
+                    System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : " + exception.getMessage());
+                }
+            }
+        });
     }
 
     private void showComponent() {

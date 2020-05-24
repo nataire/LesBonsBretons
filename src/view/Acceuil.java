@@ -1,5 +1,6 @@
 package view;
 
+import metier.UtilisateurEntity;
 import utils.DesignJPanelUtils;
 
 import javax.swing.*;
@@ -10,16 +11,17 @@ public class Acceuil extends JFrame {
     public static int[] orange = new int[]{255, 87, 51};
     public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
 
+    private UtilisateurEntity utilisateurEntity = null;
+    private JPanel jPanelParent;
+    private JPanel jPanelHeader;
+
     public Acceuil() {
+        jPanelParent = new JPanel();
 
-        JPanel jPanelParent = new JPanel();
+        setJPanelHeader();
 
-        JPanel jPanelHeader = new Header(this);
-        jPanelHeader.setPreferredSize(new Dimension(1000, 75));
-        jPanelHeader.setBackground(designJPanelUtils.getHSBFromRGB(orange));
-
-        JPanel jpanelBody1 = new Body();
-        jpanelBody1.setPreferredSize(new Dimension(1000, 900));
+        JPanel jpanelBody = new Body();
+        jpanelBody.setPreferredSize(new Dimension(1000, 900));
 
         JPanel jPanelFooter = new Footer();
         jPanelFooter.setPreferredSize(new Dimension(1000, 25));
@@ -27,7 +29,7 @@ public class Acceuil extends JFrame {
 
         jPanelParent.setLayout(new BorderLayout());
         jPanelParent.add(jPanelHeader, BorderLayout.NORTH);
-        jPanelParent.add(jpanelBody1, BorderLayout.CENTER);
+        jPanelParent.add(jpanelBody, BorderLayout.CENTER);
         jPanelParent.add(jPanelFooter, BorderLayout.SOUTH);
 
         this.setContentPane(jPanelParent);
@@ -39,6 +41,18 @@ public class Acceuil extends JFrame {
 
     }
 
+    private void setJPanelHeader() {
+        if (jPanelHeader != null) jPanelParent.remove(jPanelHeader);
+        jPanelHeader = new Header(this, utilisateurEntity);
+        jPanelHeader.setPreferredSize(new Dimension(1000, 75));
+        jPanelHeader.setBackground(designJPanelUtils.getHSBFromRGB(orange));
+        jPanelParent.add(jPanelHeader);
+        jPanelParent.updateUI();
+    }
 
+    public void setUser(UtilisateurEntity utilisateurEntity) {
+        this.utilisateurEntity = utilisateurEntity;
+        setJPanelHeader();
+    }
 
 }
