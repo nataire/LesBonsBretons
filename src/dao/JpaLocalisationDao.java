@@ -8,17 +8,18 @@ import java.util.Collection;
 
 public class JpaLocalisationDao extends JpaDao<LocalisationEntity> implements LocalisationDao {
 
+    private Class classLocalisation = new LocalisationEntity().getClass();
+
+    public Collection<LocalisationEntity> findVilles(String codePostal) {
+        Query query = session.createQuery("SELECT t FROM LocalisationEntity t WHERE t.code_postal =  :codePostal");
+        query.setParameter("codePostal", codePostal);
+        return (Collection<LocalisationEntity>) query.getResultList();
+    }
 
     @Override
     public LocalisationEntity find(Integer codePostal) {
         Query query = session.createQuery("SELECT t FROM LocalisationEntity t WHERE code_postal = " + codePostal);
         return (LocalisationEntity) query.getSingleResult();
-    }
-
-
-    public Collection<LocalisationEntity> findVilles(Integer codePostal) {
-        Query query = session.createQuery("SELECT t FROM LocalisationEntity t WHERE code_postal = " + codePostal);
-        return (Collection<LocalisationEntity>) query.getResultList();
     }
 
     @Override
@@ -27,12 +28,6 @@ public class JpaLocalisationDao extends JpaDao<LocalisationEntity> implements Lo
             return true;
         }
         return false;
-    }
-
-
-    public Collection<LocalisationEntity> find() {
-        Query query = session.createQuery("SELECT t FROM LocalisationEntity t");
-        return (Collection<LocalisationEntity>) query.getResultList();
     }
 
     public Collection<LocalisationEntity> findAll() {
