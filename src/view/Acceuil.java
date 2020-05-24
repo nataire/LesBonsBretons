@@ -14,7 +14,7 @@ public class Acceuil extends JFrame {
 
         JPanel jPanelParent = new JPanel();
 
-        JPanel jPanelHeader = new Header();
+        JPanel jPanelHeader = new Header(this);
         jPanelHeader.setPreferredSize(new Dimension(1000, 75));
         jPanelHeader.setBackground(designJPanelUtils.getHSBFromRGB(orange));
 
@@ -32,6 +32,7 @@ public class Acceuil extends JFrame {
 
         this.setContentPane(jPanelParent);
         this.setSize(1000, 1000);
+        this.setTitle("Les Bons Bretons");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

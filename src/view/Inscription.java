@@ -1,137 +1,101 @@
 package view;
 
 import dao.JpaLocalisationDao;
-import dao.JpaUtilisateurDao;
-import metier.UtilisateurEntity;
+import metier.LocalisationEntity;
+import utils.DesignJPanelUtils;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 
 public class Inscription extends JDialog {
 
-    public JTextField jTextFieldEmail;
-    public JPasswordField jPasswordFieldPassword;
-    public JPasswordField jPasswordFieldPasswordConfirm;
-    public JTextField jTextFieldVille;
-    public JTextField jTextFieldRue;
-    public JTextField jTextFieldNumRue;
-    public JTextField jTextFieldNumTel;
-    public JButton jButtonConfirm;
+    public static Dimension componentDimension = new Dimension(300, 50);
+    public static int[] orange = new int[]{255, 87, 51};
+    public static int[] grayLight = new int[]{215, 219, 211};
+    public static Font font = new Font("Comic Sans Ms", Font.BOLD + Font.ITALIC, 12);
+    public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
+    private JLabel jLabelTitle;
+    private JLabel[] labels;
+    private JComponent[] components;
+    private JButton jButtonConfirmer;
+    private JPanel jPanel;
 
     public Inscription(Frame owner, boolean modal) {
         super(owner, modal);
 
-        JPanel jPanel = new JPanel(new GridBagLayout());
+        setComponent();
+        showComponent();
 
+        this.setContentPane(jPanel);
         this.setTitle("Inscription");
-        this.setSize(1000, 400);
+        this.setSize(new Dimension(500, 700));
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setVisible(true);
+    }
 
-        JLabel jLabelEmail = new JLabel("E-Mail :");
+    private void setComponent() {
+        jLabelTitle = new JLabel("Rentrer les informations de votre nouveau compte");
+
+        JLabel jLabelEmail = new JLabel("E-mail :");
         JLabel jLabelPassword = new JLabel("Mot de passe :");
         JLabel jLabelPasswordConfirm = new JLabel("Confirmer le mot de passe :");
+        JLabel jLabelCodePostal = new JLabel("Code postal :");
         JLabel jLabelVille = new JLabel("Ville :");
         JLabel jLabelRue = new JLabel("Rue :");
         JLabel jLabelNumRue = new JLabel("Numéro dans la rue :");
         JLabel jLabelNumTel = new JLabel("Numéro de téléphone :");
-        JLabel[] arrayLabel = {
-                jLabelEmail, jLabelPassword, jLabelPasswordConfirm,
+        labels = new JLabel[]{
+                jLabelEmail, jLabelPassword, jLabelPasswordConfirm, jLabelCodePostal,
                 jLabelVille, jLabelRue, jLabelNumRue, jLabelNumTel
         };
 
         JTextField jTextFieldEmail = new JTextField();
-        JPasswordField jTextFieldPassword = new JPasswordField();
-        JPasswordField jTextFieldPasswordConfirm = new JPasswordField();
-        JTextField jTextFieldVille = new JTextField();
+        JPasswordField jPasswordFieldPassword = new JPasswordField();
+        JPasswordField jPasswordFieldPasswordConfirm = new JPasswordField();
+        JTextField jTextFieldCodePostal = new JTextField();
+        JComboBox<LocalisationEntity> jComboBoxLocalisation = new JComboBox<>();
         JTextField jTextFieldRue = new JTextField();
         JTextField jTextFieldNumRue = new JTextField();
         JTextField jTextFieldNumTel = new JTextField();
-        JTextField[] arrayTextField = {
-                jTextFieldEmail, jTextFieldPassword, jTextFieldPasswordConfirm,
-                jTextFieldVille, jTextFieldRue, jTextFieldNumRue, jTextFieldNumTel
+        components = new JComponent[]{
+                jTextFieldEmail, jPasswordFieldPassword, jPasswordFieldPasswordConfirm, jTextFieldCodePostal,
+                jComboBoxLocalisation, jTextFieldRue, jTextFieldNumRue, jTextFieldNumTel
         };
 
-        JLabel jLabelTitle = new JLabel("Inscrivez vous içi");
-
-        JButton jButton = new JButton("Inscription");
-
-        jButton.addActionListener(actionEvent -> {
-
-            String password = new String(jTextFieldPassword.getPassword());
-            String confirmPassword = new String(jTextFieldPasswordConfirm.getPassword());
-
-            if (password.equals(confirmPassword)) {
-
-                String email = jTextFieldEmail.getText();
-                String ville = jTextFieldVille.getText();
-                String rue = jTextFieldRue.getText();
-                int numRue = Integer.parseInt(jTextFieldNumRue.getText());
-                String numTel = jTextFieldNumTel.getText();
-
-                UtilisateurEntity user = new UtilisateurEntity();
-                user.setLogin(email);
-                user.setPassword(password);
-                user.setVille(ville);
-                user.setRue(rue);
-                user.setNumRue(numRue);
-                user.setNumTel(numTel);
-
-                JpaLocalisationDao localisationDao = new JpaLocalisationDao();
-                JpaUtilisateurDao userDao = new JpaUtilisateurDao();
-
-
-                try {
-                    user.setIdLocalisationUtilisateur(localisationDao.find(Integer.parseInt(ville)));
-                    if (userDao.create(user)) {
-                        System.out.println("reussi");
-                        dispose();
-                    } else
-                        System.out.println("echec");
-
-                } catch (Exception e) {
-                    System.out.println("code postal faux");
-                }
+        jTextFieldCodePostal.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                JpaLocalisationDao jpaLocalisationDao = new JpaLocalisationDao();
             }
 
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+
+            }
         });
 
+        jButtonConfirmer = new JButton("Confirmer l'inscription");
+    }
 
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+    private void showComponent() {
+        jPanel = new JPanel();
+        jPanel.setLayout(new GridBagLayout());
 
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.insets = new Insets(0, 200, 32, 320);
-        gridBagConstraints.anchor = GridBagConstraints.CENTER;
-        jPanel.add(jLabelTitle, gridBagConstraints);
+        designJPanelUtils.addComponent(jPanel, jLabelTitle, 0, 0, 1, 1, 1d, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, null, null, null, null, null, null);
 
-        for (int y = 0; y < arrayLabel.length; y++) {
-            for (int x = 0; x < 2; x++) {
-                gridBagConstraints.gridx = x;
-                gridBagConstraints.gridy = y + 1;
-                if (x == 0) {
-                    gridBagConstraints.insets = new Insets(0, 32, 8, 16);
-                    gridBagConstraints.weightx = 0.10;
-                    jPanel.add(arrayLabel[y], gridBagConstraints);
-                } else {
-                    gridBagConstraints.insets = new Insets(0, 16, 8, 32);
-                    gridBagConstraints.weightx = 0.20;
-                    jPanel.add(arrayTextField[y], gridBagConstraints);
-                }
-            }
+        for (int i = 0; i < labels.length; i++) {
+            designJPanelUtils.addComponent(jPanel, labels[i], 0, (i * 2) + 1, 1, 1, 1d, 0.01, GridBagConstraints.LINE_START, GridBagConstraints.BASELINE, 0, 32, 8, 0, null, null);
+            designJPanelUtils.addComponent(jPanel, components[i], 0, (i * 2) + 2, 1, 1, 1d, 0.01, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, 0, 48, 16, 48, null, null);
         }
 
-        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = GridBagConstraints.LINE_END;
-        gridBagConstraints.insets = new Insets(0, 128, 0, 320);
-        gridBagConstraints.weightx = 0.10;
-        gridBagConstraints.gridy++;
-
-        jPanel.add(jButton, gridBagConstraints);
-
-        this.setContentPane(jPanel);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        this.setVisible(true);
-
+        designJPanelUtils.addComponent(jPanel, jButtonConfirmer, 0, (labels.length * 2) + 1, 1, 1, 1d, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, null, null, null, null, null, null);
 
     }
 

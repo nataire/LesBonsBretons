@@ -1,7 +1,10 @@
 package utils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
 
 public class DesignJPanelUtils {
 
@@ -42,6 +45,23 @@ public class DesignJPanelUtils {
         if (ipady != null) gridBagConstraints.ipady = ipady;
 
         jPanel.add(jComponent, gridBagConstraints);
+    }
+
+    public Image getImage(String url) {
+
+        try {
+            Image icon = ImageIO.read(new URL(url));
+            return icon.getScaledInstance(100, 150, Image.SCALE_DEFAULT);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public String convertToMultiline(String oldText) {
+        String newText = oldText.replaceAll("\n", "<br>");
+        newText = newText.replace("\r", "<span style=\"margin-left: 5em;\"></span>");
+        return "<html>" + newText + "</html>";
     }
 
 }

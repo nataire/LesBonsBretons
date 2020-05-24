@@ -60,7 +60,6 @@ public class AnnonceEntity implements Serializable {
         this.titreAnnonce = titreAnnonce;
         this.descriptionAnnonce = descriptionAnnonce;
         this.isOffreAnnonce = isOffreAnnonce;
-
         this.idAnnonceLocalisation = idAnnonceLocalisation;
     }
 
