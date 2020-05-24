@@ -12,8 +12,8 @@ public class Header extends JPanel {
     public static String title = "<html><h1>Les Bons Bretons</h1></html>";
     public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
 
-    private JFrame acceuil;
-    private UtilisateurEntity utilisateurEntity;
+    private final JFrame acceuil;
+    private final UtilisateurEntity utilisateurEntity;
 
     public Header(JFrame parent, UtilisateurEntity utilisateurEntity) {
         this.setLayout(new GridBagLayout());
@@ -28,7 +28,7 @@ public class Header extends JPanel {
 
         if (utilisateurEntity != null) {
             JLabel jLabelUtilisateur = new JLabel("Bonjour " + utilisateurEntity.getLogin());
-            designJPanelUtils.addComponent(this, jLabelUtilisateur, 2, 0, 1, null, 0.1, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, 0, 0, 0, 5, null, null);
+            designJPanelUtils.addComponent(this, jLabelUtilisateur, 1, 0, 1, null, 0.1, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, 0, 0, 0, 5, null, null);
         } else {
             JButton jButtonConnexion = new JButton("Connexion");
             jButtonConnexion.setPreferredSize(dimension);
@@ -38,6 +38,10 @@ public class Header extends JPanel {
 
             designJPanelUtils.addComponent(this, jButtonConnexion, 1, 0, 1, null, 0.1, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, null, null, null, null, null, null);
             designJPanelUtils.addComponent(this, jButtonInscription, 2, 0, 1, null, 0.1, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, 0, 0, 0, 5, null, null);
+
+            jButtonConnexion.addActionListener(actionEvent -> {
+                Connexion connexion = new Connexion(acceuil, true);
+            });
 
             jButtonInscription.addActionListener(actionEvent -> {
                 Inscription inscription = new Inscription(acceuil, true);

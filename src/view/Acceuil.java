@@ -46,7 +46,7 @@ public class Acceuil extends JFrame {
         jPanelHeader = new Header(this, utilisateurEntity);
         jPanelHeader.setPreferredSize(new Dimension(1000, 75));
         jPanelHeader.setBackground(designJPanelUtils.getHSBFromRGB(orange));
-        jPanelParent.add(jPanelHeader);
+        jPanelParent.add(jPanelHeader, BorderLayout.NORTH);
         jPanelParent.updateUI();
     }
 

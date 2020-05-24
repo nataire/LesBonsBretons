@@ -110,16 +110,11 @@ public class Inscription extends JDialog {
                 utilisateurEntity.setNumRue(numRue);
                 utilisateurEntity.setNumTel(numTel);
 
-                JpaUtilisateurDao userDao = new JpaUtilisateurDao();
+                JpaUtilisateurDao jpaUtilisateurDao = new JpaUtilisateurDao();
 
                 try {
-                    if (userDao.create(utilisateurEntity)) {
+                    if (jpaUtilisateurDao.create(utilisateurEntity)) {
                         System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription réussie");
-
-                        Acceuil acceuil = (Acceuil) getOwner();
-                        acceuil.setUser(utilisateurEntity);
-
-                        this.setVisible(false);
                         this.dispose();
                     } else
                         System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription échouée");
