@@ -48,6 +48,7 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
             tx.rollback();
             return false;
         }
+        //
     }
 
     @Override
