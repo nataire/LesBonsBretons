@@ -30,9 +30,13 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     @Override
-    public boolean update(String password, int idUtilisateur) {
-        Query query = session.createQuery("UPDATE UtilisateurEntity SET password = :password WHERE idUtilisateur = :idUtilisateur");
+    public boolean update(String password, String numTel, String rue, int numRue, String ville, int idUtilisateur) {
+        Query query = session.createQuery("UPDATE UtilisateurEntity SET password = :password, numTel = :numTel, rue = :rue, numRue = :numRue, ville =: ville WHERE idUtilisateur = :idUtilisateur");
         query.setParameter("password", password);
+        query.setParameter("numTel", numTel);
+        query.setParameter("rue", rue);
+        query.setParameter("numRue", numRue);
+        query.setParameter("ville", ville);
         query.setParameter("idUtilisateur", idUtilisateur);
         return true;
     }
