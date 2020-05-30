@@ -5,6 +5,7 @@ import utils.DesignJPanelUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
 
 public class Header extends JPanel {
 
@@ -28,7 +29,30 @@ public class Header extends JPanel {
 
         if (utilisateurEntity != null) {
             JLabel jLabelUtilisateur = new JLabel("Bonjour " + utilisateurEntity.getLogin());
+
+            JComboBox<String> jComboBoxButton = new JComboBox<>();
+            jComboBoxButton.addItem("Menu");
+            jComboBoxButton.addItem("Mon compte");
+            jComboBoxButton.addItem("Déconnexion");
+            jComboBoxButton.addItemListener(itemEvent -> {
+                if (itemEvent.getStateChange() == ItemEvent.SELECTED) {
+                    switch (itemEvent.getItem().toString()) {
+                        case "Mon compte":
+                            jComboBoxButton.setSelectedIndex(0);
+                            System.out.println(itemEvent);
+                            break;
+                        case "Déconnexion":
+                            Acceuil acceuil = (Acceuil) this.acceuil;
+                            acceuil.setUser(null);
+                            System.out.println("Header.java -> jComboBoxButton(Déconnexion) : Déconnexion réussie");
+                            break;
+                    }
+                }
+            });
+
             designJPanelUtils.addComponent(this, jLabelUtilisateur, 1, 0, 1, null, 0.1, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, 0, 0, 0, 5, null, null);
+            designJPanelUtils.addComponent(this, jComboBoxButton, 2, 0, 1, null, 0.1, 1d, GridBagConstraints.CENTER, GridBagConstraints.BASELINE, 0, 0, 0, 5, null, null);
+
         } else {
             JButton jButtonConnexion = new JButton("Connexion");
             jButtonConnexion.setPreferredSize(dimension);
