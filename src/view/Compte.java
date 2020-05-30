@@ -10,8 +10,6 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Collection;
 
 public class Compte extends JDialog {
@@ -99,13 +97,12 @@ public class Compte extends JDialog {
         });
 
         jButtonToggle = new JButton("Modifier");
-        jButtonToggle.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        jButtonToggle.addActionListener(actionEvent -> {
+            if (jButtonToggle.getText().equals("Modifier")) {
+                enabledComponents(true);
                 jButtonToggle.setText(jButtonToggle.getText().equals("Modifier") ? "Sauvegarder" : "Modifier");
-                if (jButtonToggle.getText().equals("Sauvegarder")) {
-                    enabledComponents(true);
-                } else {
+            } else {
+                if (checkComponents()) {
                     enabledComponents(false);
                     utilisateurEntity.setLogin(jTextFieldEmail.getText());
                     utilisateurEntity.setPassword(new String(jPasswordFieldPassword.getPassword()));
@@ -113,13 +110,15 @@ public class Compte extends JDialog {
                     utilisateurEntity.setRue(jTextFieldRue.getText());
                     utilisateurEntity.setNumRue(Integer.parseInt(jTextFieldNumRue.getText()));
                     utilisateurEntity.setNumTel(jTextFieldNumTel.getText());
+                    if (jComboBoxLocalisation.getSelectedItem() != null) {
+                        utilisateurEntity.setVille(((LocalisationEntity) jComboBoxLocalisation.getSelectedItem()).getNomVille());
+                    }
 
                     JpaUtilisateurDao jpaUtilisateurDao = new JpaUtilisateurDao();
                     try {
-                        //if (jpaUtilisateurDao.update(utilisateurEntity)) {
-                        if (jpaUtilisateurDao.update(utilisateurEntity.getPassword(), utilisateurEntity.getNumTel(),
-                                utilisateurEntity.getRue(), utilisateurEntity.getNumRue(), utilisateurEntity.getVille(), utilisateurEntity.getIdUtilisateur())) {
+                        if (jpaUtilisateurDao.update(utilisateurEntity)) {
                             System.out.println("Compte.java -> jButtonSave(ActionListener) : Update réussie");
+                            jButtonToggle.setText(jButtonToggle.getText().equals("Modifier") ? "Sauvegarder" : "Modifier");
 //                            this.dispose();
                         } else {
                             System.out.println("Compte.java -> jButtonSave(ActionListener) : Update échouée");
@@ -128,16 +127,15 @@ public class Compte extends JDialog {
                     } catch (Exception exception) {
                         System.out.println("Compte.java -> jButtonSave(ActionListener) : " + exception.getMessage());
                     }
+                } else {
+                    System.out.println("Compte.java -> jButtonSave(ActionListener) : Information manquante");
                 }
             }
         });
 
-        jComboBoxLocalisation.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (jButtonToggle.getLabel().equals("Modifier")) {
-                    jComboBoxLocalisation.setSelectedItem(localisationEntity);
-                }
+        jComboBoxLocalisation.addActionListener(actionEvent -> {
+            if (jButtonToggle.getText().equals("Modifier")) {
+                jComboBoxLocalisation.setSelectedItem(localisationEntity);
             }
         });
     }
@@ -161,6 +159,17 @@ public class Compte extends JDialog {
         for (JComponent currentComponent : components) {
             if (currentComponent instanceof JTextField) ((JTextField) currentComponent).setEditable(bool);
         }
+    }
+
+    private boolean checkComponents() {
+        for (JComponent currentComponent : components) {
+            if (currentComponent instanceof JTextField) {
+                if (((JTextField) currentComponent).getText().equals("")) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }

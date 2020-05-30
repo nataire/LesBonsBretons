@@ -31,16 +31,17 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     @Override
-    public boolean update(String password, String numTel, String rue, int numRue, String ville, int idUtilisateur) {
+    public boolean update(UtilisateurEntity utilisateurEntity) {
 
         Transaction tx = session.beginTransaction();
         try {
-            UtilisateurEntity person = this.find(idUtilisateur);
-            person.setPassword(password);
-            person.setNumTel(numTel);
-            person.setRue(rue);
-            person.setNumRue(numRue);
-            person.setVille(ville);
+            UtilisateurEntity person = this.find(utilisateurEntity.getIdUtilisateur());
+            person.setPassword(utilisateurEntity.getPassword());
+            person.setNumTel(utilisateurEntity.getNumTel());
+            person.setRue(utilisateurEntity.getRue());
+            person.setNumRue(utilisateurEntity.getNumRue());
+            person.setVille(utilisateurEntity.getVille());
+            person.setIdLocalisationUtilisateur(utilisateurEntity.getIdLocalisationUtilisateur());
             tx.commit();
             return true;
         } catch (Exception e) {
@@ -58,10 +59,7 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     public boolean deleteAll() {
-        if (session.createQuery("DELETE FROM UtilisateurEntity").executeUpdate() > 0) {
-            return true;
-        }
-        return false;
+        return session.createQuery("DELETE FROM UtilisateurEntity").executeUpdate() > 0;
     }
 
     //endregion
