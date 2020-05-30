@@ -29,6 +29,13 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
         return (UtilisateurEntity) query.getSingleResult();
     }
 
+    @Override
+    public boolean update(String password, int idUtilisateur) {
+        Query query = session.createQuery("UPDATE UtilisateurEntity SET password = :password WHERE idUtilisateur = :idUtilisateur");
+        query.setParameter("password", password);
+        query.setParameter("idUtilisateur", idUtilisateur);
+        return true;
+    }
 
     @Override
     public Collection<UtilisateurEntity> findAll() {
@@ -37,7 +44,7 @@ public class JpaUtilisateurDao extends JpaDao<UtilisateurEntity> implements Util
     }
 
     public boolean deleteAll() {
-        if(session.createQuery("DELETE FROM UtilisateurEntity").executeUpdate() > 0){
+        if (session.createQuery("DELETE FROM UtilisateurEntity").executeUpdate() > 0) {
             return true;
         }
         return false;

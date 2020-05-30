@@ -27,11 +27,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Inscription &amp; Connexion OK&#10;MAJ header quand user connecté OK">
-      <change afterPath="$PROJECT_DIR$/src/view/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_05_2020_21_24_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_05_2020_21_24__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/CategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/CategorieDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCategorieDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/LocalisationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/LocalisationEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaUtilisateurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UtilisateurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/UtilisateurEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +48,20 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -148,6 +170,7 @@
       <workItem from="1590308315499" duration="7611000" />
       <workItem from="1590674164367" duration="683000" />
       <workItem from="1590822240797" duration="3166000" />
+      <workItem from="1590854143761" duration="1535000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Annonce faite">
       <created>1581679143461</created>
@@ -307,7 +330,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -326,12 +349,12 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe Annonce faite" />
@@ -376,12 +399,12 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="482" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1590225668169" />
-    <state x="612" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1590224671284">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1590853541307">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="612" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1590224671284" />
     <state x="693" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1739.978@0.0.1739.978" timestamp="1583836001194" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588926350656" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590853541307" />
     <state x="811" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588925296862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -404,30 +427,30 @@
     </state>
     <state x="592" y="228" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589814986346" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582630001513" />
-    <state width="1877" height="221" key="GridCell.Tab.0.bottom" timestamp="1590852648054">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom" timestamp="1590853868466">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590852648054" />
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590328605469" />
-    <state width="1877" height="221" key="GridCell.Tab.0.center" timestamp="1590852648054">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590853868466" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center" timestamp="1590853868466">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590852648054" />
-    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590328605469" />
-    <state width="1877" height="221" key="GridCell.Tab.0.left" timestamp="1590852648054">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590853868466" />
+    <state width="1877" height="273" key="GridCell.Tab.0.left" timestamp="1590853868465">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590852648054" />
-    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590328605469" />
-    <state width="1877" height="221" key="GridCell.Tab.0.right" timestamp="1590852648054">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590853868465" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right" timestamp="1590853868466">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590229834525" />
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590852648054" />
-    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590328605469" />
+    <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590853868466" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1590328605469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

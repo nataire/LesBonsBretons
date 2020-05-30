@@ -105,6 +105,14 @@ public class UtilisateurEntity implements Serializable {
         this.ville = ville;
     }
 
+    public AnnonceEntity getAnnonceUser() {
+        return AnnonceUser;
+    }
+
+    public void setAnnonceUser(AnnonceEntity annonceUser) {
+        AnnonceUser = annonceUser;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -112,16 +120,18 @@ public class UtilisateurEntity implements Serializable {
         UtilisateurEntity that = (UtilisateurEntity) o;
         return idUtilisateur == that.idUtilisateur &&
                 numRue == that.numRue &&
-                idLocalisationUtilisateur == that.idLocalisationUtilisateur &&
                 Objects.equals(login, that.login) &&
                 Objects.equals(password, that.password) &&
                 Objects.equals(numTel, that.numTel) &&
-                Objects.equals(rue, that.rue);
+                Objects.equals(rue, that.rue) &&
+                Objects.equals(idLocalisationUtilisateur, that.idLocalisationUtilisateur) &&
+                Objects.equals(AnnonceUser, that.AnnonceUser) &&
+                Objects.equals(ville, that.ville);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idUtilisateur, login, password, numTel, rue, numRue, idLocalisationUtilisateur);
+        return Objects.hash(idUtilisateur, login, password, numTel, rue, numRue, idLocalisationUtilisateur, AnnonceUser, ville);
     }
 
     @Override
@@ -134,7 +144,10 @@ public class UtilisateurEntity implements Serializable {
                 ", rue='" + rue + '\'' +
                 ", numRue=" + numRue +
                 ", idLocalisationUtilisateur=" + idLocalisationUtilisateur +
+                ", AnnonceUser=" + AnnonceUser +
+                ", ville='" + ville + '\'' +
                 '}';
     }
+
     //endregion
 }
