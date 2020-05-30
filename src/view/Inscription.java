@@ -33,6 +33,7 @@ public class Inscription extends JDialog {
         this.setTitle("Inscription");
         this.setSize(new Dimension(500, 700));
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
@@ -96,19 +97,14 @@ public class Inscription extends JDialog {
 
             if (password.equals(confirmPassword)) {
 
-                String email = jTextFieldEmail.getText();
-                String rue = jTextFieldRue.getText();
-                int numRue = Integer.parseInt(jTextFieldNumRue.getText());
-                String numTel = jTextFieldNumTel.getText();
-
                 UtilisateurEntity utilisateurEntity = new UtilisateurEntity();
-                utilisateurEntity.setLogin(email);
+                utilisateurEntity.setLogin(jTextFieldEmail.getText());
                 utilisateurEntity.setPassword(password);
                 utilisateurEntity.setVille(localisationEntity.getNomVille());
                 utilisateurEntity.setIdLocalisationUtilisateur(localisationEntity);
-                utilisateurEntity.setRue(rue);
-                utilisateurEntity.setNumRue(numRue);
-                utilisateurEntity.setNumTel(numTel);
+                utilisateurEntity.setRue(jTextFieldRue.getText());
+                utilisateurEntity.setNumRue(Integer.parseInt(jTextFieldNumRue.getText()));
+                utilisateurEntity.setNumTel(jTextFieldNumTel.getText());
 
                 JpaUtilisateurDao jpaUtilisateurDao = new JpaUtilisateurDao();
 

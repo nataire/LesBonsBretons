@@ -39,7 +39,7 @@ public class Header extends JPanel {
                     switch (itemEvent.getItem().toString()) {
                         case "Mon compte":
                             jComboBoxButton.setSelectedIndex(0);
-                            System.out.println(itemEvent);
+                            Compte compte = new Compte(acceuil, true, utilisateurEntity);
                             break;
                         case "Déconnexion":
                             Acceuil acceuil = (Acceuil) this.acceuil;

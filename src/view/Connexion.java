@@ -27,6 +27,7 @@ public class Connexion extends JDialog {
         this.setTitle("Connexion");
         this.setSize(new Dimension(500, 500));
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
