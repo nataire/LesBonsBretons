@@ -116,9 +116,9 @@ public class Compte extends JDialog {
 
                     JpaUtilisateurDao jpaUtilisateurDao = new JpaUtilisateurDao();
                     try {
-                        if (jpaUtilisateurDao.update(utilisateurEntity)) {
-//                        if (jpaUtilisateurDao.update(utilisateurEntity.getPassword(), utilisateurEntity.getNumTel(),
-//                                utilisateurEntity.getRue(), utilisateurEntity.getNumRue(), utilisateurEntity.getVille(), utilisateurEntity.getIdUtilisateur()))  {
+                        //if (jpaUtilisateurDao.update(utilisateurEntity)) {
+                        if (jpaUtilisateurDao.update(utilisateurEntity.getPassword(), utilisateurEntity.getNumTel(),
+                                utilisateurEntity.getRue(), utilisateurEntity.getNumRue(), utilisateurEntity.getVille(), utilisateurEntity.getIdUtilisateur())) {
                             System.out.println("Compte.java -> jButtonSave(ActionListener) : Update réussie");
 //                            this.dispose();
                         } else {
