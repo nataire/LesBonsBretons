@@ -26,25 +26,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Gestion du compte OK">
-      <change afterPath="$PROJECT_DIR$/src/view/AnnoncesUtilisateur.java" afterDir="false" />
+    <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="ajout lien image AnnonceEntity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/CategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/CategorieDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCategorieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaCategorieDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaLocalisationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/LocalisationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/LocalisationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/LocalisationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/LocalisationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/SurCategorieEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/SurCategorieEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/UtilisateurEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Acceuil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Acceuil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Connexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaUtilisateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/UtilisateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AnnonceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +54,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - lbb@54.38.190.187" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -362,12 +356,12 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe Annonce faite" />
@@ -432,11 +426,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2573" y="404" width="790" height="494" key="#xdebugger.XInspectDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590860851649" />
-    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1588933322886">
+    <state x="585" y="114" width="1043" height="809" key="CommitChangelistDialog2" timestamp="1590915945407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="530" y="107" width="1043" height="809" key="CommitChangelistDialog2/0.0.1739.978@0.0.1739.978" timestamp="1583837692676" />
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588933322886" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590915945407" />
     <state width="502" height="466" key="DebuggerActiveHint" timestamp="1589814574517">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

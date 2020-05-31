@@ -3,6 +3,7 @@ package dao;
 import metier.AnnonceEntity;
 import metier.CategorieEntity;
 import metier.SurCategorieEntity;
+import metier.UtilisateurEntity;
 import org.hibernate.query.Query;
 
 import java.util.Collection;
@@ -33,9 +34,9 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
         return (Collection<AnnonceEntity>) query.getResultList();
     }
 
-    public Collection<AnnonceEntity> findAnnonce(String nomAnnonce) {
-        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.titreAnnonce LIKE :nomAnnonce");
-        query.setParameter("nomAnnonce", "%" + nomAnnonce + "%");
+    public Collection<AnnonceEntity> findAnnonceByIdUser(UtilisateurEntity user) {
+        Query query = session.createQuery("SELECT a FROM AnnonceEntity a WHERE a.idUtilisateurAnnonce = :user ORDER BY  a.dateAnnonce DESC");
+        query.setParameter("user", (UtilisateurEntity) user);
         return (Collection<AnnonceEntity>) query.getResultList();
     }
 
