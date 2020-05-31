@@ -54,7 +54,6 @@ public class Connexion extends JDialog {
                 UtilisateurEntity utilisateurEntity = jpaUtilisateurDao.connexionUser(jTextFieldEmail.getText(), jPasswordFieldPassword.getText());
                 if (utilisateurEntity != null) {
                     System.out.println("Connexion.java -> jButtonConfirmer(ActionListener) : Connexion réussie");
-                    System.out.println(utilisateurEntity);
                     Acceuil acceuil = (Acceuil) getOwner();
                     acceuil.setUser(utilisateurEntity);
                     dispose();

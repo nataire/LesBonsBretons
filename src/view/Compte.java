@@ -36,6 +36,7 @@ public class Compte extends JDialog {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
     }
 
     private void setComponent() {
@@ -119,7 +120,8 @@ public class Compte extends JDialog {
                         if (jpaUtilisateurDao.update(utilisateurEntity)) {
                             System.out.println("Compte.java -> jButtonSave(ActionListener) : Update réussie");
                             jButtonToggle.setText(jButtonToggle.getText().equals("Modifier") ? "Sauvegarder" : "Modifier");
-//                            this.dispose();
+                            Acceuil acceuil = (Acceuil) getOwner();
+                            acceuil.setUser(utilisateurEntity);
                         } else {
                             System.out.println("Compte.java -> jButtonSave(ActionListener) : Update échouée");
                         }
@@ -134,7 +136,7 @@ public class Compte extends JDialog {
         });
 
         jComboBoxLocalisation.addActionListener(actionEvent -> {
-            if (jButtonToggle.getText().equals("Modifier")) {
+            if (jButtonToggle.getLabel().equals("Modifier")) {
                 jComboBoxLocalisation.setSelectedItem(localisationEntity);
             }
         });
@@ -157,7 +159,9 @@ public class Compte extends JDialog {
 
     private void enabledComponents(boolean bool) {
         for (JComponent currentComponent : components) {
-            if (currentComponent instanceof JTextField) ((JTextField) currentComponent).setEditable(bool);
+            if (currentComponent != components[0] || !bool) {
+                if (currentComponent instanceof JTextField) ((JTextField) currentComponent).setEditable(bool);
+            }
         }
     }
 

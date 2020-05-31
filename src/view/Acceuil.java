@@ -52,6 +52,7 @@ public class Acceuil extends JFrame {
 
     public void setUser(UtilisateurEntity utilisateurEntity) {
         this.utilisateurEntity = utilisateurEntity;
+        System.out.println(this.utilisateurEntity);
         setJPanelHeader();
     }
 

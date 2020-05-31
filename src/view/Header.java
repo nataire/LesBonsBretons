@@ -33,6 +33,7 @@ public class Header extends JPanel {
             JComboBox<String> jComboBoxButton = new JComboBox<>();
             jComboBoxButton.addItem("Menu");
             jComboBoxButton.addItem("Mon compte");
+            jComboBoxButton.addItem("Mes annonces");
             jComboBoxButton.addItem("Déconnexion");
             jComboBoxButton.addItemListener(itemEvent -> {
                 if (itemEvent.getStateChange() == ItemEvent.SELECTED) {
@@ -41,6 +42,9 @@ public class Header extends JPanel {
                             jComboBoxButton.setSelectedIndex(0);
                             Compte compte = new Compte(acceuil, true, utilisateurEntity);
                             break;
+                        case "Mes annonces":
+                            jComboBoxButton.setSelectedIndex(0);
+                            AnnoncesUtilisateur annoncesUtilisateur = new AnnoncesUtilisateur(acceuil, true, utilisateurEntity);
                         case "Déconnexion":
                             Acceuil acceuil = (Acceuil) this.acceuil;
                             acceuil.setUser(null);
