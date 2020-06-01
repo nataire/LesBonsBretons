@@ -56,11 +56,19 @@ public class Body extends JPanel {
         jButtonRecherche.setPreferredSize(dimension);
         jButtonRecherche.addActionListener(actionEvent -> {
             JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
-            annonceEntities = jpaAnnonceDao.findAnnonce(
-                    jTextField.getText(),
-                    jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()),
-                    Integer.parseInt(jTextFieldPrix.getText())
-            );
+            if (jTextFieldPrix.getText().equals("")) {
+                annonceEntities = jpaAnnonceDao.findAnnonce(
+                        jTextField.getText(),
+                        jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()));
+            } else {
+                annonceEntities = jpaAnnonceDao.findAnnonce(
+                        jTextField.getText(),
+                        jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()),
+                        Integer.parseInt(jTextFieldPrix.getText())
+                );
+            }
+
+
             updateAnnonceList();
         });
 
