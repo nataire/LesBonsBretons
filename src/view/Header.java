@@ -45,6 +45,7 @@ public class Header extends JPanel {
                         case "Mes annonces":
                             jComboBoxButton.setSelectedIndex(0);
                             AnnoncesUtilisateur annoncesUtilisateur = new AnnoncesUtilisateur(acceuil, true, utilisateurEntity);
+                            break;
                         case "Déconnexion":
                             Acceuil acceuil = (Acceuil) this.acceuil;
                             acceuil.setUser(null);

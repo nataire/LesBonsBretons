@@ -56,11 +56,16 @@ public class AnnonceEntity implements Serializable {
 
     }
 
-    public AnnonceEntity(String titreAnnonce, String descriptionAnnonce, boolean isOffreAnnonce, int idCategorieAnnonce, int idUtilisateurAnnonce, LocalisationEntity idAnnonceLocalisation) {
+    public AnnonceEntity(String titreAnnonce, String descriptionAnnonce, boolean isOffreAnnonce, CategorieEntity categorie, UtilisateurEntity idUtilisateurAnnonce, LocalisationEntity idAnnonceLocalisation, Timestamp dateAnnonce, int prix, String lienImage) {
         this.titreAnnonce = titreAnnonce;
         this.descriptionAnnonce = descriptionAnnonce;
         this.isOffreAnnonce = isOffreAnnonce;
+        this.categorie = categorie;
+        this.idUtilisateurAnnonce = idUtilisateurAnnonce;
         this.idAnnonceLocalisation = idAnnonceLocalisation;
+        this.dateAnnonce = dateAnnonce;
+        this.prix = prix;
+        this.lienImage = lienImage;
     }
 
     //region Getter / Setter / toString / Hashcode

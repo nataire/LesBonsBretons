@@ -16,7 +16,8 @@ public class AnnonceList extends JPanel {
     public static Font font = new Font("Comic Sans Ms", Font.BOLD + Font.ITALIC, 12);
     public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
 
-    private final ArrayList<AnnonceEntity> annonceEntities;
+    private final ArrayList<JCheckBox> checkBoxes = new ArrayList<>();
+    private ArrayList<AnnonceEntity> annonceEntities;
 
     public AnnonceList(ArrayList<AnnonceEntity> list) {
         this.setLayout(new GridBagLayout());
@@ -53,9 +54,22 @@ public class AnnonceList extends JPanel {
             designJPanelUtils.addComponent(tmpJPanel, currentPrice, 2, 0, 1, 1, 0.5, 0.01, GridBagConstraints.NORTHEAST, GridBagConstraints.BASELINE, 0, 0, 10, 0, 10, 10);
             designJPanelUtils.addComponent(tmpJPanel, jScrollPaneDescription, 1, 1, 3, 1, 1d, 1d, GridBagConstraints.CENTER, GridBagConstraints.BOTH, null, null, null, null, 10, 10);
 
+            JCheckBox tmpJCheckBox = new JCheckBox();
+            checkBoxes.add(tmpJCheckBox);
             designJPanelUtils.addComponent(this, tmpJPanel, 0, i, 1, 1, 1d, 1d, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, 0, 0, 5, 0, null, null);
+            designJPanelUtils.addComponent(this, tmpJCheckBox, 1, i, 1, 1, 0.01, 1d, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, 0, 8, 5, 0, null, null);
         }
         designJPanelUtils.addComponent(this, new JLabel(), 0, annonceEntities.size(), 1, 1, null, 100d, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, null, null, null, null, null, null);
+    }
+
+    public ArrayList<JCheckBox> getCheckBoxes() {
+        return checkBoxes;
+    }
+
+    public void setAnnonceEntities(ArrayList<AnnonceEntity> annonceEntities) {
+        this.annonceEntities = annonceEntities;
+        this.removeAll();
+        this.setComponent();
     }
 
 }
