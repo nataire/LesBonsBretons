@@ -31,6 +31,9 @@ public class Body extends JPanel {
         JTextField jTextField = new JTextField();
         jTextField.setPreferredSize(dimension);
 
+        JTextField jTextFieldPrix = new JTextField();
+        jTextFieldPrix.setPreferredSize(dimension);
+
         JComboBox<SurCategorieEntity> jComboBoxSurCategorie = new JComboBox<>();
         jComboBoxSurCategorie.setPreferredSize(dimension);
         JpaSurCategorieDao jpaSurCategorieDao = new JpaSurCategorieDao();
@@ -55,7 +58,8 @@ public class Body extends JPanel {
             JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
             annonceEntities = jpaAnnonceDao.findAnnonce(
                     jTextField.getText(),
-                    jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex())
+                    jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()),
+                    Integer.parseInt(jTextFieldPrix.getText())
             );
             updateAnnonceList();
         });
@@ -63,7 +67,8 @@ public class Body extends JPanel {
         designJPanelUtils.addComponent(this, jTextField, 0, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
         designJPanelUtils.addComponent(this, jComboBoxSurCategorie, 1, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
         designJPanelUtils.addComponent(this, jComboBoxCategorie, 2, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
-        designJPanelUtils.addComponent(this, jButtonRecherche, 3, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
+        designJPanelUtils.addComponent(this, jTextFieldPrix, 3, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
+        designJPanelUtils.addComponent(this, jButtonRecherche, 4, 0, 1, null, null, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 0, 0, 10, null, null);
 
         updateAnnonceList();
 
@@ -71,9 +76,9 @@ public class Body extends JPanel {
     }
 
     private void updateAnnonceList() {
-        if (this.getComponentCount() > 4) this.remove(4);
+        if (this.getComponentCount() > 5) this.remove(5);
         if (annonceEntities != null) {
-            designJPanelUtils.addComponent(this, new AnnonceList(new ArrayList<>(annonceEntities)), 0, 1, 4, null, null, 1d, GridBagConstraints.CENTER, GridBagConstraints.BOTH, 0, 0, 25, 0, null, null);
+            designJPanelUtils.addComponent(this, new AnnonceList(new ArrayList<>(annonceEntities)), 0, 1, 5, null, null, 1d, GridBagConstraints.CENTER, GridBagConstraints.BOTH, 0, 0, 25, 0, null, null);
         }
         this.updateUI();
     }
