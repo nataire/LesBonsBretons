@@ -59,12 +59,12 @@ public class Body extends JPanel {
             if (jTextFieldPrix.getText().equals("")) {
                 annonceEntities = jpaAnnonceDao.findAnnonce(
                         jTextField.getText(),
-                        jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()));
+                        jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()), false);
             } else {
                 annonceEntities = jpaAnnonceDao.findAnnonce(
                         jTextField.getText(),
                         jComboBoxCategorie.getItemAt(jComboBoxCategorie.getSelectedIndex()),
-                        Integer.parseInt(jTextFieldPrix.getText())
+                        Integer.parseInt(jTextFieldPrix.getText()), false
                 );
             }
 
