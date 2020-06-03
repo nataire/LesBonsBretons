@@ -127,7 +127,7 @@ public class AnnonceModification extends JDialog {
                 annonceEntity.setCategorie((CategorieEntity) jComboBoxCategorie.getSelectedItem());
                 annonceEntity.setIdAnnonceLocalisation((LocalisationEntity) jComboBoxLocalisation.getSelectedItem());
                 annonceEntity.setPrix(Integer.parseInt(jTextFieldPrix.getText()));
-                annonceEntity.setLienImage(jLabelLienImage.getText());
+                annonceEntity.setLienImage(jTextFieldLienImage.getText());
 
                 JpaAnnonceDao jpaAnnonceDao = new JpaAnnonceDao();
                 try {

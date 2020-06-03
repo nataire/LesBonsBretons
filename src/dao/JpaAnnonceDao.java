@@ -38,8 +38,10 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
 
     @Override
     public AnnonceEntity find(Integer id) {
-        return null;
+        Query query = session.createQuery("SELECT t FROM AnnonceEntity t WHERE id = " + id);
+        return (AnnonceEntity) query.getSingleResult();
     }
+
 
     @Override
     public AnnonceEntity find(Class c, Integer id) {
