@@ -3,6 +3,7 @@ package dao;
 import metier.AnnonceEntity;
 import metier.CategorieEntity;
 import metier.UtilisateurEntity;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.Collection;
@@ -60,5 +61,26 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
     public AnnonceEntity findFirstAvailable() {
         Query query = session.createQuery("SELECT a FROM AnnonceEntity a ORDER BY dateAnnonce asc");
         return (AnnonceEntity) query.setMaxResults(1).getResultList();
+    }
+
+    @Override
+    public boolean update(AnnonceEntity an) {
+
+        Transaction tx = session.beginTransaction();
+        try {
+            AnnonceEntity annonce = this.find(an.getIdAnnonce());
+            annonce.setCategorie(an.getCategorie());
+            annonce.setDateAnnonce(an.getDateAnnonce());
+            annonce.setDescriptionAnnonce(an.getDescriptionAnnonce());
+            annonce.setLienImage(an.getLienImage());
+            annonce.setPrix(an.getPrix());
+            annonce.setTitreAnnonce(an.getTitreAnnonce());
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+            tx.rollback();
+            return false;
+        }
+        //
     }
 }

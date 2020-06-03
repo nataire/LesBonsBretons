@@ -27,17 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db92648c-eb87-4ecd-aefa-3b264858529b" name="Default Changelist" comment="Ajout / Suppresion annonce design OK">
-      <change afterPath="$PROJECT_DIR$/src/view/AnnonceModification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/AnnonceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/dao/JpaAnnonceDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LesBonsBretons/metier/AnnonceEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DesignJPanelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DesignJPanelUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Acceuil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Acceuil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/AnnonceAjout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AnnonceAjout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/AnnonceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AnnonceList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/AnnoncesUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/AnnoncesUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Body.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AnnonceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/JpaAnnonceDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,12 +360,12 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe Annonce faite" />
