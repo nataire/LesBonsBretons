@@ -30,7 +30,7 @@ public class AnnoncesUtilisateur extends JDialog {
 
         this.setContentPane(jPanel);
         this.setTitle("Mes annonces");
-        this.setSize(new Dimension(800, 1000));
+        this.setSize(1500, 1000);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -54,6 +54,16 @@ public class AnnoncesUtilisateur extends JDialog {
             AnnonceAjout annonceAjout = new AnnonceAjout((Frame) getOwner(), true, utilisateurEntity, this);
         });
 
+        jButtonModifier.addActionListener(actionEvent -> {
+            ArrayList<JCheckBox> checkBoxes = annonceList.getCheckBoxes();
+            for (int i = 0; i < checkBoxes.size(); i++) {
+                if (checkBoxes.get(i).isSelected()) {
+                    AnnonceModification annonceModification = new AnnonceModification((Frame) getOwner(), true, utilisateurEntity, annonceEntities.get(i), this);
+                }
+            }
+            updateAnnonceList();
+        });
+
         jButtonSupprimer.addActionListener(actionEvent -> {
             ArrayList<JCheckBox> checkBoxes = annonceList.getCheckBoxes();
             for (int i = 0; i < checkBoxes.size(); i++) {
@@ -61,7 +71,6 @@ public class AnnoncesUtilisateur extends JDialog {
                     try {
                         if (jpaAnnonceDao.delete(annonceEntities.get(i))) {
                             System.out.println("AnnoncesUtilisateur.java -> jButtonSupprimer(ActionListener) : Annonce supprimée");
-                            annonceEntities.remove(i);
                         } else {
                             System.out.println("AnnoncesUtilisateur.java -> jButtonSupprimer(ActionListener) : Annonce non supprimée");
                         }

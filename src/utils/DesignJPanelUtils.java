@@ -51,7 +51,23 @@ public class DesignJPanelUtils {
 
         try {
             Image icon = ImageIO.read(new URL(url));
-            return icon.getScaledInstance(100, 150, Image.SCALE_DEFAULT);
+            ImageIcon imageIcon = new ImageIcon(icon);
+
+            int height = imageIcon.getIconHeight();
+            int width = imageIcon.getIconWidth();
+            if (height > width) {
+                while (height > 190) {
+                    height = height / 2;
+                    width = width / 2;
+                }
+            } else {
+                while (width > 190) {
+                    height = height / 2;
+                    width = width / 2;
+                }
+            }
+
+            return icon.getScaledInstance(width, height, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }

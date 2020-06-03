@@ -21,10 +21,10 @@ public class Acceuil extends JFrame {
         setJPanelHeader();
 
         JPanel jpanelBody = new Body();
-        jpanelBody.setPreferredSize(new Dimension(1000, 900));
+        jpanelBody.setPreferredSize(new Dimension(getWidth(), 900));
 
         JPanel jPanelFooter = new Footer();
-        jPanelFooter.setPreferredSize(new Dimension(1000, 25));
+        jPanelFooter.setPreferredSize(new Dimension(getWidth(), 25));
         jPanelFooter.setBackground(designJPanelUtils.getHSBFromRGB(orange));
 
         jPanelParent.setLayout(new BorderLayout());
@@ -33,9 +33,10 @@ public class Acceuil extends JFrame {
         jPanelParent.add(jPanelFooter, BorderLayout.SOUTH);
 
         this.setContentPane(jPanelParent);
-        this.setSize(1000, 1000);
+        this.setSize(1500, 1000);
         this.setTitle("Les Bons Bretons");
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -44,7 +45,7 @@ public class Acceuil extends JFrame {
     private void setJPanelHeader() {
         if (jPanelHeader != null) jPanelParent.remove(jPanelHeader);
         jPanelHeader = new Header(this, utilisateurEntity);
-        jPanelHeader.setPreferredSize(new Dimension(1000, 75));
+        jPanelHeader.setPreferredSize(new Dimension(getWidth(), 75));
         jPanelHeader.setBackground(designJPanelUtils.getHSBFromRGB(orange));
         jPanelParent.add(jPanelHeader, BorderLayout.NORTH);
         jPanelParent.updateUI();
