@@ -7,6 +7,7 @@ import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 public class AnnonceList extends JPanel {
 
@@ -15,13 +16,21 @@ public class AnnonceList extends JPanel {
     public static Font font = new Font("Comic Sans Ms", Font.BOLD + Font.ITALIC, 12);
     public DesignJPanelUtils designJPanelUtils = new DesignJPanelUtils();
 
-    private final ArrayList<JCheckBox> checkBoxes = new ArrayList<>();
+    private final ButtonGroup buttonGroup = new ButtonGroup();
     private ArrayList<AnnonceEntity> annonceEntities;
+    private Boolean needToSelect;
+    private JPanel jPanel;
 
-    public AnnonceList(ArrayList<AnnonceEntity> list) {
+    public AnnonceList(ArrayList<AnnonceEntity> list, Boolean needToSelect) {
         this.setLayout(new GridBagLayout());
         this.annonceEntities = list;
+        this.needToSelect = needToSelect;
+        this.jPanel = new JPanel(new GridBagLayout());
+        JScrollPane jScrollPane = new JScrollPane(jPanel);
         setComponent();
+        this.setPreferredSize(new Dimension(1300, 800));
+        designJPanelUtils.addComponent(this, jScrollPane, 0, 0, 9, 9, 1d, 1d, GridBagConstraints.CENTER, GridBagConstraints.BOTH, null, null, null, null, null, null);
+
     }
 
     private void setComponent() {
@@ -65,23 +74,32 @@ public class AnnonceList extends JPanel {
             designJPanelUtils.addComponent(tmpJPanel, currentLocation, 2, 2, 1, 1, 1d, 0.01, GridBagConstraints.SOUTH, GridBagConstraints.BASELINE, 10, 0, 0, 0, 10, 10);
             designJPanelUtils.addComponent(tmpJPanel, currentDate, 3, 2, 1, 1, 1d, 0.01, GridBagConstraints.SOUTHEAST, GridBagConstraints.BASELINE, 10, 0, 0, 0, 10, 10);
 
-            JCheckBox tmpJCheckBox = new JCheckBox();
-            checkBoxes.add(tmpJCheckBox);
-            designJPanelUtils.addComponent(this, tmpJPanel, 0, i, 1, 1, 1d, 1d, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, 0, 0, 5, 0, null, null);
-            designJPanelUtils.addComponent(this, tmpJCheckBox, 1, i, 1, 1, 0.01, 1d, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, 0, 8, 5, 0, null, null);
+            if (needToSelect) {
+                JRadioButton tmpJRadioButton = new JRadioButton();
+                tmpJRadioButton.setName(String.valueOf(currentAnnonceEntity.getIdAnnonce()));
+                buttonGroup.add(tmpJRadioButton);
+                designJPanelUtils.addComponent(jPanel, tmpJRadioButton, 1, i, 1, 1, 0.01, 1d, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, 0, 8, 5, 0, null, null);
+            }
+            designJPanelUtils.addComponent(jPanel, tmpJPanel, 0, i, 1, 1, 1d, 1d, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, 0, 0, 5, 0, null, null);
         }
-        designJPanelUtils.addComponent(this, new JLabel(), 0, annonceEntities.size(), 1, 1, null, 100d, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, null, null, null, null, null, null);
+        designJPanelUtils.addComponent(jPanel, new JLabel(), 0, annonceEntities.size(), 1, 1, null, 100d, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, null, null, null, null, null, null);
     }
 
-    public ArrayList<JCheckBox> getCheckBoxes() {
-        System.out.println(checkBoxes.size());
-        return checkBoxes;
+    public AbstractButton getRadioButtonSelected() {
+        for (Enumeration<AbstractButton> buttonEnumeration = buttonGroup.getElements(); buttonEnumeration.hasMoreElements(); ) {
+            AbstractButton abstractButton = buttonEnumeration.nextElement();
+            if (abstractButton.isSelected()) {
+                return abstractButton;
+            }
+        }
+        return null;
     }
 
     public void setAnnonceEntities(ArrayList<AnnonceEntity> annonceEntities) {
         this.annonceEntities = annonceEntities;
         this.removeAll();
         this.setComponent();
+        this.updateUI();
     }
 
 }

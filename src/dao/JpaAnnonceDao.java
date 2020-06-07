@@ -80,6 +80,7 @@ public class JpaAnnonceDao extends JpaDao<AnnonceEntity> implements AnnonceDao {
             tx.commit();
             return true;
         } catch (Exception e) {
+            System.out.println(e);
             tx.rollback();
             return false;
         }

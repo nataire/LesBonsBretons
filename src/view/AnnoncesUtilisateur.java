@@ -52,25 +52,29 @@ public class AnnoncesUtilisateur extends JDialog {
 
         jButtonAjouter.addActionListener(actionEvent -> {
             AnnonceAjout annonceAjout = new AnnonceAjout((Frame) getOwner(), true, utilisateurEntity, this);
+            updateAnnonceList();
         });
 
         jButtonModifier.addActionListener(actionEvent -> {
-            ArrayList<JCheckBox> checkBoxes = annonceList.getCheckBoxes();
-            for (int i = 0; i < checkBoxes.size(); i++) {
-                if (checkBoxes.get(i).isSelected()) {
-                    AnnonceModification annonceModification = new AnnonceModification((Frame) getOwner(), true, utilisateurEntity, annonceEntities.get(i), this);
+            String buttonInfo = (annonceList.getRadioButtonSelected()).getName();
+            for (AnnonceEntity currentAnnonce : annonceEntities) {
+                if (currentAnnonce.getIdAnnonce() == Integer.parseInt(buttonInfo)) {
+                    AnnonceModification annonceModification = new AnnonceModification((Frame) getOwner(), true, utilisateurEntity, currentAnnonce, this);
                 }
             }
             updateAnnonceList();
         });
 
         jButtonSupprimer.addActionListener(actionEvent -> {
-            ArrayList<JCheckBox> checkBoxes = annonceList.getCheckBoxes();
-            for (int i = 0; i < checkBoxes.size(); i++) {
-                if (checkBoxes.get(i).isSelected()) {
+            String buttonInfo = (annonceList.getRadioButtonSelected()).getName();
+            for (AnnonceEntity currentAnnonce : annonceEntities) {
+                if (currentAnnonce.getIdAnnonce() == Integer.parseInt(buttonInfo)) {
                     try {
-                        if (jpaAnnonceDao.delete(annonceEntities.get(i))) {
+                        if (jpaAnnonceDao.delete(currentAnnonce)) {
                             System.out.println("AnnoncesUtilisateur.java -> jButtonSupprimer(ActionListener) : Annonce supprimée");
+                            annonceEntities.remove(currentAnnonce);
+                            updateAnnonceList();
+                            return;
                         } else {
                             javax.swing.JOptionPane.showMessageDialog(null, "Echec de la suppression de l'annonce");
                             System.out.println("AnnoncesUtilisateur.java -> jButtonSupprimer(ActionListener) : Annonce non supprimée");
@@ -80,7 +84,6 @@ public class AnnoncesUtilisateur extends JDialog {
                     }
                 }
             }
-            updateAnnonceList();
         });
     }
 
@@ -92,8 +95,8 @@ public class AnnoncesUtilisateur extends JDialog {
             designJPanelUtils.addComponent(jPanel, components[i], i, 0, 1, null, 1d, 0.01, GridBagConstraints.NORTH, GridBagConstraints.BASELINE, 25, 25, 0, 25, null, null);
         }
         if (annonceEntities != null) {
-            annonceList = new AnnonceList(new ArrayList<>(annonceEntities));
-            designJPanelUtils.addComponent(jPanel, annonceList, 0, 1, 3, null, 1d, 10d, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, 25, 25, 25, 25, null, null);
+            annonceList = new AnnonceList(new ArrayList<>(annonceEntities), true);
+            designJPanelUtils.addComponent(jPanel, annonceList, 0, 1, 3, 1, 1d, 10d, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, 25, 25, 25, 25, null, null);
         }
         jPanel.updateUI();
     }

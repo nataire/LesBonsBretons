@@ -112,9 +112,10 @@ public class Inscription extends JDialog {
                     if (jpaUtilisateurDao.create(utilisateurEntity)) {
                         System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription réussie");
                         this.dispose();
-                    } else
+                    } else {
                         System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription échouée");
-                    javax.swing.JOptionPane.showMessageDialog(null, "Inscription échouée");
+                        javax.swing.JOptionPane.showMessageDialog(null, "Inscription échouée");
+                    }
 
                 } catch (Exception exception) {
                     javax.swing.JOptionPane.showMessageDialog(null, "Connexion échouée");
