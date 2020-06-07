@@ -135,13 +135,19 @@ public class AnnonceModification extends JDialog {
                         System.out.println("AnnonceModification.java -> jButtonSauvegarder(ActionListener) : Modification réussie");
                         annoncesUtilisateur.setAnnonceEntities();
                         this.dispose();
-                    } else
+                    } else {
+                        javax.swing.JOptionPane.showMessageDialog(null, "Echec de la modification");
                         System.out.println("AnnonceModification.java -> jButtonSauvegarder(ActionListener) : Modification échouée");
+                    }
+
                 } catch (Exception exception) {
                     System.out.println("AnnonceModification.java -> jButtonSauvegarder(ActionListener) : " + exception.getMessage());
                 }
-            } else
-                System.out.println("AnnonceModification.java -> jButtonSauvegarder(ActionListener) : Informations manquantes");
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(null, "Echec de la modification - Informations manquantes");
+                System.out.println("AnnonceAjout.java -> jButtonAjouter(ActionListener) : Informations manquantes");
+            }
+
         });
     }
 

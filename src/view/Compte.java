@@ -123,6 +123,7 @@ public class Compte extends JDialog {
                             Acceuil acceuil = (Acceuil) getOwner();
                             acceuil.setUser(utilisateurEntity);
                         } else {
+                            javax.swing.JOptionPane.showMessageDialog(null, "Echec de la modification du compte");
                             System.out.println("Compte.java -> jButtonSave(ActionListener) : Update échouée");
                         }
 
@@ -130,6 +131,7 @@ public class Compte extends JDialog {
                         System.out.println("Compte.java -> jButtonSave(ActionListener) : " + exception.getMessage());
                     }
                 } else {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Echec de la modification du compte - Informations manquantes");
                     System.out.println("Compte.java -> jButtonSave(ActionListener) : Information manquante");
                 }
             }

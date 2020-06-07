@@ -58,9 +58,12 @@ public class Connexion extends JDialog {
                     acceuil.setUser(utilisateurEntity);
                     dispose();
                 } else {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Connexion échouée");
                     System.out.println("Connexion.java -> jButtonConfirmer(ActionListener) : Connexion échouée");
+
                 }
             } catch (Exception exception) {
+                javax.swing.JOptionPane.showMessageDialog(null, "Connexion échouée");
                 System.out.println("Connexion.java -> jButtonConfirmer(ActionListener) : " + exception.getMessage());
             }
 

@@ -72,6 +72,7 @@ public class AnnoncesUtilisateur extends JDialog {
                         if (jpaAnnonceDao.delete(annonceEntities.get(i))) {
                             System.out.println("AnnoncesUtilisateur.java -> jButtonSupprimer(ActionListener) : Annonce supprimée");
                         } else {
+                            javax.swing.JOptionPane.showMessageDialog(null, "Echec de la suppression de l'annonce");
                             System.out.println("AnnoncesUtilisateur.java -> jButtonSupprimer(ActionListener) : Annonce non supprimée");
                         }
                     } catch (Exception exception) {

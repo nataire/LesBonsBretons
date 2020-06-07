@@ -95,7 +95,7 @@ public class Inscription extends JDialog {
             String password = new String(jPasswordFieldPassword.getPassword());
             String confirmPassword = new String(jPasswordFieldPasswordConfirm.getPassword());
 
-            if (password.equals(confirmPassword)) {
+            if (password.equals(confirmPassword) && !password.equals("")) {
 
                 UtilisateurEntity utilisateurEntity = new UtilisateurEntity();
                 utilisateurEntity.setLogin(jTextFieldEmail.getText());
@@ -114,10 +114,15 @@ public class Inscription extends JDialog {
                         this.dispose();
                     } else
                         System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription échouée");
+                    javax.swing.JOptionPane.showMessageDialog(null, "Inscription échouée");
 
                 } catch (Exception exception) {
+                    javax.swing.JOptionPane.showMessageDialog(null, "Connexion échouée");
                     System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : " + exception.getMessage());
                 }
+            } else {
+                System.out.println("Inscription.java -> jButtonConfirmer(ActionListener) : Inscription échouée - information manquante");
+                javax.swing.JOptionPane.showMessageDialog(null, "Inscription échouée - information manquante");
             }
         });
     }

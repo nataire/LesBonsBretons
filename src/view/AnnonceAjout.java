@@ -132,12 +132,16 @@ public class AnnonceAjout extends JDialog {
                         annoncesUtilisateur.setAnnonceEntities();
                         this.dispose();
                     } else {
+                        javax.swing.JOptionPane.showMessageDialog(null, "Echec de l'ajout d'une annonce");
                         System.out.println("AnnonceAjout.java -> jButtonAjouter(ActionListener) : Ajout échoué");
                     }
                 } catch (Exception exception) {
                     System.out.println("AnnonceAjout.java -> jButtonAjouter(ActionListener) : " + exception.getMessage());
                 }
-            } else System.out.println("AnnonceAjout.java -> jButtonAjouter(ActionListener) : Informations manquantes");
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(null, "Echec de l'ajout d'une annonce - Informations manquantes");
+                System.out.println("AnnonceAjout.java -> jButtonAjouter(ActionListener) : Informations manquantes");
+            }
         });
     }
 
