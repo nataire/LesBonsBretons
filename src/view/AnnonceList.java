@@ -96,10 +96,21 @@ public class AnnonceList extends JPanel {
     }
 
     public void setAnnonceEntities(ArrayList<AnnonceEntity> annonceEntities) {
-        this.annonceEntities = annonceEntities;
+        /*this.annonceEntities = annonceEntities;
         this.removeAll();
         this.setComponent();
-        this.updateUI();
+        this.updateUI();*/
+
+        this.removeAll();
+        this.setLayout(new GridBagLayout());
+        this.annonceEntities = annonceEntities;
+        this.needToSelect = true;
+        this.jPanel = new JPanel(new GridBagLayout());
+        JScrollPane jScrollPane = new JScrollPane(jPanel);
+        setComponent();
+        this.setPreferredSize(new Dimension(1300, 800));
+        designJPanelUtils.addComponent(this, jScrollPane, 0, 0, 9, 9, 1d, 1d, GridBagConstraints.CENTER, GridBagConstraints.BOTH, null, null, null, null, null, null);
+
     }
 
 }
